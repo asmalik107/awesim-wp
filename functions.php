@@ -102,6 +102,8 @@ add_action( 'widgets_init', 'awesomo_widgets_init' );
 function awesomo_scripts() {
 	wp_enqueue_style( 'awesomo-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'materialize-js', get_template_directory_uri() . '/js/materialize.min.js', array('jquery'), '', true );
+
 	wp_enqueue_script( 'awesomo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'awesomo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
