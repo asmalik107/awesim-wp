@@ -8,11 +8,11 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Awesome
+ * @package Awesom0
  */
 
 get_header(); ?>
-YAYAYAYAYA
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
