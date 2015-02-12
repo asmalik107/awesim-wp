@@ -1,5 +1,5 @@
 {
-  "name": "awesem0",
+  "name": "awesom0",
   "version": "0.0.1",
   "description": "Awesome Asims WP Theme",
   "main": "gulpfile.js",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/asmalik107/awesome-wp/issues"
   },
-  "homepage": "https://github.com/asmalik107/awesome-wp"
+  "homepage": "https://github.com/asmalik107/awesome-wp",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-ruby-sass": "^1.0.0-alpha.3"
+  }
 }
