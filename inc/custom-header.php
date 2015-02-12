@@ -18,31 +18,31 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses awsemo_header_style()
- * @uses awsemo_admin_header_style()
- * @uses awsemo_admin_header_image()
+ * @uses awesomo_header_style()
+ * @uses awesomo_admin_header_style()
+ * @uses awesomo_admin_header_image()
  */
-function awsemo_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'awsemo_custom_header_args', array(
+function awesomo_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'awesomo_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'awsemo_header_style',
-		'admin-head-callback'    => 'awsemo_admin_header_style',
-		'admin-preview-callback' => 'awsemo_admin_header_image',
+		'wp-head-callback'       => 'awesomo_header_style',
+		'admin-head-callback'    => 'awesomo_admin_header_style',
+		'admin-preview-callback' => 'awesomo_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'awsemo_custom_header_setup' );
+add_action( 'after_setup_theme', 'awesomo_custom_header_setup' );
 
-if ( ! function_exists( 'awsemo_header_style' ) ) :
+if ( ! function_exists( 'awesomo_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see awsemo_custom_header_setup().
+ * @see awesomo_custom_header_setup().
  */
-function awsemo_header_style() {
+function awesomo_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function awsemo_header_style() {
 	</style>
 	<?php
 }
-endif; // awsemo_header_style
+endif; // awesomo_header_style
 
-if ( ! function_exists( 'awsemo_admin_header_style' ) ) :
+if ( ! function_exists( 'awesomo_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see awsemo_custom_header_setup().
+ * @see awesomo_custom_header_setup().
  */
-function awsemo_admin_header_style() {
+function awesomo_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function awsemo_admin_header_style() {
 	</style>
 <?php
 }
-endif; // awsemo_admin_header_style
+endif; // awesomo_admin_header_style
 
-if ( ! function_exists( 'awsemo_admin_header_image' ) ) :
+if ( ! function_exists( 'awesomo_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see awsemo_custom_header_setup().
+ * @see awesomo_custom_header_setup().
  */
-function awsemo_admin_header_image() {
+function awesomo_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function awsemo_admin_header_image() {
 	</div>
 <?php
 }
-endif; // awsemo_admin_header_image
+endif; // awesomo_admin_header_image

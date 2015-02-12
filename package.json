@@ -1,0 +1,19 @@
+{
+  "name": "awesem0",
+  "version": "0.0.1",
+  "description": "Awesome Asims WP Theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://asmalik107@github.com/asmalik107/awesome-wp.git"
+  },
+  "author": "Asim Malik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asmalik107/awesome-wp/issues"
+  },
+  "homepage": "https://github.com/asmalik107/awesome-wp"
+}

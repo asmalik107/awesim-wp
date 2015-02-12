@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'awsemo_setup' ) ) :
+if ( ! function_exists( 'awesomo_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( 'awsemo_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function awsemo_setup() {
+function awesomo_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Awesom0, use a find and replace
-	 * to change 'awsemo' to the name of your theme in all the template files
+	 * to change 'awesomo' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'awsemo', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'awesomo', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -50,7 +50,7 @@ function awsemo_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'awsemo' ),
+		'primary' => __( 'Primary Menu', 'awesomo' ),
 	) );
 
 	/*
@@ -70,22 +70,22 @@ function awsemo_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'awsemo_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'awesomo_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // awsemo_setup
-add_action( 'after_setup_theme', 'awsemo_setup' );
+endif; // awesomo_setup
+add_action( 'after_setup_theme', 'awesomo_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function awsemo_widgets_init() {
+function awesomo_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'awsemo' ),
+		'name'          => __( 'Sidebar', 'awesomo' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -94,23 +94,23 @@ function awsemo_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'awsemo_widgets_init' );
+add_action( 'widgets_init', 'awesomo_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function awsemo_scripts() {
-	wp_enqueue_style( 'awsemo-style', get_stylesheet_uri() );
+function awesomo_scripts() {
+	wp_enqueue_style( 'awesomo-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'awsemo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'awesomo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'awsemo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'awesomo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'awsemo_scripts' );
+add_action( 'wp_enqueue_scripts', 'awesomo_scripts' );
 
 /**
  * Implement the Custom Header feature.

@@ -9,7 +9,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php awsemo_posted_on(); ?>
+			<?php awesomo_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -17,13 +17,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'awsemo' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'awesomo' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php awsemo_entry_footer(); ?>
+		<?php awesomo_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
