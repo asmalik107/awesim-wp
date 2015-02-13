@@ -56,20 +56,6 @@
 					) 
 				); ?>
 		
-
-
-<!-- <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</i></a></li>
-          <li><a href="components.html">Components</a></li>
-          <li><a href="javascript.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="sass.html">Sass</i></a></li>
-          <li><a href="components.html">Components</a></li>
-          <li><a href="javascript.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
-        </ul> -->
 			</div>
 		</nav>	
 
