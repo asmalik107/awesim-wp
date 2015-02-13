@@ -7,6 +7,12 @@ var sass = require('gulp-ruby-sass');
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
 gulp.task('sass', function() {
+
+  var lazypipe = require('lazypipe');
+  var cssChannel = lazypipe()
+    .pipe($.replace, '../font', 'fonts')
+    .pipe($.replace, '../font', 'fonts');
+
     return sass('sass/style.scss',
         {
 	      style: 'expanded',
@@ -15,6 +21,7 @@ gulp.task('sass', function() {
     	.on('error', function (err) {
       		console.error('Error', err.message);
    		})
+      .pipe(cssChannel())
    		.pipe($.autoprefixer({
       		browsers: ['last 1 version']
     	}))

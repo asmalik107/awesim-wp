@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+/* $color__link-visited: purple; */
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
@@ -475,9 +476,9 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: royalblue;
-}
-a:visited {
-  color: purple;
+  /* 	&:visited {
+  		color: $color__link-visited;
+  	} */
 }
 a:hover, a:focus, a:active {
   color: midnightblue;
@@ -3989,8 +3990,8 @@ span.badge.new:after {
 
 @font-face {
   font-family: "Material-Design-Icons";
-  src: url("../font/material-design-icons/Material-Design-Icons.eot?-g7cqhn");
-  src: url("../font/material-design-icons/Material-Design-Icons.eot?#iefix-g7cqhn") format("embedded-opentype"), url("../font/material-design-icons/Material-Design-Icons.woff?-g7cqhn") format("woff"), url("../font/material-design-icons/Material-Design-Icons.ttf?-g7cqhn") format("truetype"), url("../font/material-design-icons/Material-Design-Icons.svg?-g7cqhn#Material-Design-Icons") format("svg");
+  src: url("fonts/material-design-icons/Material-Design-Icons.eot?-g7cqhn");
+  src: url("fonts/material-design-icons/Material-Design-Icons.eot?#iefix-g7cqhn") format("embedded-opentype"), url("fonts/material-design-icons/Material-Design-Icons.woff?-g7cqhn") format("woff"), url("fonts/material-design-icons/Material-Design-Icons.ttf?-g7cqhn") format("truetype"), url("fonts/material-design-icons/Material-Design-Icons.svg?-g7cqhn#Material-Design-Icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -7403,27 +7404,27 @@ nav .input-field label.active {
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Thin.ttf");
+  src: url("fonts/roboto/Roboto-Thin.ttf");
   font-weight: 200;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Light.ttf");
+  src: url("fonts/roboto/Roboto-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Regular.ttf");
+  src: url("fonts/roboto/Roboto-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Medium.ttf");
+  src: url("fonts/roboto/Roboto-Medium.ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Bold.ttf");
+  src: url("fonts/roboto/Roboto-Bold.ttf");
   font-weight: 700;
 }
 a {

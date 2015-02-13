@@ -22,15 +22,57 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'awesomo' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+		<!-- <div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div><!-- .site-branding -->
+		</div> --><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<!-- <nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'awesomo' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+		</nav> --><!-- #site-navigation -->
+
+		<nav>
+			<div class="nav-wrapper light-blue accent-3">
+				<a href="#" class="brand-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+				<?php wp_nav_menu( array( 
+					'menu'              => 'primary',
+					'theme_location' 	=> 'primary', 
+					'container'         => '',
+					'menu_class' 		=> 'right hide-on-med-and-down',
+					'depth'             => 1
+					) 
+				); ?>
+
+				<?php wp_nav_menu( array( 
+					'menu'              => 'primary',
+					'theme_location' 	=> 'primary', 
+					'container'         => '',
+					'menu_id'			=> 'mobile-demo',
+					'menu_class' 		=> 'side-nav',
+					'depth'             => 1
+					) 
+				); ?>
+		
+
+
+<!-- <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</i></a></li>
+          <li><a href="components.html">Components</a></li>
+          <li><a href="javascript.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="sass.html">Sass</i></a></li>
+          <li><a href="components.html">Components</a></li>
+          <li><a href="javascript.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul> -->
+			</div>
+		</nav>	
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -108,11 +108,22 @@ function awesomo_scripts() {
 
 	wp_enqueue_script( 'awesomo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'awesomo_scripts' );
+
+
+
+
+/*function my_wp_nav_menu_args( $args = '' ) {
+	$args['container'] = false;
+	return $args;
+}
+add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );*/
 
 /**
  * Implement the Custom Header feature.
