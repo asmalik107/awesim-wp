@@ -1,16 +1,11 @@
 <?php
 /**
- * Awesom0 functions and definitions
+ * Awesomo functions and definitions.
  *
- * @package Awesom0
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package Awesomo
  */
-
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
 
 if ( ! function_exists( 'awesomo_setup' ) ) :
 /**
@@ -21,12 +16,11 @@ if ( ! function_exists( 'awesomo_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function awesomo_setup() {
-
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Awesom0, use a find and replace
-	 * to change 'awesomo' to the name of your theme in all the template files
+	 * If you're building a theme based on Awesomo, use a find and replace
+	 * to change 'awesomo' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'awesomo', get_template_directory() . '/languages' );
 
@@ -44,13 +38,13 @@ function awesomo_setup() {
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'awesomo' ),
+		'primary' => esc_html__( 'Primary Menu', 'awesomo' ),
 	) );
 
 	/*
@@ -58,15 +52,23 @@ function awesomo_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
 	) );
 
 	/*
 	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
 	) );
 
 	// Set up the WordPress core custom background feature.
@@ -79,19 +81,31 @@ endif; // awesomo_setup
 add_action( 'after_setup_theme', 'awesomo_setup' );
 
 /**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function awesomo_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'awesomo_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'awesomo_content_width', 0 );
+
+/**
  * Register widget area.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function awesomo_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'awesomo' ),
+		'name'          => esc_html__( 'Sidebar', 'awesomo' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s"><div class="card">',
-		'after_widget'  => '</div></aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'awesomo_widgets_init' );
@@ -102,13 +116,9 @@ add_action( 'widgets_init', 'awesomo_widgets_init' );
 function awesomo_scripts() {
 	wp_enqueue_style( 'awesomo-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'materialize-js', get_template_directory_uri() . '/js/materialize.min.js', array('jquery'), '', true );
-
 	wp_enqueue_script( 'awesomo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'awesomo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -116,19 +126,10 @@ function awesomo_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'awesomo_scripts' );
 
-
-
-
-/*function my_wp_nav_menu_args( $args = '' ) {
-	$args['container'] = false;
-	return $args;
-}
-add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );*/
-
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

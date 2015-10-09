@@ -1,8 +1,8 @@
 <?php
 /**
- * Awesom0 Theme Customizer
+ * Awesomo Theme Customizer.
  *
- * @package Awesom0
+ * @package Awesomo
  */
 
 /**

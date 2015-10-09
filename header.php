@@ -2,10 +2,13 @@
 /**
  * The header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @package Awesom0
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Awesomo
  */
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -19,46 +22,22 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'awesomo' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'awesomo' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<!-- <div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div> --><!-- .site-branding -->
+		<div class="site-branding">
+			<?php if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php endif; ?>
+			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+		</div><!-- .site-branding -->
 
-		<!-- <nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'awesomo' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav> --><!-- #site-navigation -->
-
-		<nav>
-			<div class="nav-wrapper light-blue accent-3">
-				<a href="#" class="brand-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-
-				<?php wp_nav_menu( array( 
-					'menu'              => 'primary',
-					'theme_location' 	=> 'primary', 
-					'container'         => '',
-					'menu_class' 		=> 'right hide-on-med-and-down',
-					'depth'             => 1
-					) 
-				); ?>
-
-				<?php wp_nav_menu( array( 
-					'menu'              => 'primary',
-					'theme_location' 	=> 'primary', 
-					'container'         => '',
-					'menu_id'			=> 'mobile-demo',
-					'menu_class' 		=> 'side-nav',
-					'depth'             => 1
-					) 
-				); ?>
-		
-			</div>
-		</nav>	
-
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
