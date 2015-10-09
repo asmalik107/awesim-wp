@@ -42,6 +42,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.2 Galleries
 --------------------------------------------------------------*/
 /* $color__link-visited: purple; */
+/* $color__link-hover: midnightblue;
+ */
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
@@ -480,10 +482,7 @@ a {
   		color: $color__link-visited;
   	} */
 }
-a:hover, a:focus, a:active {
-  color: midnightblue;
-}
-a:focus {
+a:hover, a:focus, a:focus {
   outline: thin dotted;
 }
 a:hover, a:active {
