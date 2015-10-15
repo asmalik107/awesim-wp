@@ -19,7 +19,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -45,16 +44,62 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
+
+/*--------------------------------------------------------------
+# Font Awesome
+--------------------------------------------------------------*/
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+@import "../node_modules/susy/sass/susy.scss";
+
+$susy: (
+        columns: 12,
+        container: 1280px,
+        gutters: 1/4,
+        global-box-sizing: border-box,
+        debug: (image: hide)
+);
+
+#masthead {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  clear: both;
+  padding: 2em;
+}
+
+#page {
+  @include container;
+}
+
+.content-area {
+  @include span(9);
+  padding: 1rem;
+}
+
+.widget-area {
+  @include span(3 last);
+}
+
+.site-branding {
+  height: auto;
+  overflow: hidden;
+  width: 200px;
+  height: 28px;
+  float: left;
+  margin: 16px 16px 14px 20px;
+}
 
 /*--------------------------------------------------------------
 # Elements
@@ -106,7 +151,49 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "media/media";
 
-/*--------------------------------------------------------------
-13.0 Skeleton
---------------------------------------------------------------*/
-@import "../bower_components/Skeleton-Sass/scss/skeleton.scss";
+.article-masonry {
+  float: left;
+  width: 250px;
+  border-radius: 2px;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+
+}
+
+#header-social-icons, #footer-social-icons {
+  float: left;
+  margin: -4px 20px 0 0;
+  padding-left: 12px;
+  height: 7px;
+}
+
+#header-social-icons ul, #footer-social-icons ul {
+  margin: 0;
+  padding: 0;
+}
+
+#header-social-icons ul li, #footer-social-icons ul li {
+  border-bottom: 0;
+  display: inline-block;
+  margin-right: -3px;
+  margin-top: 0;
+}
+
+#header-social-icons ul li a, #footer-social-icons ul li a {
+  display: inline;
+  margin-top: 0;
+  -webkit-box-shadow: 1px 1px 0px rgba(255, 255, 255, 1) inset;
+  -moz-box-shadow: 1px 1px 0px rgba(255, 255, 255, 1) inset;
+  box-shadow: 1px 1px 0px rgba(255, 255, 255, 1) inset;
+}
+
+.fa-stack-header {
+  height: 1.7em;
+  line-height: 1.7em;
+  color: #57564B;
+}
+
+.fa-stack-square {
+  font-size: 1.7em;
+}
+

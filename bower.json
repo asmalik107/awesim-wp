@@ -16,6 +16,5 @@
     "tests"
   ],
   "dependencies": {
-    "Skeleton-Sass": "skeleton-scss#*"
   }
 }

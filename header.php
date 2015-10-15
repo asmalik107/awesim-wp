@@ -27,17 +27,52 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			<?php endif; ?>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	<!-- 			<p class="site-description"><?php bloginfo( 'description' ); ?></p> -->
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<div class="menu-container">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></button>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</div>
+			<div id="header-social-icons">
+				<ul>
+					<li>
+						<a href="https://www.facebook.com/">
+							<span class="fa-stack fa-stack-header">
+								<i class="fa fa-square-o fa-stack-2x fa-stack-square"></i>
+								<i class="fa fa-facebook fa-stack-1x"></i>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/">
+							<span class="fa-stack fa-stack-header">
+								<i class="fa fa-square-o fa-stack-2x fa-stack-square"></i>
+								<i class="fa fa-twitter fa-stack-1x"></i>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/">
+							<span class="fa-stack fa-stack-header">
+								<i class="fa fa-square-o fa-stack-2x fa-stack-square"></i>
+								<i class="fa fa-instagram fa-stack-1x"></i>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</nav><!-- #site-navigation -->
+
+
+
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+<!-- 	<div id="content" class="site-content"> -->
+
+
