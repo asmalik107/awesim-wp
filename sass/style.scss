@@ -57,6 +57,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Font Awesome
 --------------------------------------------------------------*/
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
 /*--------------------------------------------------------------
 # Grid
 --------------------------------------------------------------*/
@@ -101,10 +107,7 @@ footer {
   margin: 16px 16px 14px 20px;
 }
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
+
 
 /*--------------------------------------------------------------
 # Forms
@@ -160,6 +163,15 @@ footer {
 
 }
 
+.site-footer {
+  color: #666666;
+  background-color: #322c29;
+}
+
+.site-info a{
+  color: #666666;
+}
+
 #header-social-icons, #footer-social-icons {
   float: left;
   margin: -4px 20px 0 0;
@@ -188,12 +200,12 @@ footer {
 }
 
 .fa-stack-header {
-  height: 1.7em;
-  line-height: 1.7em;
+  height: 1.8em;
+  line-height: 1.8em;
   color: #57564B;
 }
 
 .fa-stack-square {
-  font-size: 1.7em;
+  font-size: 1.8em;
 }
 

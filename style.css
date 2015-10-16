@@ -50,6 +50,7 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -281,9 +282,9 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-family: "PT Sans", Verdana, sans-serif;
+  font-size: 22.4px;
+  font-size: 1.4rem;
   line-height: 1.5;
 }
 
@@ -2978,51 +2979,6 @@ big {
 }
 
 /*--------------------------------------------------------------
-# Grid
---------------------------------------------------------------*/
-#masthead {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-}
-
-footer {
-  clear: both;
-  padding: 2em;
-}
-
-#page {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-}
-#page:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.content-area {
-  width: 74.5762711864%;
-  float: left;
-  margin-right: 1.6949152542%;
-  padding: 1rem;
-}
-
-.widget-area {
-  width: 23.7288135593%;
-  float: right;
-  margin-right: 0;
-}
-
-.site-branding {
-  height: auto;
-  overflow: hidden;
-  width: 200px;
-  height: 28px;
-  float: left;
-  margin: 16px 16px 14px 20px;
-}
-
-/*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
@@ -3091,6 +3047,51 @@ img {
 table {
   margin: 0 0 1.5em;
   width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+#masthead {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  clear: both;
+  padding: 2em;
+}
+
+#page {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#page:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.content-area {
+  width: 74.5762711864%;
+  float: left;
+  margin-right: 1.6949152542%;
+  padding: 1rem;
+}
+
+.widget-area {
+  width: 23.7288135593%;
+  float: right;
+  margin-right: 0;
+}
+
+.site-branding {
+  height: auto;
+  overflow: hidden;
+  width: 200px;
+  height: 28px;
+  float: left;
+  margin: 16px 16px 14px 20px;
 }
 
 /*--------------------------------------------------------------
@@ -3548,6 +3549,15 @@ object {
   padding: 0.5rem;
 }
 
+.site-footer {
+  color: #666666;
+  background-color: #322c29;
+}
+
+.site-info a {
+  color: #666666;
+}
+
 #header-social-icons, #footer-social-icons {
   float: left;
   margin: -4px 20px 0 0;
@@ -3574,11 +3584,11 @@ object {
 }
 
 .fa-stack-header {
-  height: 1.7em;
-  line-height: 1.7em;
+  height: 1.8em;
+  line-height: 1.8em;
   color: #57564B;
 }
 
 .fa-stack-square {
-  font-size: 1.7em;
+  font-size: 1.8em;
 }
