@@ -2993,7 +2993,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #f5f5f5;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -3012,7 +3012,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 10px 0;
 }
 
 ul {
@@ -3029,12 +3029,16 @@ li > ol {
   margin-left: 1.5em;
 }
 
+dl {
+  margin: 0 0 1.5em 0;
+}
+
 dt {
   font-weight: bold;
 }
 
 dd {
-  margin: 0 1.5em 1.5em;
+  margin: 0;
 }
 
 img {
@@ -3054,6 +3058,7 @@ table {
 --------------------------------------------------------------*/
 #masthead {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  background: #ffffff;
 }
 
 footer {
@@ -3083,6 +3088,7 @@ footer {
   width: 23.7288135593%;
   float: right;
   margin-right: 0;
+  padding: 0.5em;
 }
 
 .site-branding {
@@ -3541,12 +3547,15 @@ object {
   display: block;
 }
 
-.article-masonry {
-  float: left;
-  width: 250px;
-  border-radius: 2px;
+.article-single, .article-masonry {
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
+  float: left;
+  background: #ffffff;
+}
+
+.article-masonry {
+  width: 250px;
 }
 
 .site-footer {

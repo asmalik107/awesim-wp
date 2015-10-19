@@ -78,6 +78,7 @@ $susy: (
 
 #masthead {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  background: $color_secondary-background
 }
 
 footer {
@@ -96,6 +97,7 @@ footer {
 
 .widget-area {
   @include span(3 last);
+  padding: 0.5em;
 }
 
 .site-branding {
@@ -154,14 +156,19 @@ footer {
 --------------------------------------------------------------*/
 @import "media/media";
 
-.article-masonry {
-  float: left;
-  width: 250px;
-  border-radius: 2px;
+.article-single {
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
-
+  float: left;
+  background: $color_secondary-background;
 }
+
+
+.article-masonry {
+  @extend .article-single;
+  width: 250px;
+}
+
 
 .site-footer {
   color: #666666;
