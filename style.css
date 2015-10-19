@@ -3078,17 +3078,17 @@ footer {
 }
 
 .content-area {
-  width: 74.5762711864%;
+  width: 74.9326145553%;
   float: left;
-  margin-right: 1.6949152542%;
-  padding: 1rem;
+  margin-right: 0.269541779%;
+  padding: 1rem 0 1rem 1rem;
 }
 
 .widget-area {
-  width: 23.7288135593%;
+  width: 24.7978436658%;
   float: right;
   margin-right: 0;
-  padding: 0.5em;
+  padding: 1rem;
 }
 
 .site-branding {
@@ -3385,7 +3385,7 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 1rem;
   /* Make sure select elements fit in widgets. */
 }
 .widget select {
@@ -3408,7 +3408,7 @@ a:hover, a:active {
 }
 
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0 0 1rem;
 }
 
 .byline,
@@ -3552,10 +3552,11 @@ object {
   padding: 0.5rem;
   float: left;
   background: #ffffff;
+  width: 100%;
 }
 
 .article-masonry {
-  width: 250px;
+  width: 32%;
 }
 
 .site-footer {

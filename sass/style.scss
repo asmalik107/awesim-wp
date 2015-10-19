@@ -71,7 +71,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 $susy: (
         columns: 12,
         container: 1280px,
-        gutters: 1/4,
+        gutters: 1/30,
         global-box-sizing: border-box,
         debug: (image: hide)
 );
@@ -92,12 +92,12 @@ footer {
 
 .content-area {
   @include span(9);
-  padding: 1rem;
+  padding: 1rem 0 1rem 1rem;
 }
 
 .widget-area {
   @include span(3 last);
-  padding: 0.5em;
+  padding: 1rem;
 }
 
 .site-branding {
@@ -161,12 +161,13 @@ footer {
   padding: 0.5rem;
   float: left;
   background: $color_secondary-background;
+  width: 100%;
 }
 
 
 .article-masonry {
   @extend .article-single;
-  width: 250px;
+  width: 32%;
 }
 
 
