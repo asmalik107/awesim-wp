@@ -3067,7 +3067,7 @@ footer {
 }
 
 #page {
-  max-width: 1280px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -3078,16 +3078,10 @@ footer {
 }
 
 .content-area {
-  width: 74.9326145553%;
-  float: left;
-  margin-right: 0.269541779%;
   padding: 1rem 0 1rem 1rem;
 }
 
 .widget-area {
-  width: 24.7978436658%;
-  float: right;
-  margin-right: 0;
   padding: 1rem;
 }
 
@@ -3555,10 +3549,6 @@ object {
   width: 100%;
 }
 
-.article-masonry {
-  width: 32%;
-}
-
 .site-footer {
   color: #666666;
   background-color: #322c29;
@@ -3601,4 +3591,46 @@ object {
 
 .fa-stack-square {
   font-size: 1.8em;
+}
+
+.content-area {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 899px) {
+  .content-area {
+    width: 74.9326145553%;
+    float: left;
+    margin-right: 0.269541779%;
+  }
+}
+
+.widget-area {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 899px) {
+  .widget-area {
+    width: 24.7978436658%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+.article-masonry {
+  width: 98%;
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .article-masonry {
+    width: 48%;
+  }
+}
+@media (min-width: 1200px) {
+  .article-masonry {
+    width: 32%;
+  }
 }

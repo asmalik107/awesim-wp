@@ -52,25 +52,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
-
 /*--------------------------------------------------------------
 # Font Awesome
 --------------------------------------------------------------*/
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 @import "elements/elements";
-
 /*--------------------------------------------------------------
 # Grid
 --------------------------------------------------------------*/
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint.scss";
 @import "../node_modules/susy/sass/susy.scss";
 
 $susy: (
         columns: 12,
-        container: 1280px,
         gutters: 1/30,
         global-box-sizing: border-box,
         debug: (image: hide)
@@ -91,12 +88,10 @@ footer {
 }
 
 .content-area {
-  @include span(9);
   padding: 1rem 0 1rem 1rem;
 }
 
 .widget-area {
-  @include span(3 last);
   padding: 1rem;
 }
 
@@ -108,8 +103,6 @@ footer {
   float: left;
   margin: 16px 16px 14px 20px;
 }
-
-
 
 /*--------------------------------------------------------------
 # Forms
@@ -164,19 +157,12 @@ footer {
   width: 100%;
 }
 
-
-.article-masonry {
-  @extend .article-single;
-  width: 32%;
-}
-
-
 .site-footer {
   color: #666666;
   background-color: #322c29;
 }
 
-.site-info a{
+.site-info a {
   color: #666666;
 }
 
@@ -217,3 +203,32 @@ footer {
   font-size: 1.8em;
 }
 
+
+
+//(481-899)(900-1200)
+.content-area {
+  @include span(12);
+  @include breakpoint(899px, $susy) {
+    @include span(9);
+  }
+}
+
+.widget-area {
+  @include span(12);
+  @include susy-breakpoint(899px, $susy) {
+    @include span(3 last)
+  }
+
+}
+
+.article-masonry {
+  @extend .article-single;
+  width: 98%;
+  @include breakpoint(900px 1199px){
+    width:48%;
+  }
+  @include breakpoint(1200px){
+    width:32%;
+  }
+
+}

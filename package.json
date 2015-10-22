@@ -23,7 +23,7 @@
     "gulp-load-plugins": "^0.8.0",
     "gulp-plumber": "^0.6.6",
     "gulp-replace": "^0.5.2",
-    "gulp-ruby-sass": "^1.0.0-alpha.3",
+    "gulp-ruby-sass": "^2.0.5",
     "lazypipe": "^0.2.2"
   },
   "dependencies": {
