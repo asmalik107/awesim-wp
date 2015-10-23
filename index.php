@@ -40,7 +40,6 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 
@@ -49,6 +48,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+<div class="load-container">
+			<?php the_posts_navigation(); ?>
+</div>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

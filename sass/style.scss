@@ -224,7 +224,7 @@ footer {
 .article-masonry {
   @extend .article-single;
   width: 98%;
-  @include breakpoint(900px 1199px){
+  @include breakpoint(700px 1199px){
     width:48%;
   }
   @include breakpoint(1200px){

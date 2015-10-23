@@ -3624,7 +3624,7 @@ object {
 .article-masonry {
   width: 98%;
 }
-@media (min-width: 900px) and (max-width: 1199px) {
+@media (min-width: 700px) and (max-width: 1199px) {
   .article-masonry {
     width: 48%;
   }
