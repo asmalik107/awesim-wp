@@ -10,7 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-single'); ?>>
-	<header class="entry-header">
+	<div>
+		<?php the_post_thumbnail(); ?>
+	</div>
+
+	<header class="entry-header"
+		<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta"
@@ -18,7 +24,7 @@
 		</div><!-- .entry-meta -->
 
 	</header><!-- .entry-header -->
-    <?php the_post_thumbnail(); ?>
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

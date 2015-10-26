@@ -11,7 +11,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-masonry'); ?>>
 
-	<header class="entry-header">
+
+    <div>
+         <?php the_post_thumbnail(); ?>
+    </div>
+
+	<header class="entry-header"
+		<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
+
 		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
@@ -21,7 +28,6 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-    <?php the_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

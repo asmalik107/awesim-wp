@@ -3273,6 +3273,10 @@ a:hover, a:active {
     float: left;
   }
 }
+.posts-navigation {
+  clear: both;
+}
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
