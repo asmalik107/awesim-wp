@@ -1,9 +1,15 @@
  $(document).ready(function() {
- 	$('.site-main').masonry({
- 		// options
- 		itemSelector: '.article-masonry',
- 		/*	columnWidth: 20,*/
- 		gutter: 10,
- 		percentPosition: true
+
+
+ 	var el = $('.site-main');
+ 	imagesLoaded(el, function() {
+
+ 		el.masonry({
+ 			// options
+ 			itemSelector: '.article-masonry',
+ 			/*	columnWidth: 20,*/
+ 			gutter: 10,
+ 			percentPosition: true
+ 		});
  	});
  })

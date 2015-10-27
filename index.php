@@ -48,9 +48,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-<div class="load-container">
+		<div class="load-container">
 			<?php the_posts_navigation(); ?>
-</div>
+		</div>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

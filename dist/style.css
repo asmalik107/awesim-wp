@@ -3242,7 +3242,6 @@ a:hover, a:active {
   padding: 0px;
   border-right: 1px dotted #ddd;
   padding-right: 3px;
-  background: #ffffff;
 }
 .menu-container a {
   display: block;
@@ -3273,10 +3272,9 @@ a:hover, a:active {
     float: left;
   }
 }
-.posts-navigation {
+/*.post-navigation {
   clear: both;
-}
-
+}*/
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -3552,6 +3550,9 @@ object {
   background: #ffffff;
   width: 100%;
 }
+.article-single .article-featured-image img, .article-masonry .article-featured-image img {
+  width: 100%;
+}
 
 .site-footer {
   color: #666666;
@@ -3591,6 +3592,7 @@ object {
   height: 1.8em;
   line-height: 1.8em;
   color: #57564B;
+  background: #ffffff;
 }
 
 .fa-stack-square {

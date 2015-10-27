@@ -69,7 +69,6 @@
     padding: 0px;
     border-right: 1px dotted #ddd;
     padding-right: 3px;
-    background: #ffffff;
 
     &:hover > a,
     &.focus > a {
@@ -110,9 +109,9 @@
   }
 }
 
-.posts-navigation {
+/*.post-navigation {
   clear: both;
-}
+}*/
 
 .comment-navigation,
 .posts-navigation,

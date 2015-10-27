@@ -16,6 +16,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
+
 			<?php the_post_navigation(); ?>
 
 			<?php
@@ -28,6 +29,9 @@ get_header(); ?>
 		<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
+        <div class="load-container">
+            <?php the_post_navigation(); ?>
+        </div>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

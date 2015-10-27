@@ -41,6 +41,9 @@ function awesomo_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size('small-thumbnail', 180, 120, true);
+	add_image_size('medium-thumbnail', 300, 200, true);
+	add_image_size('large-thumbnail', 300, 200, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -122,8 +125,7 @@ function awesomo_scripts() {
 
 	wp_enqueue_script( 'masonry-js', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array('jquery'), '', true );
 
-	//wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.js', array('jquery'), '', true );
-
+	wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'awesomo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

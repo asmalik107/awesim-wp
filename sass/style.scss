@@ -155,6 +155,12 @@ footer {
   float: left;
   background: $color_secondary-background;
   width: 100%;
+
+  .article-featured-image {
+    img {
+      width:100%;
+    }
+  }
 }
 
 .site-footer {
@@ -197,6 +203,7 @@ footer {
   height: 1.8em;
   line-height: 1.8em;
   color: #57564B;
+  background: $color_secondary-background;
 }
 
 .fa-stack-square {
