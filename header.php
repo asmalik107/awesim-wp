@@ -34,7 +34,6 @@
 	<!-- 			<p class="site-description"><?php bloginfo( 'description' ); ?></p> -->
 		</div><!-- .site-branding -->
 
-		<?php get_search_form(); ?>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="menu-container">
@@ -71,7 +70,10 @@
 					</li>
 				</ul>
 			</div>
+			<?php get_search_form(); ?>
 		</nav><!-- #site-navigation -->
+
+
 
 
 

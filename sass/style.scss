@@ -73,18 +73,22 @@ $susy: (
         debug: (image: hide)
 );
 
+
+
+
+#page {
+  @include container;
+}
+
 #masthead {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  background: $color_secondary-background
+  background: $color_secondary-background;
+  @include span(12 of 12);
 }
 
 footer {
   clear: both;
   padding: 2em;
-}
-
-#page {
-  @include container;
 }
 
 .content-area {
@@ -100,8 +104,10 @@ footer {
   overflow: hidden;
   width: 200px;
   height: 28px;
-  float: left;
-  margin: 16px 16px 14px 20px;
+ // float: left;
+ // margin: 16px 16px 14px 20px;
+  @include span(2 of 12);
+
 }
 
 /*--------------------------------------------------------------
@@ -172,9 +178,13 @@ footer {
   color: #666666;
 }
 
+/*#header-social-icons {
+  @include span(2 of 12)
+}*/
+
 #header-social-icons, #footer-social-icons {
   float: left;
-  margin: -4px 20px 0 0;
+  margin: -4px 0px 0 0;
   padding-left: 12px;
   height: 7px;
 }
@@ -214,16 +224,16 @@ footer {
 
 //(481-899)(900-1200)
 .content-area {
-  @include span(12);
-  @include breakpoint(899px, $susy) {
-    @include span(9);
+  @include span(12 of 12);
+  @include susy-breakpoint(899px, $susy) {
+    @include span(9 of 12);
   }
 }
 
 .widget-area {
-  @include span(12);
+  @include span(12 of 12);
   @include susy-breakpoint(899px, $susy) {
-    @include span(3 last)
+    @include span(3 of 12 last)
   }
 
 }

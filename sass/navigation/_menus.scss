@@ -5,21 +5,23 @@
       width: 100%;*/
 
   display: block;
-  float: right;
-  margin-top: 22px;
-  margin-bottom: 22px;
+  // float: right;
+  @include span(10 of 12 last);
+  //margin-top: 22px;
+  //margin-bottom: 22px;
 }
 
 .menu-container {
   width: auto;
   display: block;
   float: left;
+  //@include span(8 of 12);
 
   ul {
     display: none;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 2em;
 
     ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -62,13 +64,13 @@
     }
   }
   li {
-    float: left;
+    //float: left;
     position: relative;
-    display: inline;
-    width: auto;
-    margin: 0px;
-    padding: 0px;
-    border-right: 1px dotted #ddd;
+    // display: inline-block;
+   // width: auto;
+    margin: 0;
+    padding: 0;
+    //border-right: 1px dotted #ddd;
     padding-right: 3px;
 
     &:hover > a,
@@ -76,15 +78,9 @@
     }
   }
   a {
+    font-weight: bold;
+    margin-bottom: 10px;
     display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0px 14px;
-    font-size: 12px;
-    color: #575652;
-    font-style: normal;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
-    letter-spacing: 0px;
   }
 
   .current_page_item > a,
@@ -99,14 +95,43 @@
   display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@include breakpoint(899px) {
   .menu-toggle {
     display: none;
   }
-  .menu-container ul {
-    display: block;
-    width: auto;
-    float: left;
+  .menu-container {
+    ul {
+      display: block;
+      width: auto;
+      float: left;
+      padding: 0;
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      margin: 0px;
+      padding: 0px;
+      border-right: 1px dotted #ddd;
+      padding-right: 3px;
+
+      &:hover > a,
+      &.focus > a {
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0px 14px;
+      font-size: 12px;
+      color: #575652;
+      font-style: normal;
+      text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+      letter-spacing: 0px;
+      margin: 0;
+    }
   }
 }
 

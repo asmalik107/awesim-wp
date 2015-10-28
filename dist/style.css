@@ -3056,16 +3056,6 @@ table {
 /*--------------------------------------------------------------
 # Grid
 --------------------------------------------------------------*/
-#masthead {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  background: #ffffff;
-}
-
-footer {
-  clear: both;
-  padding: 2em;
-}
-
 #page {
   max-width: 100%;
   margin-left: auto;
@@ -3075,6 +3065,20 @@ footer {
   content: " ";
   display: block;
   clear: both;
+}
+
+#masthead {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  background: #ffffff;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer {
+  clear: both;
+  padding: 2em;
 }
 
 .content-area {
@@ -3090,8 +3094,9 @@ footer {
   overflow: hidden;
   width: 200px;
   height: 28px;
+  width: 16.4420485175%;
   float: left;
-  margin: 16px 16px 14px 20px;
+  margin-right: 0.269541779%;
 }
 
 /*--------------------------------------------------------------
@@ -3194,9 +3199,9 @@ a:hover, a:active {
       float: left;
       width: 100%;*/
   display: block;
+  width: 83.2884097035%;
   float: right;
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-right: 0;
 }
 
 .menu-container {
@@ -3208,7 +3213,7 @@ a:hover, a:active {
   display: none;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 2em;
 }
 .menu-container ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -3235,25 +3240,15 @@ a:hover, a:active {
   left: auto;
 }
 .menu-container li {
-  float: left;
   position: relative;
-  display: inline;
-  width: auto;
-  margin: 0px;
-  padding: 0px;
-  border-right: 1px dotted #ddd;
+  margin: 0;
+  padding: 0;
   padding-right: 3px;
 }
 .menu-container a {
+  font-weight: bold;
+  margin-bottom: 10px;
   display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0px 14px;
-  font-size: 12px;
-  color: #575652;
-  font-style: normal;
-  text-shadow: 1px 1px 0px white;
-  letter-spacing: 0px;
 }
 
 /* Small menu. */
@@ -3262,7 +3257,7 @@ a:hover, a:active {
   display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media (min-width: 899px) {
   .menu-toggle {
     display: none;
   }
@@ -3271,6 +3266,28 @@ a:hover, a:active {
     display: block;
     width: auto;
     float: left;
+    padding: 0;
+  }
+  .menu-container li {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    border-right: 1px dotted #ddd;
+    padding-right: 3px;
+  }
+  .menu-container a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0px 14px;
+    font-size: 12px;
+    color: #575652;
+    font-style: normal;
+    text-shadow: 1px 1px 0px white;
+    letter-spacing: 0px;
+    margin: 0;
   }
 }
 /*.post-navigation {
@@ -3296,6 +3313,9 @@ a:hover, a:active {
   width: 50%;
 }
 
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
 .search-form .search-submit {
   display: none;
 }
@@ -3304,16 +3324,13 @@ a:hover, a:active {
   /*  position: absolute;
     right: 20px;
     top: 1px;*/
-  float: right;
-  margin: 16px 16px 14px 0;
 }
-
 .site-header .search-field {
   background-color: transparent;
   background-image: url(images/search-icon.png);
   background-position: 5px center;
-  background-repeat: no-repeat;
   background-size: 20px 20px;
+  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   height: 26px;
@@ -3323,13 +3340,12 @@ a:hover, a:active {
   transition: width 400ms ease, background 400ms ease;
   width: 1px;
 }
-
 .site-header .search-field:focus {
   background-color: #fff;
-  border: 2px solid   #57564B;
+  border: 2px solid #57564B;
   cursor: text;
   outline: 0;
-  width: 230px;
+  width: 200px;
 }
 
 /*--------------------------------------------------------------
@@ -3600,9 +3616,12 @@ object {
   color: #666666;
 }
 
+/*#header-social-icons {
+  @include span(2 of 12)
+}*/
 #header-social-icons, #footer-social-icons {
   float: left;
-  margin: -4px 20px 0 0;
+  margin: -4px 0px 0 0;
   padding-left: 12px;
   height: 7px;
 }
