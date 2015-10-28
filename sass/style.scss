@@ -104,9 +104,9 @@ footer {
   overflow: hidden;
   width: 200px;
   height: 28px;
- // float: left;
+  float: left;
  // margin: 16px 16px 14px 20px;
-  @include span(2 of 12);
+  //@include span(2 of 12);
 
 }
 

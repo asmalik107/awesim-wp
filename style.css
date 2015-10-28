@@ -3094,9 +3094,7 @@ footer {
   overflow: hidden;
   width: 200px;
   height: 28px;
-  width: 16.4420485175%;
   float: left;
-  margin-right: 0.269541779%;
 }
 
 /*--------------------------------------------------------------
@@ -3195,13 +3193,9 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .main-navigation {
   /*	clear: both;
-      display: block;
-      float: left;
-      width: 100%;*/
-  display: block;
-  width: 83.2884097035%;
+      display: block;*/
   float: right;
-  margin-right: 0;
+  display: block;
 }
 
 .menu-container {
@@ -3324,6 +3318,7 @@ a:hover, a:active {
   /*  position: absolute;
     right: 20px;
     top: 1px;*/
+  float: left;
 }
 .site-header .search-field {
   background-color: transparent;

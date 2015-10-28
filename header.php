@@ -37,10 +37,8 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="menu-container">
-
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-
 			</div>
 			<div id="header-social-icons">
 				<ul>
