@@ -5,7 +5,15 @@
  * support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, subMenus;
+	var mobileMenu = $('.mobile-menu');
+    var toggleButton = $('.button-toggle');
+
+    toggleButton.click(function(){
+       // alert('click');
+        mobileMenu.toggleClass('mobile-menu-open');
+    });
+
+/*	var container, button, menu, links, subMenus;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -57,9 +65,9 @@
 		links[i].addEventListener( 'blur', toggleFocus, true );
 	}
 
-	/**
+	/!**
 	 * Sets or removes .focus class on an element.
-	 */
+	 *!/
 	function toggleFocus() {
 		var self = this;
 
@@ -77,5 +85,5 @@
 
 			self = self.parentElement;
 		}
-	}
+	}*/
 } )();

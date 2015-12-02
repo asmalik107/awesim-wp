@@ -37,10 +37,12 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="menu-container">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</div>
-			<div id="header-social-icons">
+            <div class="menu-toggle">
+                <button class="button-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></button>
+            </div>
+			<div class="header-social-icons">
 				<ul>
 					<li>
 						<a href="https://www.facebook.com/">
@@ -71,11 +73,41 @@
 			<?php get_search_form(); ?>
 		</nav><!-- #site-navigation -->
 
-
-
-
-
 	</header><!-- #masthead -->
+
+	<div class="mobile-menu">
+	    <div class='mobile-menu-container'>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_id' => 'primary-menu' ) ); ?>
+        </div>
+        <div class="header-social-icons">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/">
+                        <span class="fa-stack fa-stack-header">
+                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/">
+                        <span class="fa-stack fa-stack-header">
+                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/">
+                        <span class="fa-stack fa-stack-header">
+                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
+                            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 <!-- 	<div id="content" class="site-content"> -->
 

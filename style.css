@@ -3194,22 +3194,103 @@ a:hover, a:active {
 .main-navigation {
   /*	clear: both;
       display: block;*/
-  float: right;
   display: block;
 }
 
 .menu-container {
   width: auto;
-  display: block;
-  float: left;
-}
-.menu-container ul {
   display: none;
+  /* ul {
+     display: none;
+     list-style: none;
+     margin: 0;
+     padding: 2em;
+
+     ul {
+       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+       float: left;
+       position: absolute;
+       top: 1.1em;
+       left: -999em;
+       z-index: 99999;
+       line-height: 1.5rem;
+       background: $color_secondary-background;
+
+       ul {
+         left: -999em;
+         top: 0;
+       }
+
+       li {
+         &:hover > ul,
+         &.focus > ul {
+           left: 100%;
+         }
+       }
+
+       a {
+         width: 200px;
+       }
+
+       :hover > a,
+       .focus > a {
+       }
+
+       a:hover,
+       a.focus {
+       }
+     }
+
+     li:hover > ul,
+     li.focus > ul {
+       left: auto;
+     }
+   }
+   li {
+     //float: left;
+     position: relative;
+     // display: inline-block;
+     // width: auto;
+     margin: 0;
+     padding: 0;
+     //border-right: 1px dotted #ddd;
+     padding-right: 3px;
+
+     &:hover > a,
+     &.focus > a {
+     }
+   }
+   a {
+     font-weight: bold;
+     margin-bottom: 10px;
+     display: block;
+   }*/
+}
+
+/* Small menu. */
+.menu-toggle {
+  float: right;
+}
+
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+.mobile-menu {
+  display: none;
+}
+.mobile-menu .header-social-icons {
+  display: block;
+}
+
+.mobile-menu-container ul {
+  display: block;
   list-style: none;
   margin: 0;
   padding: 2em;
 }
-.menu-container ul ul {
+.mobile-menu-container ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
@@ -3219,36 +3300,35 @@ a:hover, a:active {
   line-height: 1.5rem;
   background: #ffffff;
 }
-.menu-container ul ul ul {
+.mobile-menu-container ul ul ul {
   left: -999em;
   top: 0;
 }
-.menu-container ul ul li:hover > ul, .menu-container ul ul li.focus > ul {
+.mobile-menu-container ul ul li:hover > ul, .mobile-menu-container ul ul li.focus > ul {
   left: 100%;
 }
-.menu-container ul ul a {
+.mobile-menu-container ul ul a {
   width: 200px;
 }
-.menu-container ul li:hover > ul,
-.menu-container ul li.focus > ul {
+.mobile-menu-container ul li:hover > ul,
+.mobile-menu-container ul li.focus > ul {
   left: auto;
 }
-.menu-container li {
+.mobile-menu-container li {
   position: relative;
   margin: 0;
   padding: 0;
   padding-right: 3px;
 }
-.menu-container a {
+.mobile-menu-container a {
   font-weight: bold;
   margin-bottom: 10px;
   display: block;
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.mobile-menu-open {
   display: block;
+  background: #ffffff;
 }
 
 @media (min-width: 899px) {
@@ -3256,6 +3336,10 @@ a:hover, a:active {
     display: none;
   }
 
+  .menu-container {
+    width: auto;
+    display: block;
+  }
   .menu-container ul {
     display: block;
     width: auto;
@@ -3283,6 +3367,10 @@ a:hover, a:active {
     letter-spacing: 0px;
     margin: 0;
   }
+
+  .mobile-menu {
+    display: none;
+  }
 }
 /*.post-navigation {
   clear: both;
@@ -3307,6 +3395,10 @@ a:hover, a:active {
   width: 50%;
 }
 
+.menu-all-pages-container {
+  float: left;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -3318,7 +3410,7 @@ a:hover, a:active {
   /*  position: absolute;
     right: 20px;
     top: 1px;*/
-  float: left;
+  float: right;
 }
 .site-header .search-field {
   background-color: transparent;
@@ -3614,26 +3706,32 @@ object {
 /*#header-social-icons {
   @include span(2 of 12)
 }*/
-#header-social-icons, #footer-social-icons {
-  float: left;
-  margin: -4px 0px 0 0;
-  padding-left: 12px;
-  height: 7px;
+.header-social-icons, .footer-social-icons {
+  display: none;
 }
 
-#header-social-icons ul, #footer-social-icons ul {
+@media (min-width: 899px) {
+  .header-social-icons, .footer-social-icons {
+    display: block;
+    float: right;
+    margin: -4px 0px 0 0;
+    padding-left: 12px;
+    height: 7px;
+  }
+}
+.header-social-icons ul, .footer-social-icons ul {
   margin: 0;
   padding: 0;
 }
 
-#header-social-icons ul li, #footer-social-icons ul li {
+.header-social-icons ul li, .footer-social-icons ul li {
   border-bottom: 0;
   display: inline-block;
   margin-right: -3px;
   margin-top: 0;
 }
 
-#header-social-icons ul li a, #footer-social-icons ul li a {
+.header-social-icons ul li a, .footer-social-icons ul li a {
   display: inline;
   margin-top: 0;
   box-shadow: 1px 1px 0px white inset;

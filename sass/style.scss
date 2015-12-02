@@ -73,9 +73,6 @@ $susy: (
         debug: (image: hide)
 );
 
-
-
-
 #page {
   @include container;
 }
@@ -105,7 +102,7 @@ footer {
   width: 200px;
   height: 28px;
   float: left;
- // margin: 16px 16px 14px 20px;
+  // margin: 16px 16px 14px 20px;
   //@include span(2 of 12);
 
 }
@@ -164,7 +161,7 @@ footer {
 
   .article-featured-image {
     img {
-      width:100%;
+      width: 100%;
     }
   }
 }
@@ -182,26 +179,33 @@ footer {
   @include span(2 of 12)
 }*/
 
-#header-social-icons, #footer-social-icons {
-  float: left;
-  margin: -4px 0px 0 0;
-  padding-left: 12px;
-  height: 7px;
+.header-social-icons, .footer-social-icons {
+  display: none;
 }
 
-#header-social-icons ul, #footer-social-icons ul {
+@include breakpoint(899px) {
+  .header-social-icons, .footer-social-icons {
+    display: block;
+    float: right;
+    margin: -4px 0px 0 0;
+    padding-left: 12px;
+    height: 7px;
+  }
+}
+
+.header-social-icons ul, .footer-social-icons ul {
   margin: 0;
   padding: 0;
 }
 
-#header-social-icons ul li, #footer-social-icons ul li {
+.header-social-icons ul li, .footer-social-icons ul li {
   border-bottom: 0;
   display: inline-block;
   margin-right: -3px;
   margin-top: 0;
 }
 
-#header-social-icons ul li a, #footer-social-icons ul li a {
+.header-social-icons ul li a, .footer-social-icons ul li a {
   display: inline;
   margin-top: 0;
   -webkit-box-shadow: 1px 1px 0px rgba(255, 255, 255, 1) inset;
@@ -219,7 +223,6 @@ footer {
 .fa-stack-square {
   font-size: 1.8em;
 }
-
 
 
 //(481-899)(900-1200)
@@ -241,11 +244,11 @@ footer {
 .article-masonry {
   @extend .article-single;
   width: 98%;
-  @include breakpoint(700px 1199px){
-    width:48%;
+  @include breakpoint(700px 1199px) {
+    width: 48%;
   }
-  @include breakpoint(1200px){
-    width:32%;
+  @include breakpoint(1200px) {
+    width: 32%;
   }
 
 }
