@@ -79,7 +79,8 @@ $susy: (
 
 #masthead {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  background: $color_secondary-background;
+  background: $color_main_nav;
+  height: $size_main_nav;
   @include span(12 of 12);
 }
 
@@ -167,76 +168,90 @@ footer {
 }
 
 .site-footer {
-  color: #666666;
-  background-color: #322c29;
+  background-color: #076274;
 }
 
-.site-info a {
+/*.site-info a {
   color: #666666;
-}
-
-/*#header-social-icons {
-  @include span(2 of 12)
 }*/
 
 .header-social-icons, .footer-social-icons {
   display: none;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 0;
+    display: inline-block;
+    margin-right: -3px;
+    margin-top: 0;
+  }
+
+  a {
+    display: inline;
+    margin-top: 0;
+    font-size: 1.5em;
+    color: $color_links;
+    &:hover,
+    &.focus {
+      color: $color_links_hover;
+    }
+  }
+}
+
+@include breakpoint(481px) {
+  .comment-form-author, .comment-form-email, .comment-form-url {
+    width: 32%;
+  }
+
 }
 
 @include breakpoint(899px) {
+
+  #masthead {
+    position: fixed;
+    z-index: 100;
+    opacity: .92;
+  }
+
   .header-social-icons, .footer-social-icons {
     display: block;
     float: right;
     margin: -4px 0px 0 0;
     padding-left: 12px;
+    padding-right: 12px;
     height: 7px;
   }
-}
-
-.header-social-icons ul, .footer-social-icons ul {
-  margin: 0;
-  padding: 0;
-}
-
-.header-social-icons ul li, .footer-social-icons ul li {
-  border-bottom: 0;
-  display: inline-block;
-  margin-right: -3px;
-  margin-top: 0;
-}
-
-.header-social-icons ul li a, .footer-social-icons ul li a {
-  display: inline;
-  margin-top: 0;
-  -webkit-box-shadow: 1px 1px 0px rgba(255, 255, 255, 1) inset;
-  -moz-box-shadow: 1px 1px 0px rgba(255, 255, 255, 1) inset;
-  box-shadow: 1px 1px 0px rgba(255, 255, 255, 1) inset;
 }
 
 .fa-stack-header {
   height: 1.8em;
   line-height: 1.8em;
-  color: #57564B;
-  background: $color_secondary-background;
 }
 
 .fa-stack-square {
   font-size: 1.8em;
 }
 
-
 //(481-899)(900-1200)
 .content-area {
   @include span(12 of 12);
   @include susy-breakpoint(899px, $susy) {
     @include span(9 of 12);
+    position: relative;
+    top: $size_main_nav;
+    margin-bottom: $size_main_nav;
   }
 }
 
 .widget-area {
   @include span(12 of 12);
   @include susy-breakpoint(899px, $susy) {
-    @include span(3 of 12 last)
+    @include span(3 of 12 last);
+    position: relative;
+    top: $size_main_nav;
   }
 
 }
@@ -251,4 +266,8 @@ footer {
     width: 32%;
   }
 
+}
+
+.icon-hamburger:before {
+  content: "\e008";
 }

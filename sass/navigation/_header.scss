@@ -22,7 +22,7 @@
     border: none;
     cursor: pointer;
     height: 26px;
-    margin: 3px 0;
+    margin: 0px 0;
     padding: 0 0 0 34px;
     position: relative;
     -webkit-transition: width 400ms ease, background 400ms ease;
@@ -31,7 +31,7 @@
 
     &:focus {
       background-color: #fff;
-      border: 2px solid #57564B;
+      border: 2px solid #45828E;
       cursor: text;
       outline: 0;
       width: 200px;

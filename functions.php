@@ -139,6 +139,13 @@ function awesomo_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'awesomo_scripts' );
 
+
+
+
+
+
+
+
 /**
  * Implement the Custom Header feature.
  */

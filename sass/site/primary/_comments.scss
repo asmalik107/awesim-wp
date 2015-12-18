@@ -1,6 +1,90 @@
+/*
 .comment-content a {
 	word-wrap: break-word;
 }
 .bypostauthor {
 	display: block;
+}
+*/
+
+
+
+.comments-title {
+  display: block;
+}
+
+.comment-list {
+  list-style: none;
+
+  ol {
+    list-style: none;
+  }
+}
+
+.comment-respond {
+
+}
+
+.comment-reply {
+  a {
+
+  }
+}
+
+.comment-reply-title {
+
+}
+
+.comment-metadata {
+
+}
+
+.comment-form-author, .comment-form-email, .comment-form-url {
+  float: left;
+  width: 100%;
+  margin-right: 1% !important;
+}
+
+.comment-form-author, .comment-form-email {
+  margin-right: 1% !important;
+}
+
+.comment-form-url {
+  margin-right: 0 !important;
+}
+
+.comment-content {
+  clear: both;
+  padding: 15px 10px;
+  margin: 7px 0 5px;
+  border: 1px solid #ddd;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+.comment-form {
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"] {
+    width: 100%;
+  }
+
+  .comment-form-comment {
+
+  }
+
+  .form-submit {
+
+    input[type="submit"] {
+      width: 100%;
+      font-size: 110%;
+    }
+  }
 }

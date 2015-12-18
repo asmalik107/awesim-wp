@@ -1,22 +1,36 @@
-$color__background-body: #f5f5f5;
+/*$color__background-body: #f5f5f5;*/
+$color__background-body: #FAF7F3;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
+$color_links: #45828E;
+$color_links_hover: scale-color($color_links, $lightness: -15%);
+
 $color_secondary-background: #ffffff;
+$color_main_nav: #A5ECFA;
+$color_main_nav_links: $color_links;
 
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #000000;
-$color__link-visited: #000000;
-$color__link-hover: #545454;
-$color__text-main: #404040;
+$color__link: #39AEC6;
+$color__link-visited: #39AEC6;
+$color__link-hover: scale-color($color_links, $lightness: -15%);
+/*$color__text-main: #404040;*/
+$color__text-main: #45828E;
+$color__input_focus: #45828E;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+$primary-color: #2199e8;
+$success-color: #3adb76;
+$warning-color: #ffae00;
+$error-color: #ec5840;
+$link-color: #076274;

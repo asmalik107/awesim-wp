@@ -141,5 +141,25 @@ function awesomo_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'awesomo_categories' );
 }
+
+function awesemo_comments( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment;
+
+    ?>
+    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+        <article id="comment-<?php comment_ID(); ?>" class="comment">
+
+            <div class="comment-content"><?php comment_text(); ?></div>
+
+            <p><?php echo "Comment authors age: ".get_comment_meta( $comment->comment_ID, 'age', true ); ?></p>
+
+            <div class="reply">
+                <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'twentyeleven' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+            </div>
+        </article>
+    </li>
+    <?php
+}
+
 add_action( 'edit_category', 'awesomo_category_transient_flusher' );
 add_action( 'save_post',     'awesomo_category_transient_flusher' );

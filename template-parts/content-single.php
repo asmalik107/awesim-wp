@@ -14,18 +14,19 @@
 	    <a href="<?php echo get_permalink(); ?>">
 		   <?php the_post_thumbnail('large-thumbnail'); ?>
 		</a>
+
+
+        <header class="entry-header"
+            <span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
+
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+            <div class="entry-meta"
+                <?php awesomo_posted_on(); ?>
+            </div><!-- .entry-meta -->
+
+        </header><!-- .entry-header -->
 	</div>
-
-	<header class="entry-header"
-		<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta"
-			<?php awesomo_posted_on(); ?>
-		</div><!-- .entry-meta -->
-
-	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -37,8 +38,8 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+<!--	<footer class="entry-footer">
 		<?php awesomo_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer> --><!-- .entry-footer -->
 </article><!-- #post-## -->
 

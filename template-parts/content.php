@@ -16,19 +16,21 @@
         <a href="<?php echo get_permalink(); ?>">
          <?php the_post_thumbnail('small-thumbnail'); ?>
         </a>
-    </div>
 
-	<header class="entry-header"
-		<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
 
-		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+        <header class="entry-header"
+            <span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php awesomo_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+            <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+
+            <?php if ( 'post' === get_post_type() ) : ?>
+            <div class="entry-meta">
+                <?php awesomo_posted_on(); ?>
+            </div><!-- .entry-meta -->
+            <?php endif; ?>
+        </header><!-- .entry-header -->
+
+	 </div>
 
 
 	<div class="entry-content">
@@ -39,7 +41,7 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
-		<a href="<?php echo get_permalink(); ?>"> Read More...</a>
+		<a href="<?php echo get_permalink(); ?>" class="button button-link"> Read More...</a>
 
 		<?php
 			wp_link_pages( array(
@@ -49,7 +51,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+<!--	<footer class="entry-footer">
 		<?php awesomo_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>--><!-- .entry-footer -->
 </article><!-- #post-## -->

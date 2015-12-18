@@ -10,6 +10,6 @@
  			/*	columnWidth: 20,*/
  			gutter: 10,
  			percentPosition: true
- 		});
+		});
  	});
- })
+ });

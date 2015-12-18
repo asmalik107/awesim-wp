@@ -1,13 +1,25 @@
 .widget {
-	margin: 0 0 1rem;
+  margin: 0 0 1rem;
 
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
-	}
+  /* Make sure select elements fit in widgets. */
+  select {
+    max-width: 100%;
+  }
 }
 
 /* Search widget. */
 .widget_search .search-submit {
-	display: none;
+  display: none;
+}
+
+.tagcloud a {
+  display: inline-block;
+  font-size: .75rem !important;
+  font-weight: 700;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0 4px 8px 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background: #39AEC6;
 }
