@@ -31,14 +31,9 @@
             <!-- <span><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></span> -->
             </button>
         </div>
-		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			<?php else : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			<?php endif; ?>
-	<!-- 			<p class="site-description"><?php bloginfo( 'description' ); ?></p> -->
-		</div><!-- .site-branding -->
+		<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		    <span class='site-logo'></span>
+		</a>
 
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

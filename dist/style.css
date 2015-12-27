@@ -3093,11 +3093,11 @@ footer {
 }
 
 .site-branding {
-  height: auto;
+  height: 40px;
   overflow: hidden;
   width: 200px;
-  height: 28px;
   float: left;
+  margin: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -3128,7 +3128,7 @@ input[type="submit"] {
 .button-warning,
 .button-secondary {
   color: white;
-  border-radius: 4px;
+  border-radius: 0;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -3272,6 +3272,7 @@ a:hover, a:active {
       display: block;*/
   display: block;
   padding-top: 1.2em;
+  padding-left: 20em;
 }
 
 .menu-container {
@@ -3472,6 +3473,7 @@ a:hover, a:active {
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
+  margin-top: 1em;
 }
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
@@ -3479,6 +3481,7 @@ a:hover, a:active {
   float: right;
   text-align: right;
   width: 50%;
+  margin-top: 1em;
 }
 
 .menu-all-pages-container {
@@ -3490,6 +3493,13 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .search-form .search-submit {
   display: none;
+}
+
+.site-logo {
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  height: 40px;
+  display: block;
 }
 
 .site-header .search-form {
@@ -3608,10 +3618,19 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1rem;
+  padding-left: 1rem !important;
   /* Make sure select elements fit in widgets. */
 }
 .widget select {
   max-width: 100%;
+}
+.widget ul {
+  padding-left: 0;
+  list-style: none;
+}
+.widget ul li {
+  border-bottom: 1px solid #EEE;
+  margin-bottom: 10px;
 }
 
 /* Search widget. */
@@ -3620,15 +3639,50 @@ a:hover, a:active {
 }
 
 .tagcloud a {
+  position: relative;
   display: inline-block;
   font-size: .75rem !important;
   font-weight: 700;
   color: #fff;
   padding: 5px 10px;
-  margin: 0 4px 8px 0;
+  margin: 0px 0px 8px 10px;
   white-space: nowrap;
   text-transform: uppercase;
   background: #39AEC6;
+    /*
+
+    &:hover:before{
+      background: scale-color(#39AEC6, $lightness: -15%);
+    }
+    */
+}
+.tagcloud a:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  float: left;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: -1px -1px 2px #004977;
+}
+.tagcloud a:before {
+  content: "";
+  float: left;
+  position: absolute;
+  top: 0;
+  left: -11px;
+  width: 0;
+  height: 0;
+  border-color: transparent #39AEC6 transparent transparent;
+  border-style: solid;
+  border-width: 12px 11px 11px 0;
+}
+.tagcloud a:hover, .tagcloud a:focus {
+  background: #3094a8;
 }
 
 /*--------------------------------------------------------------
@@ -3706,6 +3760,24 @@ a:hover, a:active {
   list-style: none;
 }
 
+/*.comment-respond {
+
+}
+
+.comment-reply {
+  a {
+
+  }
+}
+
+.comment-reply-title {
+
+}
+
+.comment-metadata {
+
+}
+
 .comment-form-author, .comment-form-email, .comment-form-url {
   float: left;
   width: 100%;
@@ -3727,6 +3799,22 @@ a:hover, a:active {
   border: 1px solid #ddd;
   line-height: 1.5;
   background-color: #fff;
+}*/
+.comment-avatar {
+  float: left;
+  margin-right: 20px;
+}
+
+.comment-content {
+  overflow: hidden;
+}
+.comment-content footer {
+  clear: both;
+  padding: 1em;
+}
+
+.comment-metadata {
+  display: inline-block;
 }
 
 .comment-form label {

@@ -6,6 +6,8 @@
 
   display: block;
   padding-top: 1.2em;
+  padding-left: 20em;
+
 
   // float: right;
   //@include span(10 of 12 last);
@@ -251,12 +253,14 @@
   .nav-previous {
     float: left;
     width: 50%;
+    margin-top: 1em;
   }
 
   .nav-next {
     float: right;
     text-align: right;
     width: 50%;
+    margin-top: 1em;
   }
 }
 

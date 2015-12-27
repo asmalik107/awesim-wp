@@ -145,21 +145,137 @@ function awesomo_category_transient_flusher() {
 function awesemo_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
 
-    ?>
-    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-        <article id="comment-<?php comment_ID(); ?>" class="comment">
+	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 
-            <div class="comment-content"><?php comment_text(); ?></div>
+		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+			<p><?php esc_html_e( 'Pingback:', 'awesomo' ); ?> <?php comment_author_link(); ?>
+              <?php edit_comment_link( esc_html__( 'Edit', 'awesomo' ), '<span class="edit-link"><i class="fa fa-pencil-square-o"></i>', '</span>' ); ?>
+			</p>
 
-            <p><?php echo "Comment authors age: ".get_comment_meta( $comment->comment_ID, 'age', true ); ?></p>
+        <?php else : ?>
+            <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+            	<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+            	    <div class="comment-avatar">
+                        <?php echo get_avatar( $comment, 48 ); ?>
+            	    </div><!--.comment-avatar -->
+            	    <div class="comment-content">
+            	        <header>
+            	            <span class="author-name"><?php comment_author(); ?></span>
+            	            <div class="comment-metadata">
+                    		    <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+                                        <?php echo get_comment_date(); ?>
+                                        <?php echo get_comment_time(); ?>
+                                    </a>
 
-            <div class="reply">
-                <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'twentyeleven' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-            </div>
-        </article>
-    </li>
+                                </div>
+                            <?php edit_comment_link( esc_html__( 'Edit', 'awesomo' ), '<span class="edit-link"><i class="fa fa-pencil-square-o"></i>', '</span>' ); ?>
+            	        </header>
+            	        <div class="comment-content-body">
+                            <?php if ($comment->comment_approved == '0') : ?>
+                                <p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'dynamic-news-lite' ); ?></p>
+                            <?php endif; ?>
+                            <?php comment_text(); ?>
+            	        </div><!-- .comment-content-body-->
+            	        <footer>
+                            <div class="reply">
+                                <?php comment_reply_link(array_merge( $args, array(
+                                    'reply_text' => __( '<i class="fa fa-reply"></i>&nbsp; Reply' ),
+                                    'depth' => $depth,
+                                    'max_depth' => $args['max_depth']
+                                ))) ?>
+                            </div>
+            	        </footer>
+
+            	    </div> <!-- .comment-content -->
+
+
+            </article><!-- .comment-body -->
     <?php
+    endif;
 }
+
+
+function awesemo_post_navigation( $args = array() ) {
+	$args = wp_parse_args( $args, array(
+		'prev_text'          => '%title',
+		'next_text'          => '%title',
+		'in_same_term'       => false,
+		'excluded_terms'     => '',
+		'taxonomy'           => 'category',
+		'screen_reader_text' => __( 'Post navigation' ),
+	) );
+
+	$navigation = '';
+
+	$previous = get_previous_post_link(
+		'<div class="nav-previous">%link</div>',
+		__('<i class="fa fa-arrow-left"></i>' . $args['prev_text'], 'awesemo'),
+		$args['in_same_term'],
+		$args['excluded_terms'],
+		$args['taxonomy']
+	);
+
+	$next = get_next_post_link(
+		'<div class="nav-next">%link</div>',
+		 __($args['next_text'] . '<i class="fa fa-arrow-right"></i>', 'awesemo'),
+		$args['in_same_term'],
+		$args['excluded_terms'],
+		$args['taxonomy']
+	);
+
+	// Only add markup if there's somewhere to navigate to.
+	if ( $previous || $next ) {
+		$navigation = _navigation_markup( $previous . $next, 'post-navigation', $args['screen_reader_text'] );
+	}
+
+	echo($navigation);
+}
+
+
+function awesemo_posts_navigation($args = array()) {
+	$navigation = '';
+
+	// Don't print empty markup if there's only one page.
+	if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
+		$args = wp_parse_args( $args, array(
+			'prev_text'          => __( 'Older posts' ),
+			'next_text'          => __( 'Newer posts' ),
+			'screen_reader_text' => __( 'Posts navigation' ),
+		) );
+
+		$next_link = get_previous_posts_link( __($args['next_text'] . '<i class="fa fa-arrow-right"></i>', 'awesemo'));
+		$prev_link = get_next_posts_link( __('<i class="fa fa-arrow-left"></i>' . $args['prev_text'], 'awesemo') );
+
+		if ( $prev_link ) {
+			$navigation .= '<div class="nav-previous">' . $prev_link . '</div>';
+		}
+
+		if ( $next_link ) {
+			$navigation .= '<div class="nav-next">' . $next_link . '</div>';
+		}
+
+
+		$navigation = _navigation_markup( $navigation, 'posts-navigation', $args['screen_reader_text'] );
+	}
+    echo($navigation);
+}
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="button button-link button-large"';
+}
+
+add_filter('next_post_link', 'post_link_attributes');
+add_filter('previous_post_link', 'post_link_attributes');
+
+function post_link_attributes($output) {
+    $code = 'class="button button-link button-large"';
+    return str_replace('<a href=', '<a '.$code.' href=', $output);
+}
+
+
 
 add_action( 'edit_category', 'awesomo_category_transient_flusher' );
 add_action( 'save_post',     'awesomo_category_transient_flusher' );

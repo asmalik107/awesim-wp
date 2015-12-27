@@ -7,8 +7,6 @@
 }
 */
 
-
-
 .comments-title {
   display: block;
 }
@@ -21,7 +19,7 @@
   }
 }
 
-.comment-respond {
+/*.comment-respond {
 
 }
 
@@ -60,6 +58,43 @@
   border: 1px solid #ddd;
   line-height: 1.5;
   background-color: #fff;
+}*/
+
+.comment-avatar {
+  float: left;
+  margin-right: 20px;
+}
+
+.comment-content {
+  overflow: hidden;
+
+  header{
+
+  }
+
+
+  footer{
+    clear: both;
+    padding: 1em;
+
+  }
+}
+
+.comment-content-body{
+
+}
+
+.author-name {
+
+}
+
+.comment-metadata {
+  display: inline-block;
+}
+
+
+.comment-awaiting-moderation {
+
 }
 
 .comment-form {

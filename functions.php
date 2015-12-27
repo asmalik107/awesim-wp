@@ -41,6 +41,7 @@ function awesomo_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size('recent-thumbnail', 55, 55, true);
 	add_image_size('small-thumbnail', 180, 120, true);
 	add_image_size('medium-thumbnail', 300, 200, true);
 	add_image_size('large-thumbnail', 800, 600, true);

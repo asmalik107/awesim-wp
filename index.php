@@ -49,7 +49,9 @@ get_header(); ?>
 
 		</main><!-- #main -->
 		<div class="load-container">
-			<?php the_posts_navigation(); ?>
+		<!--	<?php the_posts_navigation(); ?> -->
+			<?php awesemo_posts_navigation(); ?>
+
 		</div>
 	</div><!-- #primary -->
 

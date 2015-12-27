@@ -37,6 +37,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
+			<?php awesemo_posts_navigation(); ?>
 
 		<?php else : ?>
 

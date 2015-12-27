@@ -2,6 +2,13 @@
   display: none;
 }
 
+.site-logo {
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  height: 40px;
+  display: block;
+}
+
 .site-header {
   .search-form {
     /*  position: absolute;

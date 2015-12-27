@@ -26,7 +26,7 @@
             </div><!-- .entry-meta -->
 
         </header><!-- .entry-header -->
-	</div>
+        </div>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
