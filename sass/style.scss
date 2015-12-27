@@ -252,6 +252,7 @@ footer {
     @include span(3 of 12 last);
     position: relative;
     top: $size_main_nav;
+    margin-bottom: $size_main_nav;
   }
 
 }

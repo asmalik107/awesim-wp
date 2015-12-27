@@ -276,6 +276,34 @@ function post_link_attributes($output) {
 }
 
 
+function awesemo_recent_posts() {
+    ?>
+        <aside id="recent-posts" class="widget widget_recent_entries article-single">
+            <h3>Recent Posts</h3>
+            <ul>
+            <?php
+                $args = array( 'numberposts' => '5' );
+                $recent_posts = wp_get_recent_posts($args);
+                foreach( $recent_posts as $recent ){
+                    if($recent['post_status']=="publish"){
+                        echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+                        echo get_the_post_thumbnail($recent["ID"], 'recent-thumbnail');
+                        echo($recent['comment_count']);
+
+                        $category = get_the_category($recent["ID"]);
+                        echo  $category[0]->cat_name;
+
+                        //echo(get_the_category($recent["ID"]));
+                        echo $recent['post_date'];
+                    //print_r($recent);
+                    }
+                }
+                ?>
+            </ul>
+        </aside>
+    <?php
+}
+
 
 add_action( 'edit_category', 'awesomo_category_transient_flusher' );
 add_action( 'save_post',     'awesomo_category_transient_flusher' );
