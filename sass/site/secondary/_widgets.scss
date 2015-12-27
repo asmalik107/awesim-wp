@@ -78,3 +78,23 @@
   }
 
 }
+
+#recent-post-widget {
+  .thumbnail {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+
+  .detail {
+    margin-bottom: 10px;
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  .post-date {
+    display: block;
+    font-size: .8em;
+  }
+}

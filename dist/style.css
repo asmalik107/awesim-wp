@@ -3685,6 +3685,21 @@ a:hover, a:active {
   background: #3094a8;
 }
 
+#recent-post-widget .thumbnail {
+  float: left;
+  margin: 0 10px 0 0;
+}
+#recent-post-widget .detail {
+  margin-bottom: 10px;
+}
+#recent-post-widget a {
+  font-weight: bold;
+}
+#recent-post-widget .post-date {
+  display: block;
+  font-size: .8em;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
