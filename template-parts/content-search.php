@@ -9,7 +9,12 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('article-single'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('article-masonry'); ?>>
+    <div class="article-featured-image">
+            <a href="<?php echo get_permalink(); ?>">
+               <?php the_post_thumbnail('small-thumbnail'); ?>
+            </a>
+	</div>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 

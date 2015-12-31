@@ -30,7 +30,8 @@ input[type="submit"] {
 .button-success,
 .button-error,
 .button-warning,
-.button-secondary {
+.button-secondary,
+.button-tag{
   color: white;
   border-radius: 0;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -54,7 +55,11 @@ input[type="submit"], .button-primary {
 
 .button-link {
   @include button-base($link_color);
-  color: #fff !important;
+  color: #C5F3FC !important;
+}
+
+.button-tag {
+  @include button-base($tag_color);
 }
 
 .button-xsmall {

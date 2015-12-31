@@ -44,7 +44,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 /*$color__background-body: #f5f5f5;*/
-/*$color__text-main: #404040;*/
+/*$color__text-main: #45828E;*/
+/*$tag-color: #39AEC6;*/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -283,8 +284,8 @@ button,
 input,
 select,
 textarea {
-  color: #45828E;
-  font-family: "PT Sans", Verdana, sans-serif;
+  color: #404040;
+  font-family: "Roboto", sans-serif;
   font-size: 22.4px;
   font-size: 1.4rem;
   line-height: 1.5;
@@ -3126,7 +3127,8 @@ input[type="submit"] {
 .button-success,
 .button-error,
 .button-warning,
-.button-secondary {
+.button-secondary,
+.button-tag {
   color: white;
   border-radius: 0;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -3166,10 +3168,18 @@ input[type="submit"]:hover, input[type="submit"]:focus, .button-primary:hover, .
 
 .button-link {
   background-color: #076274;
-  color: #fff !important;
+  color: #C5F3FC !important;
 }
 .button-link:hover, .button-link:focus {
   background: #065363;
+  outline: 0;
+}
+
+.button-tag {
+  background-color: #E07C67;
+}
+.button-tag:hover, .button-tag:focus {
+  background: #d8593e;
   outline: 0;
 }
 
@@ -3249,10 +3259,10 @@ label {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #39AEC6;
+  color: #45828E;
 }
 a:visited {
-  color: #39AEC6;
+  color: #45828E;
 }
 a:hover, a:focus, a:active {
   color: #3b6e79;
@@ -3618,15 +3628,22 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1rem;
-  padding-left: 1rem !important;
   /* Make sure select elements fit in widgets. */
+}
+.widget h3 {
+  color: #45828E;
+  background: #A5ECFA;
+  padding: 10px;
+  text-align: center;
+  margin: 0.4em;
 }
 .widget select {
   max-width: 100%;
 }
 .widget ul {
-  padding-left: 0;
+  padding: 0.5em;
   list-style: none;
+  margin: 0;
 }
 .widget ul li {
   border-bottom: 1px solid #EEE;
@@ -3638,6 +3655,9 @@ a:hover, a:active {
   display: none;
 }
 
+.tagcloud {
+  padding: 0.5em;
+}
 .tagcloud a {
   position: relative;
   display: inline-block;
@@ -3648,7 +3668,7 @@ a:hover, a:active {
   margin: 0px 0px 8px 10px;
   white-space: nowrap;
   text-transform: uppercase;
-  background: #39AEC6;
+  background: #E07C67;
     /*
 
     &:hover:before{
@@ -3677,12 +3697,12 @@ a:hover, a:active {
   left: -11px;
   width: 0;
   height: 0;
-  border-color: transparent #39AEC6 transparent transparent;
+  border-color: transparent #E07C67 transparent transparent;
   border-style: solid;
   border-width: 12px 11px 11px 0;
 }
 .tagcloud a:hover, .tagcloud a:focus {
-  background: #3094a8;
+  background: #d8593e;
 }
 
 #recent-post-widget .thumbnail {
@@ -3727,7 +3747,7 @@ a:hover, a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 0.5em 0.5em 0 0.5em;
 }
 
 .page-links {
@@ -3738,11 +3758,30 @@ a:hover, a:active {
 .entry-header {
   position: absolute;
   top: 0;
+  padding: 0.5em;
+  height: 100%;
   width: 100%;
+  margin: auto 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.entry-header a, .entry-header i, .entry-header span, .entry-header h1 {
+  color: white;
 }
 
+/*.entry-header {
+  position: absolute;
+  bottom: 10px;
+  left: 15%;
+  width: 70%;
+  padding: 20px 2.5%;
+  text-align: center;
+  background: rgba(7, 98, 116, 0.3);
+}*/
 .article-featured-image {
   position: relative;
+}
+.article-featured-image img {
+  transition: all .2s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -3945,7 +3984,6 @@ object {
 
 .article-single, .article-masonry {
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
   float: left;
   background: #ffffff;
   width: 100%;

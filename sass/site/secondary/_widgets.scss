@@ -1,6 +1,14 @@
 .widget {
   margin: 0 0 1rem;
-  padding-left: 1rem ! important;
+  //padding-left: 1rem ! important;
+
+  h3 {
+    color: #45828E;
+    background: $color_main_nav;
+    padding: 10px;
+    text-align: center;
+    margin: 0.4em;
+  }
 
   /* Make sure select elements fit in widgets. */
   select {
@@ -9,8 +17,9 @@
 
   ul {
     //padding: 10px 10px;
-    padding-left: 0;
+    padding: 0.5em;
     list-style: none;
+    margin:0;
 
     li {
       border-bottom: 1px solid #EEE;
@@ -26,6 +35,8 @@
 }
 
 .tagcloud {
+  padding: 0.5em;
+
   a {
     position: relative;
     display: inline-block;
@@ -36,7 +47,7 @@
     margin: 0px 0px 8px 10px;
     white-space: nowrap;
     text-transform: uppercase;
-    background: #39AEC6;
+    background: $tag-color;
 
     &:after {
       content: "";
@@ -66,14 +77,14 @@
       left: -11px;
       width: 0;
       height: 0;
-      border-color: transparent #39AEC6 transparent transparent;
+      border-color: transparent $tag-color transparent transparent;
       border-style: solid;
       border-width: 12px 11px 11px 0;
     }
 
     &:hover,
     &:focus {
-      background: scale-color(#39AEC6, $lightness: -15%);
+      background: scale-color($tag-color, $lightness: -15%);
     }
   }
 

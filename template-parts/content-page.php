@@ -10,6 +10,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-single'); ?>>
+	<div class="article-featured-image">
+	    <a href="<?php echo get_permalink(); ?>">
+		   <?php the_post_thumbnail('large-thumbnail'); ?>
+		</a>
+	</div>
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

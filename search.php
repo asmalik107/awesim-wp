@@ -10,13 +10,16 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
+
+		<?php if ( have_posts() ) : ?>
+            <header class="page-header">
+                <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'awesomo' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+            </header><!-- .page-header -->
+	    <?php endif; ?>
+
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'awesomo' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

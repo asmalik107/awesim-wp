@@ -12,11 +12,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-single'); ?>>
 	<div class="article-featured-image">
 	    <a href="<?php echo get_permalink(); ?>">
-		   <?php the_post_thumbnail('large-thumbnail'); ?>
+		   <?php the_post_thumbnail('medium-thumbnail'); ?>
 		</a>
 
 
-        <header class="entry-header"
+        <header class="entry-header">
             <span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
 
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

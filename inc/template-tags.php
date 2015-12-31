@@ -279,7 +279,7 @@ function post_link_attributes($output) {
 function awesemo_recent_posts() {
     ?>
         <aside id="recent-post-widget" class="widget widget_recent_entries article-single">
-            <h3>Recent Posts</h3>
+            <h3>Latest Posts</h3>
             <ul>
             <?php
                 $args = array( 'numberposts' => '5' );
@@ -296,7 +296,7 @@ function awesemo_recent_posts() {
                             <div class="detail">
                             <?php
                                 echo '<a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a>';
-                                echo '<span class="post-date">'.$recent['post_date'].'</span>';
+                                echo '<span class="post-date">'.mysql2date('F j, Y', $recent['post_date']).'</span>';
                             ?>
                             </div>
                         </li>

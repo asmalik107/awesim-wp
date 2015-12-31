@@ -30,7 +30,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
         <div class="load-container">
-            <!-- <?php the_post_navigation(); ?> -->
             <?php awesemo_post_navigation(); ?>
         </div>
 	</div><!-- #primary -->
