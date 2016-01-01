@@ -3755,28 +3755,64 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
-.entry-header {
+.cat-links {
   position: absolute;
   top: 0;
-  padding: 0.5em;
-  height: 100%;
-  width: 100%;
-  margin: auto 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-.entry-header a, .entry-header i, .entry-header span, .entry-header h1 {
+.cat-links a {
   color: white;
 }
 
-/*.entry-header {
+.entry-header {
+  margin: auto;
   position: absolute;
-  bottom: 10px;
-  left: 15%;
-  width: 70%;
-  padding: 20px 2.5%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 85%;
+  height: 50%;
+  border: 1px solid #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.entry-title {
   text-align: center;
-  background: rgba(7, 98, 116, 0.3);
-}*/
+  border-top: 1px solid #fff;
+  margin: 10px 10px;
+  padding-top: 20px;
+}
+.entry-title a {
+  color: white;
+  text-transform: capitalize;
+}
+.entry-title a:hover {
+  text-shadow: #fff 0 0 10px;
+}
+
+.entry-meta {
+  font-size: 1.1rem;
+  color: white;
+  margin: 10px 10px;
+  padding-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.entry-meta a {
+  color: white;
+}
+.entry-meta a:hover {
+  text-shadow: #fff 0 0 5px;
+}
+
+.comments-link {
+  margin-left: 10px;
+}
+
+.edit-link {
+  margin-left: 10px;
+}
+
 .article-featured-image {
   position: relative;
 }
@@ -4027,6 +4063,12 @@ object {
     width: 32%;
   }
 }
+@media (min-width: 482px) and (max-width: 699px) {
+  .entry-header {
+    width: 50%;
+    height: 35%;
+  }
+}
 @media (min-width: 899px) {
   #masthead {
     position: fixed;
@@ -4041,6 +4083,14 @@ object {
     padding-left: 12px;
     padding-right: 12px;
     height: 7px;
+  }
+
+  .entry-title {
+    padding-top: 10px;
+  }
+
+  .entry-meta {
+    padding-top: 0;
   }
 }
 .fa-stack-header {

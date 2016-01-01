@@ -13,6 +13,7 @@ if ( ! function_exists( 'awesomo_posted_on' ) ) :
  */
 function awesomo_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
@@ -23,35 +24,43 @@ function awesomo_posted_on() {
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
 	);
+	echo '<i class="fa fa-clock-o"></i><span class="posted-on">&nbsp;' . $time_string . '</span>'; // WPCS: XSS OK.
 
-/*	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'awesomo' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);*/
 
-/*	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'awesomo' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);*/
+}
+endif;
 
-	//echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-	echo '<i class="fa fa-clock-o"></i><span class="posted-on">' . $time_string . '</span>'; // WPCS: XSS OK.
-/*	echo '<i class="fa fa-comment-o"></i><span>dsdsd</span>';*/
+if ( ! function_exists( 'awesomo_on_comments' ) ) :
+/**
+ * Prints HTML with meta information for the edit link.
+ */
+function awesomo_on_comments() {
 
 	if (  ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<i class="fa fa-comment-o"></i>';
+		$comment_icon =  '<i class="fa fa-comment-o"></i>';
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'awesomo' ), esc_html__( '1', 'awesomo' ), esc_html__( '%', 'awesomo' ) );
+		comments_popup_link( $comment_icon . esc_html__(' 0', 'awesomo' ),
+		    $comment_icon . esc_html__('1', 'awesomo' ),
+		    $comment_icon . esc_html__('%', 'awesomo' ) );
 		echo '</span>';
 	}
 
+}
+endif;
+
+
+
+if ( ! function_exists( 'awesomo_on_edit' ) ) :
+/**
+ * Prints HTML with meta information for the edit link.
+ */
+function awesomo_on_edit() {
+
 	edit_post_link(
-		//echo '<i class="fa fa-pencil-square-o"></i>';
+
 		sprintf(
 			/* translators: %s: Name of current post */
-			'<i class="fa fa-pencil-square-o"></i>',
-			//esc_html__( 'Edit %s', 'awesomo' ),
-
+			'<i class="fa fa-pencil-square-o"></i>&nbsp;Edit',
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
@@ -60,6 +69,7 @@ function awesomo_posted_on() {
 
 }
 endif;
+
 
 if ( ! function_exists( 'awesomo_entry_footer' ) ) :
 /**

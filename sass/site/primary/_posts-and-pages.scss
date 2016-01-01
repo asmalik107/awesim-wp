@@ -27,30 +27,69 @@
   margin: 0 0 1.5em;
 }
 
-.entry-header {
+.cat-links {
   position: absolute;
   top: 0;
-  padding: 0.5em;
-  //background: rgba(7, 98, 116, 0.3);
-  height: 100%;
-  width: 100%;
-  margin: auto 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
-  a, i, span, h1 {
+  a {
     color: white;
   }
 }
 
-/*.entry-header {
+.entry-header {
+  margin: auto;
   position: absolute;
-  bottom: 10px;
-  left: 15%;
-  width: 70%;
-  padding: 20px 2.5%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 85%;
+  height: 50%;
+  border: 1px solid #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.entry-title {
   text-align: center;
-  background: rgba(7, 98, 116, 0.3);
-}*/
+  border-top: 1px solid #fff;
+  margin: 10px 10px;
+  padding-top: 20px;
+
+  a {
+    color: white;
+    text-transform: capitalize;
+
+    &:hover {
+      text-shadow: #fff 0 0 10px;
+    }
+  }
+}
+
+.entry-meta {
+  font-size: 1.1rem;
+  color: white;
+  margin: 10px 10px;
+  padding-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+
+  a {
+    color: white;
+
+    &:hover {
+      text-shadow: #fff 0 0 5px;
+    }
+  }
+}
+
+.comments-link {
+  margin-left:10px;
+}
+
+.edit-link {
+  margin-left:10px;
+}
+
 
 .article-featured-image {
   position: relative;

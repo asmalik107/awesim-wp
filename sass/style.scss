@@ -205,6 +205,15 @@ footer {
   .comment-form-author, .comment-form-email, .comment-form-url {
     width: 32%;
   }
+}
+
+@include breakpoint(482px 699px) {
+
+
+  .entry-header {
+    width: 50%;
+    height: 35%;
+  }
 
 }
 
@@ -223,6 +232,14 @@ footer {
     padding-left: 12px;
     padding-right: 12px;
     height: 7px;
+  }
+
+  .entry-title {
+    padding-top: 10px;
+  }
+
+  .entry-meta {
+    padding-top: 0;
   }
 }
 
