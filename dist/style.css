@@ -3781,6 +3781,8 @@ a:hover, a:active {
   border-top: 1px solid #fff;
   margin: 10px 10px;
   padding-top: 20px;
+  color: white;
+  text-transform: capitalize;
 }
 .entry-title a {
   color: white;
@@ -3791,12 +3793,12 @@ a:hover, a:active {
 }
 
 .entry-meta {
-  font-size: 1.1rem;
   color: white;
-  margin: 10px 10px;
-  padding-top: 5px;
   text-align: center;
   text-transform: uppercase;
+  margin: 10px 10px;
+  font-size: 1.1rem;
+  padding-top: 5px;
 }
 .entry-meta a {
   color: white;
@@ -3804,12 +3806,10 @@ a:hover, a:active {
 .entry-meta a:hover {
   text-shadow: #fff 0 0 5px;
 }
-
-.comments-link {
+.entry-meta .comments-link {
   margin-left: 10px;
 }
-
-.edit-link {
+.entry-meta .edit-link {
   margin-left: 10px;
 }
 
@@ -4063,10 +4063,16 @@ object {
     width: 32%;
   }
 }
-@media (min-width: 482px) and (max-width: 699px) {
+@media (min-width: 482px) and (max-width: 898px) {
   .entry-header {
-    width: 50%;
-    height: 35%;
+    height: 40%;
+  }
+
+  .entry-title-single {
+    padding-top: 1.5em;
+    font-weight: 700;
+    font-stretch: normal;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 899px) {
@@ -4091,6 +4097,26 @@ object {
 
   .entry-meta {
     padding-top: 0;
+  }
+
+  .entry-title-single {
+    padding-top: 30px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-size: 3.5rem;
+    line-height: 60px;
+    margin: 20px 20px;
+  }
+
+  .entry-meta-single {
+    margin: 20px 20px;
+    font-size: 1.5rem;
+  }
+  .entry-meta-single .comments-link {
+    margin-left: 30px;
+  }
+  .entry-meta-single .edit-link {
+    margin-left: 30px;
   }
 }
 .fa-stack-header {

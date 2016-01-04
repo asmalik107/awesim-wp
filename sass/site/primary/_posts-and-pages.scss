@@ -54,6 +54,8 @@
   border-top: 1px solid #fff;
   margin: 10px 10px;
   padding-top: 20px;
+  color: white;
+  text-transform: capitalize;
 
   a {
     color: white;
@@ -66,12 +68,12 @@
 }
 
 .entry-meta {
-  font-size: 1.1rem;
   color: white;
-  margin: 10px 10px;
-  padding-top: 5px;
   text-align: center;
   text-transform: uppercase;
+  margin: 10px 10px;
+  font-size: 1.1rem;
+  padding-top: 5px;
 
   a {
     color: white;
@@ -80,16 +82,15 @@
       text-shadow: #fff 0 0 5px;
     }
   }
-}
 
-.comments-link {
-  margin-left:10px;
-}
+  .comments-link {
+    margin-left: 10px;
+  }
 
-.edit-link {
-  margin-left:10px;
+  .edit-link {
+    margin-left: 10px;
+  }
 }
-
 
 .article-featured-image {
   position: relative;

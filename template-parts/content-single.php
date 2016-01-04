@@ -11,22 +11,23 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-single'); ?>>
 	<div class="article-featured-image">
-	    <a href="<?php echo get_permalink(); ?>">
-		   <?php the_post_thumbnail('medium-thumbnail'); ?>
-		</a>
+	    <!-- <a href="<?php echo get_permalink(); ?>"></a> -->
 
+		<?php the_post_thumbnail('medium-thumbnail'); ?>
+
+        <span class="cat-links button button-tag"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
 
         <header class="entry-header">
-            <span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
-
-            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-            <div class="entry-meta"
+            <p class="entry-meta entry-meta-single">
                 <?php awesomo_posted_on(); ?>
-            </div><!-- .entry-meta -->
+                <?php awesomo_on_comments(); ?>
+                <?php awesomo_on_edit(); ?>
+            </p>
+
+            <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
 
         </header><!-- .entry-header -->
-        </div>
+     </div>
 
 	<div class="entry-content">
 		<?php the_content(); ?>

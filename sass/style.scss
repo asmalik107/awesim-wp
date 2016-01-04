@@ -207,12 +207,17 @@ footer {
   }
 }
 
-@include breakpoint(482px 699px) {
-
+@include breakpoint(482px 898px) {
 
   .entry-header {
-    width: 50%;
-    height: 35%;
+    height: 40%;
+  }
+
+  .entry-title-single {
+    padding-top: 1.5em;
+    font-weight: 700;
+    font-stretch: normal;
+    font-size: 2.5rem;
   }
 
 }
@@ -241,6 +246,30 @@ footer {
   .entry-meta {
     padding-top: 0;
   }
+
+  .entry-title-single {
+    padding-top: 30px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-size: 3.5rem;
+    line-height: 60px;
+    margin: 20px 20px;
+  }
+
+  .entry-meta-single {
+    margin: 20px 20px;
+    font-size: 1.5rem;
+
+
+    .comments-link {
+      margin-left: 30px;
+    }
+
+    .edit-link {
+      margin-left: 30px;
+    }
+  }
+
 }
 
 .fa-stack-header {
