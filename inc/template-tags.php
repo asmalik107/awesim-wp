@@ -87,7 +87,7 @@ function awesomo_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'awesomo' ) );
 		if ( $tags_list ) {
-			printf( '<i class="fa fa-tag"></i><span class="tags-links">' . esc_html__( '%1$s', 'awesomo' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<i class="fa fa-tag"></i><span class="tags-links">' . esc_html__( '&nbsp;%1$s', 'awesomo' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 

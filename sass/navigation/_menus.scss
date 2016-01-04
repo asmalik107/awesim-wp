@@ -8,7 +8,6 @@
   padding-top: 1.2em;
   padding-left: 20em;
 
-
   // float: right;
   //@include span(10 of 12 last);
   //margin-top: 22px;
@@ -111,6 +110,13 @@
   .header-social-icons {
     display: block;
     text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: solid 2px #e7e7e9;
+
+    li {
+      width: 16%;
+    }
   }
 }
 
@@ -169,7 +175,8 @@
     // display: inline-block;
     // width: auto;
     margin: 0;
-    padding: 0;
+    text-align: center;
+    padding: 10px 0;
 
     &:hover > a,
     &.focus > a {
@@ -177,10 +184,13 @@
   }
   a {
     color: $color_links;
-    font-weight: bold;
     display: block;
-    font-size: 2rem;
-    padding: 0.2em 0.5em 0.2em 2em;
+    font-size: 2.4rem;
+    padding: 0.2em 0 0.2em 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
 }
