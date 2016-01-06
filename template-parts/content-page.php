@@ -11,14 +11,19 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-single'); ?>>
 	<div class="article-featured-image">
-	    <a href="<?php echo get_permalink(); ?>">
 		   <?php the_post_thumbnail('large-thumbnail'); ?>
-		</a>
-	</div>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+
+        <header class="entry-header">
+             <p class="entry-meta entry-meta-single">
+                 <?php awesomo_posted_on(); ?>
+                 <?php awesomo_on_comments(); ?>
+                 <?php awesomo_on_edit(); ?>
+             </p>
+
+             <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
+        </header><!-- .entry-header -->
+	</div>
 
 	<div class="entry-content">
 		<?php the_content(); ?>

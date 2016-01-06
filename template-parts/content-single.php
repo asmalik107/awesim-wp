@@ -13,7 +13,7 @@
 	<div class="article-featured-image">
 	    <!-- <a href="<?php echo get_permalink(); ?>"></a> -->
 
-		<?php the_post_thumbnail('medium-thumbnail'); ?>
+		<?php the_post_thumbnail('large-thumbnail'); ?>
 
         <span class="cat-links button button-tag"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
 

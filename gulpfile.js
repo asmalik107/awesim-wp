@@ -7,7 +7,6 @@ var sass = require('gulp-ruby-sass');
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
 gulp.task('sass', function() {
-
   var lazypipe = require('lazypipe');
   var cssChannel = lazypipe()
     .pipe($.replace, '../font', 'fonts')
@@ -29,8 +28,17 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(''));
 });
 
+gulp.task('copy', function(){
+	gulp.src(['**.php', 'js/**/*', 'fonts/**/*', 'images/**/*', 'inc/**/*', 'languages/**/*', 'layouts/**/*', 'template-parts/**/*'], {
+			base: '.'
+		})
+		.pipe(gulp.dest('dist/'));
+});
+
 gulp.task('watch', function() {
     gulp.watch('sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['clean', 'sass', 'watch']);
+gulp.task('watch-sass', ['clean', 'sass', 'watch']);
+
+gulp.task('default', ['clean', 'sass', 'copy']);
