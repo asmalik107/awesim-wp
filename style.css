@@ -3486,20 +3486,83 @@ a:hover, a:active {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-.comment-navigation .nav-previous,
+.comment-navigation .nav-previous, .comment-navigation .post-previous,
 .posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.posts-navigation .post-previous,
+.post-navigation .nav-previous,
+.post-navigation .post-previous {
   float: left;
   width: 50%;
-  margin-top: 1em;
+  margin-top: 2em;
 }
-.comment-navigation .nav-next,
+.comment-navigation .nav-next, .comment-navigation .post-next,
 .posts-navigation .nav-next,
-.post-navigation .nav-next {
+.posts-navigation .post-next,
+.post-navigation .nav-next,
+.post-navigation .post-next {
   float: right;
   text-align: right;
   width: 50%;
-  margin-top: 1em;
+  margin-top: 2em;
+}
+.comment-navigation .post-previous,
+.comment-navigation .post-next,
+.posts-navigation .post-previous,
+.posts-navigation .post-next,
+.post-navigation .post-previous,
+.post-navigation .post-next {
+  width: 100%;
+}
+.comment-navigation .post-next-content,
+.posts-navigation .post-next-content,
+.post-navigation .post-next-content {
+  float: left;
+  width: 100%;
+  margin-top: -5px;
+  text-align: center;
+}
+.comment-navigation .post-previous-content,
+.posts-navigation .post-previous-content,
+.post-navigation .post-previous-content {
+  float: right;
+  width: 100%;
+  margin-top: -5px;
+  text-align: center;
+}
+.comment-navigation .post-previous-icon,
+.posts-navigation .post-previous-icon,
+.post-navigation .post-previous-icon {
+  float: left;
+  font-size: 4em;
+  line-height: 30px;
+  margin-right: 20px;
+  display: none;
+}
+.comment-navigation .post-next-icon,
+.posts-navigation .post-next-icon,
+.post-navigation .post-next-icon {
+  float: right;
+  font-size: 4em;
+  line-height: 30px;
+  margin-right: 20px;
+  display: none;
+}
+.comment-navigation h5,
+.posts-navigation h5,
+.post-navigation h5 {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.comment-navigation .post-label,
+.posts-navigation .post-label,
+.post-navigation .post-label {
+  font-size: 22px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  color: #999;
+  line-height: 28px;
 }
 
 .menu-all-pages-container {
@@ -4070,6 +4133,17 @@ object {
 @media (min-width: 481px) {
   .comment-form-author, .comment-form-email, .comment-form-url {
     width: 32%;
+  }
+
+  .post-navigation .post-next, .post-navigation .post-previous {
+    width: 50%;
+  }
+  .post-navigation .post-previous-icon,
+  .post-navigation .post-next-icon {
+    display: block;
+  }
+  .post-navigation .post-next-content, .post-navigation .post-previous-content {
+    width: 85%;
   }
 }
 @media (min-width: 482px) and (max-width: 898px) {

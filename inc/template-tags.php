@@ -217,17 +217,30 @@ function awesemo_post_navigation( $args = array() ) {
 
 	$navigation = '';
 
+    $template = '
+        <div class="post-previous">
+            <i class="fa %1$s %2$s"></i>
+            <div class="%3$s">
+            	<span class="post-label">%4$s</span>
+            	<h5>%5$s</h5>
+            </div>
+         </div>';
+
 	$previous = get_previous_post_link(
-		'<div class="nav-previous">%link</div>',
-		__('<i class="fa fa-arrow-left"></i>' . $args['prev_text'], 'awesemo'),
+	//	'<div class="post-previous">%link</div>',
+        '%link',
+		//__('<div class="post-previous"><i class="fa fa-angle-left"></i><div class="post-next-content">' . $args['prev_text'] . '</div></div>', 'awesemo'),
+		__(sprintf($template, 'fa-angle-left', 'post-previous-icon', 'post-next-content','Previous Post' ,$args['prev_text']), 'awesemo'),
 		$args['in_same_term'],
 		$args['excluded_terms'],
 		$args['taxonomy']
 	);
 
 	$next = get_next_post_link(
-		'<div class="nav-next">%link</div>',
-		 __($args['next_text'] . '<i class="fa fa-arrow-right"></i>', 'awesemo'),
+		//'<div class="post-next">%link</div>',
+		'%link',
+		 //__($args['next_text'] . '<i class="fa fa-angle-right"></i>', 'awesemo'),
+		__(sprintf($template, 'fa-angle-right', 'post-next-icon', 'post-previous-content', 'Next Post', $args['next_text']), 'awesemo'),
 		$args['in_same_term'],
 		$args['excluded_terms'],
 		$args['taxonomy']
@@ -277,13 +290,13 @@ function posts_link_attributes() {
     return 'class="button button-link button-large"';
 }
 
-add_filter('next_post_link', 'post_link_attributes');
+/*add_filter('next_post_link', 'post_link_attributes');
 add_filter('previous_post_link', 'post_link_attributes');
 
 function post_link_attributes($output) {
     $code = 'class="button button-link button-large"';
     return str_replace('<a href=', '<a '.$code.' href=', $output);
-}
+}*/
 
 
 function awesemo_recent_posts() {
