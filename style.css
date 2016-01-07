@@ -291,10 +291,16 @@ textarea {
   line-height: 1.5;
 }
 
+/*--------------------------------------------------------------
+# Headings
+--------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
+/*--------------------------------------------------------------
+# Copy
+--------------------------------------------------------------*/
 p {
   margin-bottom: 1.5em;
 }
@@ -3014,6 +3020,9 @@ hr {
   margin-bottom: 1.5em;
 }
 
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
 ul, ol {
   margin: 0 0 10px 0;
 }
@@ -3044,6 +3053,9 @@ dd {
   margin: 0;
 }
 
+/*--------------------------------------------------------------
+# Images
+--------------------------------------------------------------*/
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -3051,6 +3063,9 @@ img {
   /* Adhere to container width. */
 }
 
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
 table {
   margin: 0 0 1.5em;
   width: 100%;
@@ -3902,14 +3917,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/*
-.comment-content a {
-	word-wrap: break-word;
-}
-.bypostauthor {
-	display: block;
-}
-*/
 .comments-title {
   display: block;
 }
@@ -3921,46 +3928,6 @@ a:hover, a:active {
   list-style: none;
 }
 
-/*.comment-respond {
-
-}
-
-.comment-reply {
-  a {
-
-  }
-}
-
-.comment-reply-title {
-
-}
-
-.comment-metadata {
-
-}
-
-.comment-form-author, .comment-form-email, .comment-form-url {
-  float: left;
-  width: 100%;
-  margin-right: 1% !important;
-}
-
-.comment-form-author, .comment-form-email {
-  margin-right: 1% !important;
-}
-
-.comment-form-url {
-  margin-right: 0 !important;
-}
-
-.comment-content {
-  clear: both;
-  padding: 15px 10px;
-  margin: 7px 0 5px;
-  border: 1px solid #ddd;
-  line-height: 1.5;
-  background-color: #fff;
-}*/
 .comment-avatar {
   float: left;
   margin-right: 20px;
@@ -3996,10 +3963,9 @@ a:hover, a:active {
 #disqus_thread {
   float: left;
   width: 100%;
-}
-
-#layout {
   background: white;
+  padding: 0.5em;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------------------------------------
@@ -4138,6 +4104,9 @@ object {
   color: #3b6e79;
 }
 
+/*--------------------------------------------------------------
+# Breakpoint upto 481px
+--------------------------------------------------------------*/
 @media (min-width: 481px) {
   .comment-form-author, .comment-form-email, .comment-form-url {
     width: 32%;
@@ -4154,6 +4123,9 @@ object {
     width: 85%;
   }
 }
+/*--------------------------------------------------------------
+# Breakpoint 482px to 898px
+--------------------------------------------------------------*/
 @media (min-width: 482px) and (max-width: 898px) {
   .entry-header {
     height: 40%;
@@ -4166,6 +4138,9 @@ object {
     font-size: 2.5rem;
   }
 }
+/*--------------------------------------------------------------
+# Breakpoint 898px and above
+--------------------------------------------------------------*/
 @media (min-width: 899px) {
   #masthead {
     position: fixed;
@@ -4254,16 +4229,16 @@ object {
 }
 
 .article-masonry {
-  width: 98%;
+  width: 100%;
 }
 @media (min-width: 700px) and (max-width: 1199px) {
   .article-masonry {
-    width: 48%;
+    width: 49%;
   }
 }
 @media (min-width: 1200px) {
   .article-masonry {
-    width: 32%;
+    width: 32.6%;
   }
 }
 
