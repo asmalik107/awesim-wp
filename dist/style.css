@@ -3086,7 +3086,7 @@ footer {
 }
 
 .content-area {
-  padding: 1rem 0 1rem 1rem;
+  padding: 1rem;
 }
 
 .widget-area {
@@ -3484,7 +3484,6 @@ a:hover, a:active {
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
-  overflow: hidden;
 }
 .comment-navigation .nav-previous, .comment-navigation .post-previous,
 .posts-navigation .nav-previous,
@@ -3992,6 +3991,15 @@ a:hover, a:active {
 .comment-form .form-submit input[type="submit"] {
   width: 100%;
   font-size: 110%;
+}
+
+#disqus_thread {
+  float: left;
+  width: 100%;
+}
+
+#layout {
+  background: white;
 }
 
 /*--------------------------------------------------------------

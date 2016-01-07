@@ -35,7 +35,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php awesemo_posts_navigation(); ?>
 
 		<?php else : ?>
 
@@ -44,6 +44,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+        <div class="load-container">
+            <?php awesemo_post_navigation(); ?>
+        </div>
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
