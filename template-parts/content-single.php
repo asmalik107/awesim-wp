@@ -41,6 +41,6 @@
 
 <!--	<footer class="entry-footer">
 		<?php awesomo_entry_footer(); ?>
-	</footer> --><!-- .entry-footer -->
+	</footer> --><!-- .entry-footer -
 </article><!-- #post-## -->
 

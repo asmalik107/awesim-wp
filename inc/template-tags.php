@@ -39,7 +39,7 @@ function awesomo_on_comments() {
 	if (  ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		$comment_icon =  '<i class="fa fa-comment-o"></i>';
 		echo '<span class="comments-link">';
-		comments_popup_link( $comment_icon . esc_html__(' 0', 'awesomo' ),
+		comments_popup_link( $comment_icon . esc_html__('0', 'awesomo' ),
 		    $comment_icon . esc_html__('1', 'awesomo' ),
 		    $comment_icon . esc_html__('%', 'awesomo' ) );
 		echo '</span>';

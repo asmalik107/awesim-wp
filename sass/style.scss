@@ -51,6 +51,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "normalize";
 /*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base";
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
@@ -227,7 +231,6 @@ footer {
   }
 }
 
-
 /*--------------------------------------------------------------
 # Breakpoint upto 481px
 --------------------------------------------------------------*/
@@ -259,7 +262,7 @@ footer {
 @include breakpoint(482px 898px) {
 
   .entry-header {
-    height: 40%;
+    height: 50%;
   }
 
   .entry-title-single {
@@ -292,7 +295,7 @@ footer {
   }
 
   .entry-title {
-    padding-top: 10px;
+    padding-top: 0.5em;
   }
 
   .entry-meta {

@@ -37,11 +37,11 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
-		<a href="<?php echo get_permalink(); ?>" class="button button-link"> Read More...</a>
+		<a href="<?php echo get_permalink(); ?>" class="button button-link button-xsmall"> Read More...</a>
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
+<!--	<footer class="entry-footer">
 		<?php awesomo_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer> --><!-- .entry-footer -->
 </article><!-- #post-## -->
 

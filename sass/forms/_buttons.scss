@@ -84,4 +84,7 @@ input[type="submit"], .button-primary {
 
 .button-toggle {
   @include button-base(transparent);
+  color: #A5ECFA;
+  font-size: 0.8em;
+  padding: 0.3em;
 }

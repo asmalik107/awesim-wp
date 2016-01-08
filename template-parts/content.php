@@ -17,7 +17,7 @@
          <?php the_post_thumbnail('small-thumbnail'); ?>
         </a>
 
-         <span class="cat-links button button-tag"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
+         <span class="cat-links button button-tag button-xsmall"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
 
         <header class="entry-header">
             <?php if ( 'post' === get_post_type() ) : ?>
@@ -41,7 +41,7 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
-		<a href="<?php echo get_permalink(); ?>" class="button button-link"> Read More...</a>
+		<a href="<?php echo get_permalink(); ?>" class="button button-link button-xsmall"> Read More...</a>
 
 		<?php
 			wp_link_pages( array(

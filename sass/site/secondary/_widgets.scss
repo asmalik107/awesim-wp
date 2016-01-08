@@ -5,9 +5,10 @@
   h3 {
     color: #45828E;
     background: $color_main_nav;
-    padding: 10px;
+    padding: 0.4em;
     text-align: center;
     margin: 0.4em;
+    border-bottom: 2px solid #A5ECFA;
   }
 
   /* Make sure select elements fit in widgets. */
@@ -17,13 +18,13 @@
 
   ul {
     //padding: 10px 10px;
-    padding: 0.5em;
+    padding: 0 0.5em;
     list-style: none;
     margin:0;
 
     li {
       border-bottom: 1px solid #EEE;
-      margin-bottom: 10px;
+      padding: 0.4em 0;
     }
 
   }
@@ -40,7 +41,7 @@
   a {
     position: relative;
     display: inline-block;
-    font-size: .75rem !important;
+    font-size: .55rem !important;
     font-weight: 700;
     color: #fff;
     padding: 5px 10px;
