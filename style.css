@@ -3477,7 +3477,7 @@ a {
   color: #45828E;
 }
 a:visited {
-  color: inherit;
+  color: #45828E;
 }
 a:hover, a:focus, a:active {
   color: #3b6e79;
