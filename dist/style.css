@@ -3297,7 +3297,7 @@ footer {
   overflow: hidden;
   width: 200px;
   float: left;
-  margin: 1px 10px;
+  margin: 0.4em 0.8em;
 }
 
 /*--------------------------------------------------------------
@@ -3655,10 +3655,10 @@ a:hover, a:active {
     position: relative;
     display: inline-block;
     width: auto;
-    margin: 0px;
     padding: 0px;
     border-right: 1px dotted #ddd;
-    padding-right: 3px;
+    padding-right: 0.2em;
+    margin-top: 0.2em;
   }
   .menu-container li:hover > a, .menu-container li.focus > a {
     color: #3b6e79;
@@ -3779,9 +3779,9 @@ ul.page-numbers {
   padding: 0;
 }
 ul.page-numbers li {
-  margin-right: 4px;
+  margin-right: 0.25em;
   text-align: center;
-  line-height: 32px;
+  line-height: 2em;
   display: inline-block;
 }
 ul.page-numbers .current, ul.page-numbers a:hover, ul.page-numbers .dots:hover {
@@ -3792,11 +3792,11 @@ ul.page-numbers span, ul.page-numbers a {
   display: block;
   margin: 0;
   padding: 0;
-  width: 32px;
-  height: 32px;
+  width: 2.2em;
+  height: 2.2em;
   color: #b3b3b3;
   text-align: center;
-  line-height: 30px;
+  line-height: 2.1em;
   border: 2px solid #e7e7e7;
 }
 ul.page-numbers .dots {
@@ -3975,12 +3975,6 @@ ul.page-numbers .dots {
   white-space: nowrap;
   text-transform: uppercase;
   background: #E07C67;
-    /*
-
-    &:hover:before{
-      background: scale-color(#39AEC6, $lightness: -15%);
-    }
-    */
 }
 .tagcloud a:after {
   content: "";
@@ -4009,6 +4003,9 @@ ul.page-numbers .dots {
 }
 .tagcloud a:hover, .tagcloud a:focus {
   background: #d8593e;
+}
+.tagcloud a:hover::before, .tagcloud a:focus::before {
+  border-right-color: #d8593e;
 }
 
 #recent-post-widget .thumbnail {

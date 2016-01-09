@@ -218,10 +218,10 @@
       position: relative;
       display: inline-block;
       width: auto;
-      margin: 0px;
       padding: 0px;
       border-right: 1px dotted #ddd;
-      padding-right: 3px;
+      padding-right: 0.2em;;
+      margin-top: 0.2em;
 
       &:hover > a,
       &.focus > a {
