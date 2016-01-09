@@ -18,7 +18,7 @@ $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__link: #45828E;
-$color__link-visited: #45828E;
+$color__link-visited: inherit;
 $color__link-hover: scale-color($color_links, $lightness: -15%);
 $color__text-main: #404040;
 /*$color__text-main: #45828E;*/
@@ -38,3 +38,5 @@ $link-color: #076274;
 
 /*$tag-color: #39AEC6;*/
 $tag-color: #E07C67;
+
+$button_link_color: #45828E;

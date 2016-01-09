@@ -37,7 +37,7 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
-		<a href="<?php echo get_permalink(); ?>" class="button button-link button-xsmall"> Read More...</a>
+		<a href="<?php echo get_permalink(); ?>" class="button button-link button-small"> Read More...</a>
 	</div><!-- .entry-summary -->
 </article><!-- #post-## -->
 

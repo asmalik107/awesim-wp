@@ -1,8 +1,12 @@
-@mixin button-base($background-color) {
-  background-color: $background-color;
+@mixin button-base($base-color) {
+  //background-color: $background-color;
+  color: $base-color;
+  border: 2px solid $base-color;
 
   &:hover, &:focus {
-    background: scale-color($background-color, $lightness: -15%);
+    //background: scale-color($background-color, $lightness: -15%);
+    background: $base-color;
+    color: #ffffff;
     outline: 0;
   }
 }
@@ -31,7 +35,7 @@ input[type="submit"] {
 .button-error,
 .button-warning,
 .button-secondary,
-.button-tag{
+.button-tag {
   color: white;
   border-radius: 0;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -54,8 +58,8 @@ input[type="submit"], .button-primary {
 }
 
 .button-link {
-  @include button-base($link_color);
-  color: #C5F3FC !important;
+  @include button-base($button_link_color);
+ // color: #C5F3FC !important;
 }
 
 .button-tag {

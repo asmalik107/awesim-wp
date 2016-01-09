@@ -3334,51 +3334,62 @@ input[type="submit"] {
 }
 
 input[type="submit"], .button-primary {
-  background-color: #2199e8;
+  color: #2199e8;
+  border: 2px solid #2199e8;
 }
 input[type="submit"]:hover, input[type="submit"]:focus, .button-primary:hover, .button-primary:focus {
-  background: #1583cc;
+  background: #2199e8;
+  color: #ffffff;
   outline: 0;
 }
 
 .button-success {
-  background-color: #3adb76;
+  color: #3adb76;
+  border: 2px solid #3adb76;
 }
 .button-success:hover, .button-success:focus {
-  background: #24c761;
+  background: #3adb76;
+  color: #ffffff;
   outline: 0;
 }
 
 .button-error {
-  background-color: #ec5840;
+  color: #ec5840;
+  border: 2px solid #ec5840;
 }
 .button-error:hover, .button-error:focus {
-  background: #e83417;
+  background: #ec5840;
+  color: #ffffff;
   outline: 0;
 }
 
 .button-warning {
-  background-color: #ffae00;
+  color: #ffae00;
+  border: 2px solid #ffae00;
 }
 .button-warning:hover, .button-warning:focus {
-  background: #d99400;
+  background: #ffae00;
+  color: #ffffff;
   outline: 0;
 }
 
 .button-link {
-  background-color: #076274;
-  color: #C5F3FC !important;
+  color: #45828E;
+  border: 2px solid #45828E;
 }
 .button-link:hover, .button-link:focus {
-  background: #065363;
+  background: #45828E;
+  color: #ffffff;
   outline: 0;
 }
 
 .button-tag {
-  background-color: #E07C67;
+  color: #E07C67;
+  border: 2px solid #E07C67;
 }
 .button-tag:hover, .button-tag:focus {
-  background: #d8593e;
+  background: #E07C67;
+  color: #ffffff;
   outline: 0;
 }
 
@@ -3403,13 +3414,15 @@ input[type="submit"]:hover, input[type="submit"]:focus, .button-primary:hover, .
 }
 
 .button-toggle {
-  background-color: transparent;
+  color: transparent;
+  border: 2px solid transparent;
   color: #A5ECFA;
   font-size: 0.8em;
   padding: 0.3em;
 }
 .button-toggle:hover, .button-toggle:focus {
   background: transparent;
+  color: #ffffff;
   outline: 0;
 }
 
@@ -3464,7 +3477,7 @@ a {
   color: #45828E;
 }
 a:visited {
-  color: #45828E;
+  color: inherit;
 }
 a:hover, a:focus, a:active {
   color: #3b6e79;
