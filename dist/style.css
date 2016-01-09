@@ -457,6 +457,10 @@ a:hover {
   text-decoration: none;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -467,8 +471,8 @@ select,
 textarea {
   color: #404040;
   font-family: "Fira Sans", Helvetica, sans-serif;
-  font-size: 14.4px;
-  font-size: 0.9rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -3767,6 +3771,39 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Pagination
+--------------------------------------------------------------*/
+ul.page-numbers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.page-numbers li {
+  margin-right: 4px;
+  text-align: center;
+  line-height: 32px;
+  display: inline-block;
+}
+ul.page-numbers .current, ul.page-numbers a:hover, ul.page-numbers .dots:hover {
+  color: #45828E;
+  border: 2px solid #45828E;
+}
+ul.page-numbers span, ul.page-numbers a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  color: #b3b3b3;
+  text-align: center;
+  line-height: 30px;
+  border: 2px solid #e7e7e7;
+}
+ul.page-numbers .dots {
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 .search-form .search-submit {
@@ -3901,22 +3938,21 @@ a:hover, a:active {
 .widget h3 {
   color: #45828E;
   background: #ffffff;
-  padding: 0.4em;
+  padding: 0.2em;
   text-align: center;
   margin: 0.4em;
-  border-bottom: 2px solid #A5ECFA;
 }
 .widget select {
   max-width: 100%;
 }
 .widget ul {
-  padding: 0 0.5em;
+  padding: 0 0.2em;
   list-style: none;
-  margin: 0;
+  border-top: 2px solid #A5ECFA;
+  margin: 0 0.4em 0.2em 0.4em;
 }
 .widget ul li {
   border-bottom: 1px solid #EEE;
-  margin-bottom: 10px;
   padding: 0.4em 0;
 }
 
@@ -4068,7 +4104,7 @@ a:hover, a:active {
   text-align: center;
   text-transform: uppercase;
   margin: 10px 10px;
-  font-size: 0.6875rem;
+  font-size: 0.6em;
   padding-top: 5px;
 }
 .entry-meta a {
@@ -4317,10 +4353,13 @@ object {
   }
 
   .entry-title-single {
-    padding-top: 1.5em;
     font-weight: 700;
     font-stretch: normal;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
+  }
+
+  .entry-meta {
+    font-size: 0.8rem;
   }
 }
 /*--------------------------------------------------------------
@@ -4351,17 +4390,16 @@ object {
   }
 
   .entry-title-single {
-    padding-top: 30px;
     font-weight: 700;
     font-stretch: normal;
-    font-size: 3.5rem;
+    font-size: 2.4rem;
     line-height: 60px;
-    margin: 20px 20px;
+    margin: 0.5em;
   }
 
   .entry-meta-single {
-    margin: 20px 20px;
-    font-size: 1.5rem;
+    margin: 1em;
+    font-size: 1em;
   }
   .entry-meta-single .comments-link {
     margin-left: 30px;

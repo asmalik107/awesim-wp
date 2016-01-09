@@ -37,11 +37,10 @@ if ( ! function_exists( 'awesomo_on_comments' ) ) :
 function awesomo_on_comments() {
 
 	if (  ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		$comment_icon =  '<i class="fa fa-comment-o"></i>';
-		echo '<span class="comments-link">';
-		comments_popup_link( $comment_icon . esc_html__('0', 'awesomo' ),
-		    $comment_icon . esc_html__('1', 'awesomo' ),
-		    $comment_icon . esc_html__('%', 'awesomo' ) );
+		echo '<span class="comments-link"><i class="fa fa-comment-o"></i>';
+		comments_popup_link(esc_html__('0', 'awesomo' ),
+		    esc_html__('1', 'awesomo' ),
+		    esc_html__('%', 'awesomo' ) );
 		echo '</span>';
 	}
 
@@ -71,41 +70,18 @@ function awesomo_on_edit() {
 endif;
 
 
-if ( ! function_exists( 'awesomo_entry_footer' ) ) :
+if ( ! function_exists( 'awesomo_tags' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function awesomo_entry_footer() {
+function awesomo_tags() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-/*		$categories_list = get_the_category_list( esc_html__( ', ', 'awesomo' ) );
-		if ( $categories_list && awesomo_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( '%1$s', 'awesomo' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}*/
-
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'awesomo' ) );
+		$tags_list = get_the_tag_list( '' );
 		if ( $tags_list ) {
-			printf( '<i class="fa fa-tag"></i><span class="tags-links">' . esc_html__( '&nbsp;%1$s', 'awesomo' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf('<div class="tagcloud text-center">' . esc_html__('%1$s', 'awesomo' ) . '</div>', $tags_list);
 		}
 	}
-
-/*	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'awesomo' ), esc_html__( '1 Comment', 'awesomo' ), esc_html__( '% Comments', 'awesomo' ) );
-		echo '</span>';
-	}
-
-	edit_post_link(
-		sprintf(
-			translators: %s: Name of current post
-			esc_html__( 'Edit %s', 'awesomo' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);*/
 }
 endif;
 
@@ -227,9 +203,7 @@ function awesemo_post_navigation( $args = array() ) {
          </div>';
 
 	$previous = get_previous_post_link(
-	//	'<div class="post-previous">%link</div>',
         '%link',
-		//__('<div class="post-previous"><i class="fa fa-angle-left"></i><div class="post-next-content">' . $args['prev_text'] . '</div></div>', 'awesemo'),
 		__(sprintf($template, 'fa-angle-left', 'post-previous-icon', 'post-next-content','Previous Post' ,$args['prev_text']), 'awesemo'),
 		$args['in_same_term'],
 		$args['excluded_terms'],
@@ -237,9 +211,7 @@ function awesemo_post_navigation( $args = array() ) {
 	);
 
 	$next = get_next_post_link(
-		//'<div class="post-next">%link</div>',
 		'%link',
-		 //__($args['next_text'] . '<i class="fa fa-angle-right"></i>', 'awesemo'),
 		__(sprintf($template, 'fa-angle-right', 'post-next-icon', 'post-previous-content', 'Next Post', $args['next_text']), 'awesemo'),
 		$args['in_same_term'],
 		$args['excluded_terms'],
@@ -283,12 +255,12 @@ function awesemo_posts_navigation($args = array()) {
     echo($navigation);
 }
 
-add_filter('next_posts_link_attributes', 'posts_link_attributes');
+/*add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
 function posts_link_attributes() {
     return 'class="button button-link button-large"';
-}
+}*/
 
 /*add_filter('next_post_link', 'post_link_attributes');
 add_filter('previous_post_link', 'post_link_attributes');
@@ -330,6 +302,39 @@ function awesemo_recent_posts() {
             </ul>
         </aside>
     <?php
+}
+
+
+function awesemo_posts_pagination($pages = '', $range = 4)
+{
+/*    $prev_arrow = is_rtl() ? '&rarr;' : '&larr;';
+    $next_arrow = is_rtl() ? '&larr;' : '&rarr;';*/
+
+    $prev_arrow = is_rtl() ? '<i class="fa fa-angle-right"></i>' :'<i class="fa fa-angle-left"></i>';
+     $next_arrow = is_rtl() ? '<i class="fa fa-angle-left"></i>' :'<i class="fa fa-angle-right"></i>';
+
+    global $wp_query;
+    $total = $wp_query->max_num_pages;
+    $big = 999999999; // need an unlikely integer
+    if( $total > 1 )  {
+         if( !$current_page = get_query_var('paged') )
+             $current_page = 1;
+         if( get_option('permalink_structure') ) {
+             $format = 'page/%#%/';
+         } else {
+             $format = '&paged=%#%';
+         }
+        echo paginate_links(array(
+            'base'			=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format'		=> $format,
+            'current'		=> max( 1, get_query_var('paged') ),
+            'total' 		=> $total,
+            'mid_size'		=> 3,
+            'type' 			=> 'list',
+            'prev_text'		=> $prev_arrow,
+            'next_text'		=> $next_arrow,
+         ) );
+    }
 }
 
 

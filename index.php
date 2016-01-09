@@ -47,8 +47,8 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-		<div class="load-container">
-			<?php awesemo_posts_navigation(); ?>
+		<div class="pagination">
+			<?php awesemo_posts_pagination(); ?>
 		</div>
 	</div><!-- #primary -->
 

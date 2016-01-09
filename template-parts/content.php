@@ -49,9 +49,7 @@
 				'after'  => '</div>',
 			) );
 		?>
+
 	</div><!-- .entry-content -->
 
-<!--	<footer class="entry-footer">
-		<?php awesomo_entry_footer(); ?>
-	</footer>--><!-- .entry-footer -->
 </article><!-- #post-## -->

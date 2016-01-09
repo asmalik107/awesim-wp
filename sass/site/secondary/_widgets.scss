@@ -5,10 +5,9 @@
   h3 {
     color: #45828E;
     background: $color_main_nav;
-    padding: 0.4em;
+    padding: 0.2em;
     text-align: center;
     margin: 0.4em;
-    border-bottom: 2px solid #A5ECFA;
   }
 
   /* Make sure select elements fit in widgets. */
@@ -18,9 +17,10 @@
 
   ul {
     //padding: 10px 10px;
-    padding: 0 0.5em;
+    padding: 0 0.2em;
     list-style: none;
-    margin:0;
+    border-top: 2px solid #A5ECFA;
+    margin: 0 0.4em 0.2em 0.4em;
 
     li {
       border-bottom: 1px solid #EEE;

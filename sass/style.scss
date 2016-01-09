@@ -131,6 +131,10 @@ footer {
 --------------------------------------------------------------*/
 @import "navigation/menus";
 /*--------------------------------------------------------------
+## Pagination
+--------------------------------------------------------------*/
+@import "navigation/pagination";
+/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 @import "navigation/header";
@@ -266,10 +270,14 @@ footer {
   }
 
   .entry-title-single {
-    padding-top: 1.5em;
+    //padding-top: 1.5em;
     font-weight: 700;
     font-stretch: normal;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
+  }
+
+  .entry-meta {
+    font-size: 0.8rem;
   }
 
 }
@@ -303,17 +311,21 @@ footer {
   }
 
   .entry-title-single {
-    padding-top: 30px;
+    //padding-top: 2em;
     font-weight: 700;
     font-stretch: normal;
-    font-size: 3.5rem;
+    font-size: 2.4rem;
     line-height: 60px;
-    margin: 20px 20px;
+    margin: 0.5em;
+  }
+
+  .entry-title-container {
+
   }
 
   .entry-meta-single {
-    margin: 20px 20px;
-    font-size: 1.5rem;
+    margin: 1em;
+    font-size: 1em;
 
     .comments-link {
       margin-left: 30px;

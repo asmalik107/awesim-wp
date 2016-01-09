@@ -26,6 +26,8 @@
 
             <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
 
+            <?php awesomo_tags(); ?>
+
         </header><!-- .entry-header -->
      </div>
 
@@ -39,8 +41,5 @@
 		?>
 	</div><!-- .entry-content -->
 
-<!--	<footer class="entry-footer">
-		<?php awesomo_entry_footer(); ?>
-	</footer> --><!-- .entry-footer -
 </article><!-- #post-## -->
 

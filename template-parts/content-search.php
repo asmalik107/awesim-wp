@@ -39,9 +39,5 @@
 		?>
 		<a href="<?php echo get_permalink(); ?>" class="button button-link button-xsmall"> Read More...</a>
 	</div><!-- .entry-summary -->
-
-<!--	<footer class="entry-footer">
-		<?php awesomo_entry_footer(); ?>
-	</footer> --><!-- .entry-footer -->
 </article><!-- #post-## -->
 

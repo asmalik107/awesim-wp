@@ -46,8 +46,6 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php awesemo_posts_navigation(); ?>
-
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
@@ -55,6 +53,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+		<div class="pagination">
+			<?php awesemo_posts_pagination(); ?>
+		</div>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
