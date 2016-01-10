@@ -1,0 +1,62 @@
+/*$color__background-body: #f5f5f5;*/
+$background-color: #FAF7F3;
+
+/* Accessibilty*/
+$background-screen-color: #f1f1f1;
+$text-screen-color: #21759b;
+
+/* Layout */
+$background-hr-color: #ccc;
+
+/* Base (Typography, etc) */
+$text-main-color: #404040;
+$background-pre-color: #eee;
+$background-ins-color: #fff9c0;
+$border-abbr-color: #666;
+
+/* Fonts */
+$font-main: "Fira Sans",Helvetica,sans-serif;
+$font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font-pre: "Courier 10 Pitch", Courier, monospace;
+$font-line-height-body: 1.5;
+$font-line-height-pre: 1.6;
+$fa-font-path: '../font';
+
+/* Fields */
+$text-input-color: #666;
+$text-input-focus-color: #111;
+$input_focus-color: #45828E;
+$border-input-color: #ccc;
+
+/* Links */
+$link-color: #45828E;
+$link_hover-color: scale-color($link-color, $lightness: -15%);
+$link-visited-color: $link-color;
+
+/* Background */
+$background-secondary-color: #ffffff;
+//$color_main_nav: #A5ECFA;
+
+/* Menu */
+$main-nav-color: #ffffff;
+$main-nav-links-color: $link-color;
+$main-nav-size: 60px;
+
+
+/* Tags*/
+$tag-color: #E07C67;
+
+/* Buttons */
+$button-primary-color: #2199e8;
+$button-success-color: #3adb76;
+$button-warning-color: #ffae00;
+$button-error-color: #ec5840;
+$button_link_color: #45828E;
+$button-tag-color: $tag-color;
+
+
+
+//$size__site-main: 100%;
+//$size__site-sidebar: 25%;
+
+

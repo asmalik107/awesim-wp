@@ -121,7 +121,7 @@
 }
 
 .mobile-menu-container {
-  padding-top: $size_main_nav;
+  padding-top: $main-nav-size;
 
   ul {
     display: block;
@@ -137,7 +137,7 @@
       left: -999em;
       z-index: 99999;
       line-height: 1.5rem;
-      background: $color_secondary-background;
+      background: $background-secondary-color;
 
       ul {
         left: -999em;
@@ -183,7 +183,7 @@
     }
   }
   a {
-    color: $color_links;
+    color: $link-color;
     display: block;
     font-size: 1.5rem;
     padding: 0.2em 0 0.2em 0;
@@ -197,7 +197,7 @@
 
 .mobile-menu-open {
   display: block;
-  background: $color_secondary-background;
+  background: $background-secondary-color;
 }
 
 @include breakpoint(899px) {
@@ -216,25 +216,30 @@
 
     li {
       position: relative;
-      display: inline-block;
+      display: inline;
       width: auto;
       padding: 0px;
-      border-right: 1px dotted #ddd;
+      //border-right: 1px dotted #ddd;
       padding-right: 0.2em;;
       margin-top: 0.2em;
 
       &:hover > a,
-      &.focus > a {
-        color: $color_links_hover;
+      &:focus > a {
+        color: $main-nav-links-color;
+      }
+
+      &:after {
+        content: "\2022";
+        font-size: 1em;
+        color: #45828E;
       }
     }
     a {
-      display: block;
       text-decoration: none;
       text-transform: uppercase;
       padding: 2px 14px;
       font-weight: bold;
-      color: $color_main_nav_links;
+      color: $main-nav-links-color;
       font-style: normal;
       letter-spacing: 0px;
       margin: 0;

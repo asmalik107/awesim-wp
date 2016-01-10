@@ -42,19 +42,19 @@ input[type="submit"] {
 }
 
 input[type="submit"], .button-primary {
-  @include button-base($primary_color);
+  @include button-base($button-primary_color);
 }
 
 .button-success {
-  @include button-base($success_color);
+  @include button-base($button-success_color);
 }
 
 .button-error {
-  @include button-base($error_color);
+  @include button-base($button-error_color);
 }
 
 .button-warning {
-  @include button-base($warning_color);
+  @include button-base($button-warning_color);
 }
 
 .button-link {
@@ -63,7 +63,7 @@ input[type="submit"], .button-primary {
 }
 
 .button-tag {
-  @include button-base($tag_color);
+  @include button-base($button-tag_color);
 }
 
 .button-xsmall {
@@ -87,8 +87,11 @@ input[type="submit"], .button-primary {
 }
 
 .button-toggle {
-  @include button-base(transparent);
   color: #A5ECFA;
   font-size: 0.8em;
   padding: 0.3em;
+  background: transparent;
+  &:focus {
+    outline: 0;
+  }
 }

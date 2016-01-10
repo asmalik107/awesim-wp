@@ -42,9 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "variables-site/colors";
-@import "variables-site/typography";
-@import "variables-site/structure";
+@import "variables-site/variables";
 @import "mixins/mixins-master";
 /*--------------------------------------------------------------
 # Normalize
@@ -85,8 +83,8 @@ $susy: (
 
 #masthead {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  background: $color_main_nav;
-  height: $size_main_nav;
+  background: $main-nav-color;
+  height: $main-nav-size;
   @include span(12 of 12);
 }
 
@@ -191,7 +189,7 @@ footer {
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
   //padding: 0.5rem;
   float: left;
-  background: $color_secondary-background;
+  background: $background-secondary-color;
   width: 100%;
 
   .article-featured-image {
@@ -227,10 +225,10 @@ footer {
     display: inline;
     margin-top: 0;
     font-size: 1.5em;
-    color: $color_links;
+    color: $link-color;
     &:hover,
     &.focus {
-      color: $color_links_hover;
+      color: $link-hover-color;
     }
   }
 }
@@ -353,8 +351,8 @@ footer {
   @include susy-breakpoint(899px, $susy) {
     @include span(9 of 12);
     position: relative;
-    top: $size_main_nav;
-    margin-bottom: $size_main_nav;
+    top: $main-nav-size;
+    margin-bottom: $main-nav-size;
   }
 }
 
@@ -363,8 +361,8 @@ footer {
   @include susy-breakpoint(899px, $susy) {
     @include span(3 of 12 last);
     position: relative;
-    top: $size_main_nav;
-    margin-bottom: $size_main_nav;
+    top: $main-nav-size;
+    margin-bottom: $main-nav-size;
   }
 
 }

@@ -44,8 +44,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 /*$color__background-body: #f5f5f5;*/
-/*$color__text-main: #45828E;*/
-/*$tag-color: #39AEC6;*/
+/* Accessibilty*/
+/* Layout */
+/* Base (Typography, etc) */
+/* Fonts */
+/* Fields */
+/* Links */
+/* Background */
+/* Menu */
+/* Tags*/
+/* Buttons */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -3414,15 +3422,12 @@ input[type="submit"]:hover, input[type="submit"]:focus, .button-primary:hover, .
 }
 
 .button-toggle {
-  color: transparent;
-  border: 2px solid transparent;
   color: #A5ECFA;
   font-size: 0.8em;
   padding: 0.3em;
-}
-.button-toggle:hover, .button-toggle:focus {
   background: transparent;
-  color: #ffffff;
+}
+.button-toggle:focus {
   outline: 0;
 }
 
@@ -3483,7 +3488,7 @@ a:hover, a:focus, a:active {
   color: #3b6e79;
 }
 a:focus {
-  outline: thin dotted;
+  outline: 0;
 }
 a:hover, a:active {
   outline: 0;
@@ -3666,18 +3671,21 @@ a:hover, a:active {
   }
   .menu-container li {
     position: relative;
-    display: inline-block;
+    display: inline;
     width: auto;
     padding: 0px;
-    border-right: 1px dotted #ddd;
     padding-right: 0.2em;
     margin-top: 0.2em;
   }
-  .menu-container li:hover > a, .menu-container li.focus > a {
-    color: #3b6e79;
+  .menu-container li:hover > a, .menu-container li:focus > a {
+    color: #45828E;
+  }
+  .menu-container li:after {
+    content: "\2022";
+    font-size: 1em;
+    color: #45828E;
   }
   .menu-container a {
-    display: block;
     text-decoration: none;
     text-transform: uppercase;
     padding: 2px 14px;

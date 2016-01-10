@@ -3,10 +3,10 @@ button,
 input,
 select,
 textarea {
-  color: $color__text-main;
-  font-family: $font__main;
+  color: $text-main-color;
+  font-family: $font-main;
   @include font-size(0.875);
-  line-height: $font__line-height-body;
+  line-height: $font-line-height-body;
 }
 
 /*--------------------------------------------------------------
@@ -36,10 +36,10 @@ address {
 }
 
 pre {
-  background: $color__background-pre;
-  font-family: $font__pre;
+  background: $background-pre-color;
+  font-family: $font-pre;
   @include font-size(0.9375);
-  line-height: $font__line-height-pre;
+  line-height: $font-line-height-pre;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
@@ -47,17 +47,17 @@ pre {
 }
 
 code, kbd, tt, var {
-  font-family: $font__code;
+  font-family: $font-code;
   @include font-size(0.9375);
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted $color__border-abbr;
+  border-bottom: 1px dotted $border-abbr-color;
   cursor: help;
 }
 
 mark, ins {
-  background: $color__background-ins;
+  background: $background-ins-color;
   text-decoration: none;
 }
 

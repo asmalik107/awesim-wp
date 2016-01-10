@@ -12,33 +12,32 @@ gulp.task('sass', function() {
     .pipe($.replace, '../font', 'fonts')
     .pipe($.replace, '../font', 'fonts');
 
-    return sass('sass/style.scss',
-        {
-	      style: 'expanded',
-	      precision: 10
-	    })
-    	.on('error', function (err) {
-      		console.error('Error', err.message);
-   		})
-      .pipe(cssChannel())
-   		.pipe($.autoprefixer({
-      		browsers: ['last 1 version']
-    	}))
-        .pipe(gulp.dest('dist'))
-        .pipe(gulp.dest(''));
+  return sass('sass/style.scss', {
+      style: 'expanded',
+      precision: 10
+    })
+    .on('error', function(err) {
+      console.error('Error', err.message);
+    })
+    .pipe(cssChannel())
+    .pipe($.autoprefixer({
+      browsers: ['last 1 version']
+    }))
+    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(''));
 });
 
-gulp.task('copy', function(){
-	gulp.src(['**.php', 'js/**/*', 'fonts/**/*', 'images/**/*', 'inc/**/*', 'languages/**/*', 'layouts/**/*', 'template-parts/**/*'], {
-			base: '.'
-		})
-		.pipe(gulp.dest('dist/'));
+gulp.task('copy', function() {
+  gulp.src(['**.php', 'js/**/*', 'fonts/**/*', 'images/**/*', 'inc/**/*', 'languages/**/*', 'layouts/**/*', 'template-parts/**/*'], {
+      base: '.'
+    })
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('sass/**/*.scss', ['sass']);
+  gulp.watch('sass/**/*.scss', ['sass']);
 });
 
-gulp.task('watch-sass', ['clean', 'sass', 'watch']);
+gulp.task('watch-sass', ['sass', 'watch']);
 
 gulp.task('default', ['clean', 'sass', 'copy']);
