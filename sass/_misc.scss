@@ -1,0 +1,51 @@
+.header-social-icons, .footer-social-icons {
+  display: none;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 0;
+    display: inline-block;
+    margin-right: -3px;
+    margin-top: 0;
+  }
+
+  a {
+    display: inline;
+    margin-top: 0;
+    font-size: 1.5em;
+    color: $link-color;
+    &:hover,
+    &.focus {
+      color: $link-hover-color;
+    }
+  }
+
+  @include breakpoint($bp-medium-min) {
+    display: block;
+    float: right;
+    margin: -4px 0px 0 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 7px;
+  }
+
+
+}
+
+.fa-stack-header {
+  height: 1.8em;
+  line-height: 1.8em;
+}
+
+.fa-stack-square {
+  font-size: 1.8em;
+}
+
+
+.icon-hamburger:before {
+  content: "\e008";
+}

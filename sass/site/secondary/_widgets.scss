@@ -78,8 +78,7 @@
     }
 
     &:hover,
-    &:focus,
-   {
+    &:focus {
       background: scale-color($tag-color, $lightness: -15%);
       &::before {
         border-right-color: scale-color($tag-color, $lightness: -15%);

@@ -14,6 +14,14 @@ $susy: (
   background: $main-nav-color;
   height: $main-nav-size;
   @include span(12 of 12);
+
+  @include breakpoint($bp-medium-min) {
+
+    position: fixed;
+    z-index: 100;
+    opacity: .92;
+  }
+
 }
 
 footer {
@@ -21,20 +29,40 @@ footer {
   padding: 2em;
 }
 
-.content-area {
+.content-area, .widget-area  {
   padding: 1rem;
 }
 
-.widget-area {
-  padding: 1rem;
+
+.content-area {
+  @include span(12 of 12);
+  @include susy-breakpoint($bp-medium-min, $susy) {
+    @include span(9 of 12);
+    position: relative;
+    top: $main-nav-size;
+    margin-bottom: $main-nav-size;
+  }
 }
+
+.widget-area {
+  @include span(12 of 12);
+  @include susy-breakpoint($bp-medium-min, $susy) {
+    @include span(3 of 12 last);
+    position: relative;
+    top: $main-nav-size;
+    margin-bottom: $main-nav-size;
+  }
+
+}
+
 
 .site-branding {
   overflow: hidden;
   width: 200px;
   float: left;
   margin: 0.4em 0.8em;
-  // margin: 16px 16px 14px 20px;
-  //@include span(2 of 12);
+}
 
+.site-footer {
+  background-color: #076274;
 }
