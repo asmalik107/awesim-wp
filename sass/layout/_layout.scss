@@ -1,0 +1,40 @@
+$susy: (
+        columns: 12,
+        gutters: 1/30,
+        global-box-sizing: border-box,
+        debug: (image: hide)
+);
+
+#page {
+  @include container;
+}
+
+#masthead {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  background: $main-nav-color;
+  height: $main-nav-size;
+  @include span(12 of 12);
+}
+
+footer {
+  clear: both;
+  padding: 2em;
+}
+
+.content-area {
+  padding: 1rem;
+}
+
+.widget-area {
+  padding: 1rem;
+}
+
+.site-branding {
+  overflow: hidden;
+  width: 200px;
+  float: left;
+  margin: 0.4em 0.8em;
+  // margin: 16px 16px 14px 20px;
+  //@include span(2 of 12);
+
+}

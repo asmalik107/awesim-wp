@@ -1,5 +1,15 @@
-/*$color__background-body: #f5f5f5;*/
 $background-color: #FAF7F3;
+
+/* Breakpoints */
+$bp-xsmall-min: 482px;
+$bp-small-min: 700px;
+$bp-medium-min: 899px;
+$bp-large-min: 1200px;
+
+$bp-xsmall-max: ($bp-xsmall-min - 1);
+$bp-small-max: ($bp-small-min - 1);
+$bp-medium-max: ($bp-medium-min - 1);
+$bp-large-max : ($bp-large-min - 1);
 
 /* Accessibilty*/
 $background-screen-color: #f1f1f1;
@@ -15,7 +25,7 @@ $background-ins-color: #fff9c0;
 $border-abbr-color: #666;
 
 /* Fonts */
-$font-main: "Fira Sans",Helvetica,sans-serif;
+$font-main: "Fira Sans", Helvetica, sans-serif;
 $font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font-pre: "Courier 10 Pitch", Courier, monospace;
 $font-line-height-body: 1.5;
@@ -42,7 +52,6 @@ $main-nav-color: #ffffff;
 $main-nav-links-color: $link-color;
 $main-nav-size: 60px;
 
-
 /* Tags*/
 $tag-color: #E07C67;
 
@@ -55,8 +64,5 @@ $button_link_color: #45828E;
 $button-tag-color: $tag-color;
 
 
-
-//$size__site-main: 100%;
-//$size__site-sidebar: 25%;
 
 

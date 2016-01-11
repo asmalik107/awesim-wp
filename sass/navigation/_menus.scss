@@ -1,90 +1,13 @@
+/* Main Navigation*/
 .main-navigation {
-  /*	clear: both;
-      display: block;*/
-  // float: right;
-  //width: 100%;
-
   display: block;
   padding-top: 1.2em;
   padding-left: 20em;
-
-  // float: right;
-  //@include span(10 of 12 last);
-  //margin-top: 22px;
-  //margin-bottom: 22px;
 }
 
 .menu-container {
   width: auto;
   display: none;
-  //float: left;
-  //@include span(8 of 12);
-
-  /* ul {
-     display: none;
-     list-style: none;
-     margin: 0;
-     padding: 2em;
-
-     ul {
-       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-       float: left;
-       position: absolute;
-       top: 1.1em;
-       left: -999em;
-       z-index: 99999;
-       line-height: 1.5rem;
-       background: $color_secondary-background;
-
-       ul {
-         left: -999em;
-         top: 0;
-       }
-
-       li {
-         &:hover > ul,
-         &.focus > ul {
-           left: 100%;
-         }
-       }
-
-       a {
-         width: 200px;
-       }
-
-       :hover > a,
-       .focus > a {
-       }
-
-       a:hover,
-       a.focus {
-       }
-     }
-
-     li:hover > ul,
-     li.focus > ul {
-       left: auto;
-     }
-   }
-   li {
-     //float: left;
-     position: relative;
-     // display: inline-block;
-     // width: auto;
-     margin: 0;
-     padding: 0;
-     //border-right: 1px dotted #ddd;
-     padding-right: 3px;
-
-     &:hover > a,
-     &.focus > a {
-     }
-   }
-   a {
-     font-weight: bold;
-     margin-bottom: 10px;
-     display: block;
-   }*/
 
   .current_page_item > a,
   .current-menu-item > a,
@@ -93,7 +16,6 @@
 }
 
 /* Small menu. */
-
 .menu-toggle {
   float: left;
   padding: 0.5em 1em;
@@ -104,6 +26,7 @@
   display: block;
 }
 
+/* Mobile Menu */
 .mobile-menu {
   display: none;
 
@@ -170,10 +93,7 @@
     }
   }
   li {
-    //float: left;
     position: relative;
-    // display: inline-block;
-    // width: auto;
     margin: 0;
     text-align: center;
     padding: 10px 0;
@@ -200,7 +120,7 @@
   background: $background-secondary-color;
 }
 
-@include breakpoint(899px) {
+@include breakpoint($bp-medium-min) {
   .menu-toggle {
     display: none;
   }
@@ -251,9 +171,6 @@
 
 }
 
-/*.post-navigation {
-  clear: both;
-}*/
 
 .comment-navigation,
 .posts-navigation,

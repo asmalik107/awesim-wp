@@ -65,51 +65,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "elements/elements";
 /*--------------------------------------------------------------
-# Grid
+# Layout
 --------------------------------------------------------------*/
 @import "../node_modules/breakpoint-sass/stylesheets/breakpoint.scss";
 @import "../node_modules/susy/sass/susy.scss";
 
-$susy: (
-        columns: 12,
-        gutters: 1/30,
-        global-box-sizing: border-box,
-        debug: (image: hide)
-);
-
-#page {
-  @include container;
-}
-
-#masthead {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  background: $main-nav-color;
-  height: $main-nav-size;
-  @include span(12 of 12);
-}
-
-footer {
-  clear: both;
-  padding: 2em;
-}
-
-.content-area {
-  padding: 1rem;
-}
-
-.widget-area {
-  padding: 1rem;
-}
-
-.site-branding {
-  overflow: hidden;
-  width: 200px;
-  float: left;
-  margin: 0.4em 0.8em;
-  // margin: 16px 16px 14px 20px;
-  //@include span(2 of 12);
-
-}
+@import "layout/layout";
 
 /*--------------------------------------------------------------
 # Forms
@@ -261,7 +222,7 @@ footer {
 /*--------------------------------------------------------------
 # Breakpoint 482px to 898px
 --------------------------------------------------------------*/
-@include breakpoint(482px 898px) {
+@include breakpoint($bp-xsmall-min $bp-medium-max) {
 
   .entry-header {
     height: 50%;
@@ -283,7 +244,7 @@ footer {
 /*--------------------------------------------------------------
 # Breakpoint 898px and above
 --------------------------------------------------------------*/
-@include breakpoint(899px) {
+@include breakpoint($bp-medium-min) {
 
   #masthead {
     position: fixed;
@@ -348,7 +309,7 @@ footer {
 //(481-899)(900-1200)
 .content-area {
   @include span(12 of 12);
-  @include susy-breakpoint(899px, $susy) {
+  @include susy-breakpoint($bp-medium-min, $susy) {
     @include span(9 of 12);
     position: relative;
     top: $main-nav-size;
@@ -358,7 +319,7 @@ footer {
 
 .widget-area {
   @include span(12 of 12);
-  @include susy-breakpoint(899px, $susy) {
+  @include susy-breakpoint($bp-medium-min, $susy) {
     @include span(3 of 12 last);
     position: relative;
     top: $main-nav-size;
@@ -370,10 +331,10 @@ footer {
 .article-masonry {
   @extend .article-single;
   width: 100%;
-  @include breakpoint(700px 1199px) {
+  @include breakpoint($bp-small-min $bp-large-max) {
     width: 49%;
   }
-  @include breakpoint(1200px) {
+  @include breakpoint($bp-large-min) {
     width: 32.6%;
   }
 
