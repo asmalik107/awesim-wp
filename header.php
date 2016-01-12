@@ -32,7 +32,7 @@
             </button>
         </div>
 		<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		    <span class='site-logo'></span>
+		    <span class='site-logo'>AM</span>
 		</a>
 
 
