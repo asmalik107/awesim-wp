@@ -3362,7 +3362,6 @@ input[type="submit"] {
   border: 1px solid transparent;
   border-radius: 0;
   padding: 0.85em 1em;
-  margin: 0 1rem 1rem 0;
   font-size: 0.9rem;
   color: #fff;
 }
@@ -3536,8 +3535,8 @@ a:hover, a:active {
 /* Main Navigation*/
 .main-navigation {
   display: block;
-  padding-top: 1.2em;
   padding-left: 15em;
+  padding-top: 1em;
 }
 
 .menu-container {
@@ -3553,6 +3552,7 @@ a:hover, a:active {
     width: auto;
     float: left;
     padding: 0;
+    padding-top: 0.3em;
   }
   .menu-container li {
     position: relative;
@@ -3560,25 +3560,25 @@ a:hover, a:active {
     width: auto;
     padding: 0px;
     padding-right: 0.2em;
-    margin-top: 0.2em;
   }
   .menu-container li:hover > a, .menu-container li:focus > a {
     color: #45828E;
   }
   .menu-container li:after {
     content: "\2022";
-    font-size: 1em;
+    font-size: 1.2em;
     color: #45828E;
   }
   .menu-container a {
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: 2px 14px;
     font-weight: bold;
     color: #45828E;
     font-style: normal;
     letter-spacing: 0px;
     margin: 0;
+    font-size: 1rem;
   }
 }
 
@@ -3841,7 +3841,7 @@ ul.page-numbers .dots {
   border: none;
   cursor: pointer;
   height: 26px;
-  margin: 0px 0;
+  margin: 0 7px 0 0;
   padding: 0 0 0 34px;
   position: relative;
   transition: width 400ms ease, background 400ms ease;
@@ -3961,7 +3961,7 @@ ul.page-numbers .dots {
 .widget ul {
   padding: 0 0.2em;
   list-style: none;
-  border-top: 2px solid #A5ECFA;
+  border-top: 2px solid #45828E;
   margin: 0 0.4em 0.2em 0.4em;
 }
 .widget ul li {
@@ -4063,7 +4063,7 @@ ul.page-numbers .dots {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 0.5em 0.5em 0 0.5em;
+  margin: 0.5em;
 }
 
 .page-links {
@@ -4072,9 +4072,7 @@ ul.page-numbers .dots {
 }
 
 .cat-links {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
 }
 .cat-links a {
   color: white;
@@ -4087,22 +4085,22 @@ ul.page-numbers .dots {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 85%;
-  height: 60%;
-  border: 1px solid #fff;
+  width: 75%;
+  height: 80%;
+  padding: 1em 0.5em;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-@media (min-width: 482px) and (max-width: 898px) {
-  .entry-header {
-    height: 50%;
+.entry-header .cat-size {
+  font-size: 70%;
+}
+@media (min-width: 899px) {
+  .entry-header .cat-size {
+    font-size: 100%;
   }
 }
 
 .entry-title {
   text-align: center;
-  border-top: 1px solid #fff;
-  margin: 10px 10px;
-  padding-top: 20px;
   color: white;
   text-transform: capitalize;
 }
@@ -4113,9 +4111,9 @@ ul.page-numbers .dots {
 .entry-title a:hover {
   text-shadow: #fff 0 0 10px;
 }
-@media (min-width: 899px) {
+@media (min-width: 482px) and (max-width: 699px) {
   .entry-title {
-    padding-top: 0.5em;
+    font-size: 1.7rem;
   }
 }
 
@@ -4123,9 +4121,7 @@ ul.page-numbers .dots {
   color: white;
   text-align: center;
   text-transform: uppercase;
-  margin: 10px 10px;
   font-size: 0.6em;
-  padding-top: 5px;
 }
 .entry-meta a {
   color: white;
@@ -4139,7 +4135,7 @@ ul.page-numbers .dots {
 .entry-meta .edit-link {
   margin-left: 10px;
 }
-@media (min-width: 482px) and (max-width: 898px) {
+@media (min-width: 482px) and (max-width: 699px) {
   .entry-meta {
     font-size: 0.8rem;
   }
@@ -4163,18 +4159,25 @@ ul.page-numbers .dots {
   }
 }
 
-@media (min-width: 482px) and (max-width: 898px) {
+.entry-title-single {
+  font-weight: 700;
+  font-stretch: normal;
+}
+@media (min-width: 482px) and (max-width: 699px) {
   .entry-title-single {
-    font-weight: 700;
-    font-stretch: normal;
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
 }
-@media (min-width: 899px) {
+@media (min-width: 700px) and (max-width: 1199px) {
   .entry-title-single {
-    font-weight: 700;
-    font-stretch: normal;
-    font-size: 2.4rem;
+    font-size: 2.4em;
+    line-height: 60px;
+    margin: 0.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .entry-title-single {
+    font-size: 3.7em;
     line-height: 60px;
     margin: 0.5em;
   }
@@ -4200,6 +4203,7 @@ ul.page-numbers .dots {
 }
 .article-single .article-featured-image, .article-masonry .article-featured-image {
   position: relative;
+  font-size: 0.9rem;
 }
 .article-single .article-featured-image img, .article-masonry .article-featured-image img {
   width: 100%;

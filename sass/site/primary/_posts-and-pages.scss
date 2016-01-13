@@ -19,7 +19,7 @@
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 0.5em 0.5em 0 0.5em;
+  margin: 0.5em;
 }
 
 .page-links {
@@ -28,9 +28,8 @@
 }
 
 .cat-links {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  //margin: 0 auto;
 
   a {
     color: white;
@@ -44,22 +43,25 @@
   left: 0;
   bottom: 0;
   right: 0;
-  width: 85%;
-  height: 60%;
-  border: 1px solid #fff;
+  width: 75%;
+  height: 80%;
+  padding: 1em 0.5em;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
-  @include breakpoint($bp-xsmall-min $bp-medium-max) {
-    height: 50%;
+  .cat-size {
+    font-size: 70%;
+
+    @include breakpoint($bp-medium-min) {
+      font-size: 100%;
+    }
   }
+
+
 
 }
 
 .entry-title {
   text-align: center;
-  border-top: 1px solid #fff;
-  margin: 10px 10px;
-  padding-top: 20px;
   color: white;
   text-transform: capitalize;
 
@@ -72,8 +74,8 @@
     }
   }
 
-  @include breakpoint($bp-medium-min) {
-    padding-top: 0.5em;
+  @include breakpoint($bp-xsmall-min $bp-small-max) {
+    font-size: 1.7rem;
   }
 
 }
@@ -82,9 +84,9 @@
   color: white;
   text-align: center;
   text-transform: uppercase;
-  margin: 10px 10px;
+  //margin: 10px 10px;
   font-size: 0.6em;
-  padding-top: 5px;
+  //padding-top: 5px;
 
   a {
     color: white;
@@ -102,7 +104,7 @@
     margin-left: 10px;
   }
 
-  @include breakpoint($bp-xsmall-min $bp-medium-max) {
+  @include breakpoint($bp-xsmall-min $bp-small-max) {
     font-size: 0.8rem;
   }
 
@@ -131,22 +133,24 @@
 }
 
 .entry-title-single {
-  @include breakpoint($bp-xsmall-min $bp-medium-max) {
-    //padding-top: 1.5em;
-    font-weight: 700;
-    font-stretch: normal;
-    font-size: 1.6rem;
+  font-weight: 700;
+  font-stretch: normal;
+
+  @include breakpoint($bp-xsmall-min $bp-small-max) {
+    font-size: 1.6em;
   }
 
-  @include breakpoint($bp-medium-min) {
-    //padding-top: 2em;
-    font-weight: 700;
-    font-stretch: normal;
-    font-size: 2.4rem;
+  @include breakpoint($bp-small-min $bp-large-max) {
+    font-size: 2.4em;
     line-height: 60px;
     margin: 0.5em;
   }
 
+  @include breakpoint($bp-large-min) {
+    font-size: 3.7em;
+    line-height: 60px;
+    margin: 0.5em;
+  }
 }
 
 /*.article-featured-image {
@@ -171,6 +175,8 @@
 
   .article-featured-image {
     position: relative;
+    font-size: 0.9rem;
+
     img {
       width: 100%;
     }

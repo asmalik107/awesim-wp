@@ -15,17 +15,16 @@
 
 		<?php the_post_thumbnail('large-thumbnail'); ?>
 
-        <span class="cat-links button button-tag"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
 
         <header class="entry-header">
+            <span class="cat-links button button-tag cat-size"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
+
+            <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
             <p class="entry-meta entry-meta-single">
                 <?php awesomo_posted_on(); ?>
                 <?php awesomo_on_comments(); ?>
                 <?php awesomo_on_edit(); ?>
             </p>
-
-            <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
-
             <?php awesomo_tags(); ?>
 
         </header><!-- .entry-header -->

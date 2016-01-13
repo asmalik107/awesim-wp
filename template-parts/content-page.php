@@ -13,6 +13,7 @@
 	<div class="article-featured-image">
 		   <?php the_post_thumbnail('large-thumbnail'); ?>
 
+       <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
 
         <header class="entry-header">
              <p class="entry-meta entry-meta-single">
@@ -21,7 +22,6 @@
                  <?php awesomo_on_edit(); ?>
              </p>
 
-             <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
         </header><!-- .entry-header -->
 	</div>
 

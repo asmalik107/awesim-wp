@@ -1,8 +1,9 @@
 /* Main Navigation*/
 .main-navigation {
   display: block;
-  padding-top: 1.2em;
+  //padding-top: 1.2em;
   padding-left: 15em;
+  padding-top: 1em;
 }
 
 .menu-container {
@@ -17,6 +18,7 @@
       width: auto;
       float: left;
       padding: 0;
+      padding-top: 0.3em;
     }
 
     li {
@@ -26,7 +28,6 @@
       padding: 0px;
       //border-right: 1px dotted #ddd;
       padding-right: 0.2em;;
-      margin-top: 0.2em;
 
       &:hover > a,
       &:focus > a {
@@ -35,19 +36,20 @@
 
       &:after {
         content: "\2022";
-        font-size: 1em;
+        font-size: 1.2em;
         color: #45828E;
       }
     }
     a {
       text-decoration: none;
-      text-transform: uppercase;
+      text-transform: capitalize;
       padding: 2px 14px;
       font-weight: bold;
       color: $main-nav-links-color;
       font-style: normal;
       letter-spacing: 0px;
       margin: 0;
+      font-size: 1rem;
     }
 
   }

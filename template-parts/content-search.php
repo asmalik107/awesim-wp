@@ -15,7 +15,11 @@
            <?php the_post_thumbnail('small-thumbnail'); ?>
         </a>
 
+
         <header class="entry-header">
+            <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+
+
             <?php if ( 'post' === get_post_type() ) : ?>
                 <p class="entry-meta">
                     <?php awesomo_posted_on(); ?>
@@ -24,7 +28,6 @@
                 </p>
             <?php endif; ?>
 
-            <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
         </header><!-- .entry-header -->
 
     </div>

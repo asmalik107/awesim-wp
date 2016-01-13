@@ -307,11 +307,8 @@ function awesemo_recent_posts() {
 
 function awesemo_posts_pagination($pages = '', $range = 4)
 {
-/*    $prev_arrow = is_rtl() ? '&rarr;' : '&larr;';
-    $next_arrow = is_rtl() ? '&larr;' : '&rarr;';*/
-
     $prev_arrow = is_rtl() ? '<i class="fa fa-angle-right"></i>' :'<i class="fa fa-angle-left"></i>';
-     $next_arrow = is_rtl() ? '<i class="fa fa-angle-left"></i>' :'<i class="fa fa-angle-right"></i>';
+    $next_arrow = is_rtl() ? '<i class="fa fa-angle-left"></i>' :'<i class="fa fa-angle-right"></i>';
 
     global $wp_query;
     $total = $wp_query->max_num_pages;
@@ -335,6 +332,41 @@ function awesemo_posts_pagination($pages = '', $range = 4)
             'next_text'		=> $next_arrow,
          ) );
     }
+}
+
+
+function awesemo_social_icons() {
+?>
+        <div class="header-social-icons">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/asimsaeedmalik">
+                        <span class="fa-stack fa-stack-header">
+                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/asimmalik">
+                        <span class="fa-stack fa-stack-header">
+                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://uk.linkedin.com/in/asimsmalik">
+                        <span class="fa-stack fa-stack-header">
+                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
+                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    <?php
+
 }
 
 

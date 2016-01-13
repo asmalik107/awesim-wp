@@ -40,34 +40,7 @@
 			<div class="menu-container">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</div>
-			<div class="header-social-icons">
-				<ul>
-					<li>
-						<a href="https://www.facebook.com/">
-							<span class="fa-stack fa-stack-header">
-								<i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-								<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.facebook.com/">
-							<span class="fa-stack fa-stack-header">
-								<i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-								<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.facebook.com/">
-							<span class="fa-stack fa-stack-header">
-								<i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-								<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					</li>
-				</ul>
-			</div>
+            <?php awesemo_social_icons() ?>
 			<?php get_search_form(); ?>
 		</nav><!-- #site-navigation -->
 
@@ -77,34 +50,7 @@
 	    <div class='mobile-menu-container'>
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_id' => 'primary-menu' ) ); ?>
         </div>
-        <div class="header-social-icons">
-            <ul>
-                <li>
-                    <a href="https://www.facebook.com/">
-                        <span class="fa-stack fa-stack-header">
-                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/">
-                        <span class="fa-stack fa-stack-header">
-                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/">
-                        <span class="fa-stack fa-stack-header">
-                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-                            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <?php awesemo_social_icons() ?>
     </div>
 
 <!-- 	<div id="content" class="site-content"> -->
