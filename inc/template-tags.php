@@ -24,7 +24,7 @@ function awesomo_posted_on() {
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
 	);
-	echo '<i class="fa fa-clock-o"></i><span class="posted-on">&nbsp;' . $time_string . '</span>'; // WPCS: XSS OK.
+	echo '<i class="fa fa-calendar-o"></i><span class="posted-on">&nbsp;' . $time_string . '</span>'; // WPCS: XSS OK.
 
 
 }

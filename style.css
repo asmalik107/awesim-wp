@@ -3951,22 +3951,21 @@ ul.page-numbers .dots {
 .widget h3 {
   color: #45828E;
   background: #ffffff;
-  padding: 0.2em;
   text-align: center;
-  margin: 0.4em;
 }
 .widget select {
   max-width: 100%;
 }
 .widget ul {
-  padding: 0 0.2em;
   list-style: none;
   border-top: 2px solid #45828E;
-  margin: 0 0.4em 0.2em 0.4em;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0 10px;
 }
 .widget ul li {
-  border-bottom: 1px solid #EEE;
-  padding: 0.4em 0;
+  padding: 15px 0;
+  border-bottom: 2px solid #45828E;
 }
 
 /* Search widget. */
@@ -4025,9 +4024,6 @@ ul.page-numbers .dots {
   float: left;
   margin: 0 10px 0 0;
 }
-#recent-post-widget .detail {
-  margin-bottom: 10px;
-}
 #recent-post-widget a {
   font-weight: bold;
 }
@@ -4073,6 +4069,12 @@ ul.page-numbers .dots {
 
 .cat-links {
   position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 4px 7px 3px;
+  line-height: 14px;
 }
 .cat-links a {
   color: white;
@@ -4081,14 +4083,11 @@ ul.page-numbers .dots {
 .entry-header {
   margin: auto;
   position: absolute;
-  top: 0;
-  left: 0;
+  /*  top: 0;
+    left: 0;*/
   bottom: 0;
-  right: 0;
-  width: 75%;
-  height: 80%;
+  width: 100%;
   padding: 1em 0.5em;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 .entry-header .cat-size {
   font-size: 70%;
@@ -4100,9 +4099,10 @@ ul.page-numbers .dots {
 }
 
 .entry-title {
-  text-align: center;
   color: white;
   text-transform: capitalize;
+  margin: 0;
+  margin-bottom: 0.3em;
 }
 .entry-title a {
   color: white;
@@ -4119,9 +4119,10 @@ ul.page-numbers .dots {
 
 .entry-meta {
   color: white;
-  text-align: center;
   text-transform: uppercase;
-  font-size: 0.6em;
+  font-size: 0.8em;
+  margin: 0;
+  margin-bottom: 2px;
 }
 .entry-meta a {
   color: white;
@@ -4138,11 +4139,6 @@ ul.page-numbers .dots {
 @media (min-width: 482px) and (max-width: 699px) {
   .entry-meta {
     font-size: 0.8rem;
-  }
-}
-@media (min-width: 899px) {
-  .entry-meta {
-    padding-top: 0;
   }
 }
 
@@ -4204,6 +4200,16 @@ ul.page-numbers .dots {
 .article-single .article-featured-image, .article-masonry .article-featured-image {
   position: relative;
   font-size: 0.9rem;
+}
+.article-single .article-featured-image .post-link::before, .article-masonry .article-featured-image .post-link::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 6px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 .article-single .article-featured-image img, .article-masonry .article-featured-image img {
   width: 100%;

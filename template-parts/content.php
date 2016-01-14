@@ -11,9 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-masonry'); ?>>
 
-
     <div class="article-featured-image">
-        <a href="<?php echo get_permalink(); ?>">
+        <a class="post-link" href="<?php echo get_permalink(); ?>">
          <?php the_post_thumbnail('small-thumbnail'); ?>
         </a>
 
