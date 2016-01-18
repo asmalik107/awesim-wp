@@ -16,14 +16,20 @@
   ul {
     //padding: 10px 10px;
     list-style: none;
-    border-top: 2px solid #45828E;
+    //border-top: 2px solid #45828E;
     margin: 0;
-    margin-bottom: 1em;
-    padding: 0 10px;
+    //margin-bottom: 1em;
+    padding: 0 0.5em;
 
     li {
-      padding: 15px 0;
-      border-bottom: 2px solid #45828E;
+      padding: 0.5em 0;
+      //border-top: 2px solid #45828E;
+      border-top: 1px solid #eee;
+
+      &:after {
+        @include clearfix();
+        @include clearfix-after();
+      }
     }
 
   }
@@ -94,11 +100,11 @@
   }
 
   .detail {
-   // margin-bottom: 10px;
+    padding-left: 65px;
   }
 
   a {
-    font-weight: bold;
+    //font-weight: bold;
   }
 
   .post-date {

@@ -29,8 +29,12 @@ footer {
   padding: 2em;
 }
 
-.content-area, .widget-area  {
-  padding: 1rem;
+.content-area{
+    padding: 1em 0 1em 1em;
+}
+
+ .widget-area  {
+  padding: 1em 1em 1em 0.5em;
 }
 
 

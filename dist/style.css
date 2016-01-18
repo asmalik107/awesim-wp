@@ -3296,8 +3296,12 @@ footer {
   padding: 2em;
 }
 
-.content-area, .widget-area {
-  padding: 1rem;
+.content-area {
+  padding: 1em 0 1em 1em;
+}
+
+.widget-area {
+  padding: 1em 1em 1em 0.5em;
 }
 
 .content-area {
@@ -3929,7 +3933,7 @@ ul.page-numbers .dots {
 .site-footer:before,
 .site-footer:after {
   content: "";
-  display: table;
+  display: block;
 }
 
 .clear:after,
@@ -3958,14 +3962,17 @@ ul.page-numbers .dots {
 }
 .widget ul {
   list-style: none;
-  border-top: 2px solid #45828E;
   margin: 0;
-  margin-bottom: 1em;
-  padding: 0 10px;
+  padding: 0 0.5em;
 }
 .widget ul li {
-  padding: 15px 0;
-  border-bottom: 2px solid #45828E;
+  padding: 0.5em 0;
+  border-top: 1px solid #eee;
+}
+.widget ul li:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 /* Search widget. */
@@ -4024,8 +4031,8 @@ ul.page-numbers .dots {
   float: left;
   margin: 0 10px 0 0;
 }
-#recent-post-widget a {
-  font-weight: bold;
+#recent-post-widget .detail {
+  padding-left: 65px;
 }
 #recent-post-widget .post-date {
   display: block;
@@ -4120,7 +4127,7 @@ ul.page-numbers .dots {
 .entry-meta {
   color: white;
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 0.7em;
   margin: 0;
   margin-bottom: 2px;
 }
