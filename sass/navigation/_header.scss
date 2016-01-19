@@ -10,10 +10,10 @@
   display: block;
   border-radius: 40px;
   font-size: 20px;
-  color: #ffffff;
-  background: #45828E;
+  color: $logo-color;
+  background: $logo-background-color;
   line-height: 41px;
-  font-family: TROCCHI;
+  font-family: $logo-font-family;
   text-align: center;
 
 }

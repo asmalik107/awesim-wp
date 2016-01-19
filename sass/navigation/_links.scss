@@ -1,5 +1,9 @@
 a {
 	color: $link-color;
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+	vertical-align: top;
 
 	&:visited {
 		color: $link-visited-color;
@@ -16,4 +20,9 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+	&:hover {
+		text-decoration: none;
+	}
 }
+

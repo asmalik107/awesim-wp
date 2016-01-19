@@ -21,10 +21,10 @@ ul.page-numbers {
     padding: 0;
     width: 2.2em;
     height: 2.2em;
-    color: #b3b3b3;
+    color: $pagination-color;
     text-align: center;
     line-height: 2.1em;
-    border: 2px solid #e7e7e7;
+    border: 2px solid $pagination-border-color;
   }
 
   a {

@@ -56,6 +56,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Tags*/
 /* Buttons */
 /* Sidebar widgets */
+/* Pagination */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -456,17 +457,6 @@ th {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-a {
-  cursor: pointer;
-  text-decoration: none;
-  outline: none;
-  vertical-align: top;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -3304,6 +3294,7 @@ table {
 @media (min-width: 700px) {
   .content-area {
     padding: 1em 0 1em 0.5em;
+    margin: 0 auto -4.3em auto;
   }
 }
 @media (min-width: 899px) {
@@ -3530,6 +3521,10 @@ label {
 --------------------------------------------------------------*/
 a {
   color: #45828E;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  vertical-align: top;
 }
 a:visited {
   color: #45828E;
@@ -3542,6 +3537,9 @@ a:focus {
 }
 a:hover, a:active {
   outline: 0;
+}
+a:hover {
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -4058,6 +4056,11 @@ ul.page-numbers .dots {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none;
+}
+
 .sticky {
   display: block;
 }
@@ -4247,14 +4250,6 @@ ul.page-numbers .dots {
   .article-masonry {
     width: 32.6%;
   }
-}
-
-/*--------------------------------------------------------------
-## Asides
---------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none;
 }
 
 /*--------------------------------------------------------------
