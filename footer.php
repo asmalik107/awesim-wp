@@ -13,13 +13,15 @@
 
 
 <!--</div> #content -->
-
+    <div class="clear-push"></div>
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'awesomo' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'awesomo' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'awesomo' ), 'awesomo', '<a href="http://underscores.me/" rel="designer">Asim Malik</a>' ); ?>
-		</div><!-- .site-info -->
+	<div class="copyright">
+	        <span>© Asim Malik</span>
+	        <span>
+	        	<?php printf( esc_html__( 'Theme: %1$s designed and developed by Asim Malik. Powered by %2$s.', 'awesomo' ), '<a href="https://github.com/asmalik107/awesome-wp">Awesomo</a>', 'WordPress' ); ?>
+	        </span>
+	    <!--<?php awesemo_social_icons() ?> -->
+    </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -3,9 +3,11 @@
   //padding-left: 1rem ! important;
 
   h3 {
-    color: #45828E;
-    background: $main-nav-color;
+    color: $widget-header-color;
+    background: $widget-header-background-color;
     text-align: center;
+    padding: 0.7em 0;
+    margin: 0;
   }
 
   /* Make sure select elements fit in widgets. */

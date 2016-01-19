@@ -363,9 +363,22 @@ function awesemo_social_icons() {
                         </span>
                     </a>
                 </li>
+                <li>
+                    <a href="https://github.com/asmalik107">
+                        <span class="fa-stack fa-stack-header">
+                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
             </ul>
         </div>
     <?php
+
+}
+
+
+function awesemo_footer_content() {
 
 }
 

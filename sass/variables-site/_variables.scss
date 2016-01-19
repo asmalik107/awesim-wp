@@ -9,7 +9,7 @@ $bp-large-min: 1200px;
 $bp-xsmall-max: ($bp-xsmall-min - 1);
 $bp-small-max: ($bp-small-min - 1);
 $bp-medium-max: ($bp-medium-min - 1);
-$bp-large-max : ($bp-large-min - 1);
+$bp-large-max: ($bp-large-min - 1);
 
 /* Accessibilty*/
 $background-screen-color: #f1f1f1;
@@ -19,7 +19,8 @@ $text-screen-color: #21759b;
 $background-hr-color: #ccc;
 
 /* Base (Typography, etc) */
-$text-main-color: #404040;
+$primary-main-color: #404040;
+
 $background-pre-color: #eee;
 $background-ins-color: #fff9c0;
 $border-abbr-color: #666;
@@ -47,15 +48,25 @@ $link-visited-color: $link-color;
 $background-secondary-color: #ffffff;
 //$color_main_nav: #A5ECFA;
 
-/* Menu */
-$main-nav-color: #ffffff;
-$main-nav-links-color: $link-color;
-$main-nav-size: 60px;
+/* Header & Menu */
+//$main-nav-color: #ffffff;
+$header-background-color: #ffffff;
+$header-links-color: $link-color;
+$header-size: 4.3em;
+
+/* Footer */
+$footer-color: #ffffff;
+$footer_background_color: #076274;
+$footer-size: $header-size;
 
 /* Tags*/
 $tag-color: #E07C67;
 
 /* Buttons */
+
+$button-text-color: #ffffff;
+$button-toggle-color: #A5ECFA;
+
 $button-primary-color: #2199e8;
 $button-success-color: #3adb76;
 $button-warning-color: #ffae00;
@@ -63,6 +74,6 @@ $button-error-color: #ec5840;
 $button_link_color: #45828E;
 $button-tag-color: $tag-color;
 
-
-
-
+/* Sidebar widgets */
+$widget-header-color: #ffffff;
+$widget-header-background-color: #45828E;

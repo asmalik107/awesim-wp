@@ -3,7 +3,7 @@ button,
 input,
 select,
 textarea {
-  color: $text-main-color;
+  color: $primary-main-color;
   font-family: $font-main;
   @include font-size(0.875);
   line-height: $font-line-height-body;

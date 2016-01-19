@@ -11,12 +11,11 @@ $susy: (
 
 #masthead {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  background: $main-nav-color;
-  height: $main-nav-size;
+  background: $header-background-color;
+  height: $header-size;
   @include span(12 of 12);
 
   @include breakpoint($bp-medium-min) {
-
     position: fixed;
     z-index: 100;
     opacity: .92;
@@ -24,41 +23,43 @@ $susy: (
 
 }
 
-footer {
-  clear: both;
-  padding: 2em;
-}
-
-.content-area{
-    padding: 1em 0 1em 1em;
-}
-
- .widget-area  {
-  padding: 1em 1em 1em 0.5em;
-}
-
-
 .content-area {
+  padding: 1em 0.5em 1em 0.5em;
+  margin: 0 auto 0 auto;
+
   @include span(12 of 12);
+
+  @include breakpoint($bp-small-min, $bp-medium-max) {
+    padding: 1em 0 1em 0.5em;
+  }
+
   @include susy-breakpoint($bp-medium-min, $susy) {
     @include span(9 of 12);
+    padding: 5em 0 1em 0.5em;
+    //padding: 1em 0 1em 1em;
+    //top: $header-size;
     position: relative;
-    top: $main-nav-size;
-    margin-bottom: $main-nav-size;
+
+    //margin-bottom: $header-size;
   }
 }
 
 .widget-area {
+  padding: 1em 0.5em 1em 0.5em;
+  margin: 0 auto (-$header-size) auto;
+
   @include span(12 of 12);
+
   @include susy-breakpoint($bp-medium-min, $susy) {
     @include span(3 of 12 last);
+    margin: 0 auto (-$header-size) auto;
+    padding: 5em 1em 1em 0.5em;
     position: relative;
-    top: $main-nav-size;
-    margin-bottom: $main-nav-size;
+    //top: $header-size;
+    //margin-bottom: $header-size;
   }
 
 }
-
 
 .site-branding {
   overflow: hidden;
@@ -68,5 +69,21 @@ footer {
 }
 
 .site-footer {
-  background-color: #076274;
+  display: block;
+  color: $footer-color;
+  background-color: $footer_background_color;
+
+}
+
+.clear-push {
+  height: $footer-size;
+
+  @include clearfix();
+  @include clearfix-after();
+
+}
+
+.copyright {
+  text-align: center;
+  padding: 1.5em;
 }

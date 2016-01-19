@@ -31,7 +31,7 @@
 
       &:hover > a,
       &:focus > a {
-        color: $main-nav-links-color;
+        color: $header-links-color;
       }
 
       &:after {
@@ -45,7 +45,7 @@
       text-transform: capitalize;
       padding: 2px 14px;
       font-weight: bold;
-      color: $main-nav-links-color;
+      color: $header-links-color;
       font-style: normal;
       letter-spacing: 0px;
       margin: 0;
@@ -94,7 +94,7 @@
 }
 
 .mobile-menu-container {
-  padding-top: $main-nav-size;
+  padding-top: $header-size;
 
   ul {
     display: block;
@@ -266,9 +266,3 @@
   }
 
 }
-
-
-
-
-
-

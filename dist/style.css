@@ -51,9 +51,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Fields */
 /* Links */
 /* Background */
-/* Menu */
+/* Header & Menu */
+/* Footer */
 /* Tags*/
 /* Buttons */
+/* Sidebar widgets */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -3277,7 +3279,7 @@ table {
 #masthead {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   background: #ffffff;
-  height: 60px;
+  height: 4.3em;
   width: 100%;
   float: left;
   margin-left: 0;
@@ -3291,37 +3293,32 @@ table {
   }
 }
 
-footer {
-  clear: both;
-  padding: 2em;
-}
-
 .content-area {
-  padding: 1em 0 1em 1em;
-}
-
-.widget-area {
-  padding: 1em 1em 1em 0.5em;
-}
-
-.content-area {
+  padding: 1em 0.5em 1em 0.5em;
+  margin: 0 auto 0 auto;
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
+}
+@media (min-width: 700px) {
+  .content-area {
+    padding: 1em 0 1em 0.5em;
+  }
 }
 @media (min-width: 899px) {
   .content-area {
     width: 74.9326145553%;
     float: left;
     margin-right: 0.269541779%;
+    padding: 5em 0 1em 0.5em;
     position: relative;
-    top: 60px;
-    margin-bottom: 60px;
   }
 }
 
 .widget-area {
+  padding: 1em 0.5em 1em 0.5em;
+  margin: 0 auto -4.3em auto;
   width: 100%;
   float: left;
   margin-left: 0;
@@ -3332,9 +3329,9 @@ footer {
     width: 24.7978436658%;
     float: right;
     margin-right: 0;
+    margin: 0 auto -4.3em auto;
+    padding: 5em 1em 1em 0.5em;
     position: relative;
-    top: 60px;
-    margin-bottom: 60px;
   }
 }
 
@@ -3345,7 +3342,21 @@ footer {
 }
 
 .site-footer {
+  display: block;
+  color: #ffffff;
   background-color: #076274;
+}
+
+.clear-push {
+  height: 4.3em;
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -3367,7 +3378,7 @@ input[type="submit"] {
   border-radius: 0;
   padding: 0.85em 1em;
   font-size: 0.9rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .button-success,
@@ -3375,7 +3386,7 @@ input[type="submit"] {
 .button-warning,
 .button-secondary,
 .button-tag {
-  color: white;
+  color: #ffffff;
   border-radius: 0;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
@@ -3622,7 +3633,7 @@ a:hover, a:active {
 }
 
 .mobile-menu-container {
-  padding-top: 60px;
+  padding-top: 4.3em;
 }
 .mobile-menu-container ul {
   display: block;
@@ -3953,9 +3964,11 @@ ul.page-numbers .dots {
   /* Make sure select elements fit in widgets. */
 }
 .widget h3 {
-  color: #45828E;
-  background: #ffffff;
+  color: #ffffff;
+  background: #45828E;
   text-align: center;
+  padding: 0.7em 0;
+  margin: 0;
 }
 .widget select {
   max-width: 100%;
