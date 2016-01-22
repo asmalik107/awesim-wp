@@ -62,7 +62,13 @@ input[type="submit"], .button-primary {
 }
 
 .button-tag {
-  @include button-base($button-tag_color);
+  //@include button-base($button-tag_color);
+  background: $button-tag-color;
+
+  &:hover, &:focus {
+    background: scale-color($button-tag-color, $lightness: -15%);
+    outline: 0;
+  }
 }
 
 .button-xsmall {

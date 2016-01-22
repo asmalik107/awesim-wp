@@ -10,15 +10,17 @@ $susy: (
 }
 
 #masthead {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+ // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   background: $header-background-color;
   height: $header-size;
+  border-bottom: 1px solid $header-border-color;
+
   @include span(12 of 12);
 
   @include breakpoint($bp-medium-min) {
     position: fixed;
     z-index: 100;
-    opacity: .92;
+    //opacity: .92;
   }
 
 }

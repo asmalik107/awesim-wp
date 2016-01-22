@@ -37,9 +37,9 @@
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;
-    height: 26px;
-    margin: 0 7px 0 0;
-    padding: 0 0 0 34px;
+    height: 1.8em;
+    margin: 0 0.5em 0 0;
+    padding: 0 0 0 2em;
     position: relative;
     -webkit-transition: width 400ms ease, background 400ms ease;
     transition: width 400ms ease, background 400ms ease;
@@ -47,7 +47,7 @@
 
     &:focus {
       background-color: #fff;
-      border: 2px solid #45828E;
+      border: 2px solid $secondary-main-color;
       cursor: text;
       outline: 0;
       width: 150px;

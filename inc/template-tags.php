@@ -340,7 +340,7 @@ function awesemo_social_icons() {
         <div class="header-social-icons">
             <ul>
                 <li>
-                    <a href="https://www.facebook.com/asimsaeedmalik">
+                    <a class="icon-facebook" href="https://www.facebook.com/asimsaeedmalik">
                         <span class="fa-stack fa-stack-header">
                             <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
                             <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -348,7 +348,7 @@ function awesemo_social_icons() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/asimmalik">
+                    <a class="icon-twitter" href="https://twitter.com/asimmalik">
                         <span class="fa-stack fa-stack-header">
                             <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
                             <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -356,7 +356,7 @@ function awesemo_social_icons() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://uk.linkedin.com/in/asimsmalik">
+                    <a class="icon-linkedin" href="https://uk.linkedin.com/in/asimsmalik">
                         <span class="fa-stack fa-stack-header">
                             <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
                             <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -364,7 +364,7 @@ function awesemo_social_icons() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/asmalik107">
+                    <a class="icon-github" href="https://github.com/asmalik107">
                         <span class="fa-stack fa-stack-header">
                             <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
                             <i class="fa fa-github fa-stack-1x fa-inverse"></i>

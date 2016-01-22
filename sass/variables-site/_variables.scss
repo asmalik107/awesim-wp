@@ -1,4 +1,4 @@
-$background-color: #FAF7F3;
+$background-color: #f2f5f8;
 
 /* Breakpoints */
 $bp-xsmall-min: 482px;
@@ -19,14 +19,16 @@ $text-screen-color: #21759b;
 $background-hr-color: #ccc;
 
 /* Base (Typography, etc) */
-$primary-main-color: #404040;
+$primary-main-color: #313131;
+$secondary-main-color: #10cca9;
 
 $background-pre-color: #eee;
 $background-ins-color: #fff9c0;
 $border-abbr-color: #666;
 
 /* Fonts */
-$font-main: "Fira Sans", Helvetica, sans-serif;
+$font-primary: "Open Sans", Helvetica, sans-serif;
+$font-secondary: "PT Serif", Helvetica, sans-serif;
 $font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font-pre: "Courier 10 Pitch", Courier, monospace;
 $font-line-height-body: 1.5;
@@ -40,7 +42,7 @@ $input_focus-color: #45828E;
 $border-input-color: #ccc;
 
 /* Links */
-$link-color: #45828E;
+$link-color: $secondary-main-color;
 $link_hover-color: scale-color($link-color, $lightness: -15%);
 $link-visited-color: $link-color;
 
@@ -53,15 +55,15 @@ $background-secondary-color: #ffffff;
 $header-background-color: #ffffff;
 $header-links-color: $link-color;
 $header-size: 4.3em;
-
+$header-border-color:#ECECEC;
 
 $logo-color: #ffffff;
-$logo-background-color: #45828E;
+$logo-background-color: $secondary-main-color;
 $logo-font-family: TROCCHI;
 
 /* Footer */
-$footer-color: #ffffff;
-$footer_background_color: #076274;
+$footer-color: $primary-main-color;
+$footer_background_color: #ffffff;
 $footer-size: $header-size;
 
 /* Tags*/
@@ -70,20 +72,30 @@ $tag-color: #E07C67;
 /* Buttons */
 
 $button-text-color: #ffffff;
-$button-toggle-color: #A5ECFA;
+$button-toggle-color: $primary-main-color;
 
 $button-primary-color: #2199e8;
 $button-success-color: #3adb76;
 $button-warning-color: #ffae00;
 $button-error-color: #ec5840;
-$button_link_color: #45828E;
+$button_link_color: $link-color;
 $button-tag-color: $tag-color;
 
 /* Sidebar widgets */
-$widget-header-color: #ffffff;
-$widget-header-background-color: #45828E;
-
+$widget-header-color: inherit;
+$widget-header-background-color: inherit  ;
 
 /* Pagination */
 $pagination-color: #b3b3b3;
 $pagination-border-color: #e7e7e7;
+
+/* */
+$icon-facebook-color:#3b5998;
+$icon-twitter-color: #00aced;
+$icon-linkedin-color:#007bb5;
+$icon-github-color:#333;
+
+$icon-facebook-hover-color: scale-color($icon-facebook-color, $lightness: 25%);
+$icon-twitter-hover-color: scale-color($icon-twitter-color, $lightness: 25%);
+$icon-linkedin-hover-color: scale-color($icon-linkedin-color, $lightness: 25%);
+$icon-github-hover-color: scale-color($icon-github-color, $lightness: 25%);

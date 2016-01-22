@@ -4,9 +4,11 @@ input,
 select,
 textarea {
   color: $primary-main-color;
-  font-family: $font-main;
+  font-family: $font-primary;
   @include font-size(0.875);
   line-height: $font-line-height-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*--------------------------------------------------------------
@@ -14,6 +16,7 @@ textarea {
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-family: $font-secondary;
 }
 
 /*--------------------------------------------------------------

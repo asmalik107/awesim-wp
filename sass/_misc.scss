@@ -17,11 +17,11 @@
     display: inline;
     margin-top: 0;
     font-size: 1.5em;
-    color: $link-color;
+    /*color: $link-color;
     &:hover,
     &.focus {
       color: $link-hover-color;
-    }
+    }*/
   }
 
   @include breakpoint($bp-medium-min) {
@@ -33,7 +33,40 @@
     height: 7px;
   }
 
+}
 
+.icon-facebook {
+  color: $icon-facebook-color !important;
+  &:hover,
+  &.focus {
+    color: $icon-facebook-hover-color !important;
+  }
+}
+
+.icon-twitter {
+  color: $icon-twitter-color !important;
+  &:hover,
+  &.focus {
+    color: $icon-twitter-hover-color !important;
+  }
+}
+
+
+.icon-github {
+  color: $icon-github-color !important;
+  &:hover,
+  &.focus {
+    color: $icon-github-hover-color !important;
+  }
+}
+
+
+.icon-linkedin {
+  color: $icon-linkedin-color !important;
+  &:hover,
+  &.focus {
+    color: $icon-linkedin-hover-color !important;
+  }
 }
 
 .fa-stack-header {
@@ -45,6 +78,9 @@
   font-size: 1.8em;
 }
 
+.icon-facebook {
+
+}
 
 /*
 .icon-hamburger:before {

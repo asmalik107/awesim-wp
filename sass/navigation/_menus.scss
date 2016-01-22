@@ -2,7 +2,7 @@
 .main-navigation {
   display: block;
   //padding-top: 1.2em;
-  padding-left: 15em;
+  padding-left: 22em;
   padding-top: 1em;
 }
 
@@ -18,7 +18,7 @@
       width: auto;
       float: left;
       padding: 0;
-      padding-top: 0.3em;
+      padding-top: 0.4em;
     }
 
     li {
@@ -27,7 +27,7 @@
       width: auto;
       padding: 0px;
       //border-right: 1px dotted #ddd;
-      padding-right: 0.2em;;
+      padding-right: 0.2em;
 
       &:hover > a,
       &:focus > a {
@@ -37,19 +37,20 @@
       &:after {
         content: "\2022";
         font-size: 1.2em;
-        color: #45828E;
+        color: $primary-main-color;
       }
     }
     a {
       text-decoration: none;
       text-transform: capitalize;
-      padding: 2px 14px;
-      font-weight: bold;
-      color: $header-links-color;
-      font-style: normal;
-      letter-spacing: 0px;
+      padding: 0 14px;
+      //font-weight: bold;
+      color: $primary-main-color;
+      //font-style: normal;
+      letter-spacing: 0;
       margin: 0;
       font-size: 1rem;
+      font-family: 'PT Serif';
     }
 
   }
@@ -153,13 +154,14 @@
     }
   }
   a {
-    color: $link-color;
+    color: $primary-main-color;
     display: block;
     font-size: 1.5rem;
     padding: 0.2em 0 0.2em 0;
 
     &:hover {
       text-decoration: underline;
+      color: $link_hover-color;
     }
   }
 
