@@ -3399,6 +3399,7 @@ input[type="submit"] {
   padding: 0.85em 1em;
   font-size: 0.9rem;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .button-success,
@@ -3412,41 +3413,41 @@ input[type="submit"] {
 }
 
 input[type="submit"], .button-primary {
-  color: #2199e8;
-  border: 2px solid #2199e8;
+  color: #4580D6;
+  border: 2px solid #4580D6;
 }
 input[type="submit"]:hover, input[type="submit"]:focus, .button-primary:hover, .button-primary:focus {
-  background: #2199e8;
+  background: #4580D6;
   color: #ffffff;
   outline: 0;
 }
 
 .button-success {
-  color: #3adb76;
-  border: 2px solid #3adb76;
+  color: #46EA12;
+  border: 2px solid #46EA12;
 }
 .button-success:hover, .button-success:focus {
-  background: #3adb76;
+  background: #46EA12;
   color: #ffffff;
   outline: 0;
 }
 
 .button-error {
-  color: #ec5840;
-  border: 2px solid #ec5840;
+  color: #F60022;
+  border: 2px solid #F60022;
 }
 .button-error:hover, .button-error:focus {
-  background: #ec5840;
+  background: #F60022;
   color: #ffffff;
   outline: 0;
 }
 
 .button-warning {
-  color: #ffae00;
-  border: 2px solid #ffae00;
+  color: #FFB941;
+  border: 2px solid #FFB941;
 }
 .button-warning:hover, .button-warning:focus {
-  background: #ffae00;
+  background: #FFB941;
   color: #ffffff;
   outline: 0;
 }
@@ -3462,10 +3463,10 @@ input[type="submit"]:hover, input[type="submit"]:focus, .button-primary:hover, .
 }
 
 .button-tag {
-  background: #E07C67;
+  background: #6C9ADF;
 }
 .button-tag:hover, .button-tag:focus {
-  background: #d8593e;
+  background: #437ed6;
   outline: 0;
 }
 
@@ -4037,7 +4038,7 @@ ul.page-numbers .dots {
   margin: 0px 0px 8px 10px;
   white-space: nowrap;
   text-transform: uppercase;
-  background: #E07C67;
+  background: #FF8C41;
 }
 .tagcloud a:after {
   content: "";
@@ -4060,15 +4061,15 @@ ul.page-numbers .dots {
   left: -11px;
   width: 0;
   height: 0;
-  border-color: transparent #E07C67 transparent transparent;
+  border-color: transparent #FF8C41 transparent transparent;
   border-style: solid;
   border-width: 12px 11px 11px 0;
 }
 .tagcloud a:hover, .tagcloud a:focus {
-  background: #d8593e;
+  background: #ff6f11;
 }
 .tagcloud a:hover::before, .tagcloud a:focus::before {
-  border-right-color: #d8593e;
+  border-right-color: #ff6f11;
 }
 
 #recent-post-widget .thumbnail {
@@ -4081,6 +4082,7 @@ ul.page-numbers .dots {
 #recent-post-widget a {
   color: #313131;
   font-weight: bold;
+  font-family: "PT Serif";
 }
 #recent-post-widget a:hover {
   color: #0ead90;
@@ -4133,7 +4135,6 @@ ul.page-numbers .dots {
 .cat-links {
   position: relative;
   text-transform: uppercase;
-  font-weight: bold;
   margin: 0;
   margin-bottom: 0.5em;
   padding: 4px 7px 3px;
@@ -4339,6 +4340,7 @@ ul.page-numbers .dots {
 
 .recentcomments a {
   font-weight: bold;
+  font-family: "PT Serif";
 }
 
 @media (min-width: 481px) {

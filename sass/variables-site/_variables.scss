@@ -67,19 +67,20 @@ $footer_background_color: #ffffff;
 $footer-size: $header-size;
 
 /* Tags*/
-$tag-color: #E07C67;
+$tag-color: #FF8C41;
+$category-color:#6C9ADF;
 
 /* Buttons */
 
 $button-text-color: #ffffff;
 $button-toggle-color: $primary-main-color;
 
-$button-primary-color: #2199e8;
-$button-success-color: #3adb76;
-$button-warning-color: #ffae00;
-$button-error-color: #ec5840;
+$button-primary-color: #4580D6;
+$button-success-color: #46EA12;
+$button-warning-color: #FFB941;
+$button-error-color: #F60022;
 $button_link_color: $link-color;
-$button-tag-color: $tag-color;
+$button-tag-color: $category-color;
 
 /* Sidebar widgets */
 $widget-header-color: inherit;
