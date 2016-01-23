@@ -44,13 +44,11 @@
       text-decoration: none;
       text-transform: capitalize;
       padding: 0 14px;
-      //font-weight: bold;
       color: $primary-main-color;
-      //font-style: normal;
       letter-spacing: 0;
       margin: 0;
       font-size: 1rem;
-      font-family: 'PT Serif';
+      font-family: $font-secondary;
     }
 
   }
@@ -84,9 +82,8 @@
   .header-social-icons {
     display: block;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: solid 2px #e7e7e9;
+    padding: 0.5em 0;
+    //border-top: solid 2px #e7e7e9;
 
     li {
       width: 16%;
@@ -103,7 +100,7 @@
     margin: 0;
     padding: 0;
 
-    ul {
+/*    ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
@@ -141,13 +138,15 @@
     li:hover > ul,
     li.focus > ul {
       left: auto;
-    }
+    }*/
   }
+
   li {
     position: relative;
     margin: 0;
     text-align: center;
-    padding: 10px 0;
+    padding: 0;
+    border-bottom: 1px solid $header-border-color;
 
     &:hover > a,
     &.focus > a {
@@ -156,8 +155,9 @@
   a {
     color: $primary-main-color;
     display: block;
-    font-size: 1.5rem;
-    padding: 0.2em 0 0.2em 0;
+    font-size: 1.2em;
+    font-family: $font-secondary;
+    padding: 0.5em;
 
     &:hover {
       text-decoration: underline;
