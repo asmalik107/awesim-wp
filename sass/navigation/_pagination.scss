@@ -11,8 +11,8 @@ ul.page-numbers {
   }
 
   .current {
-    color: $link-color;
-    border: 2px solid $link-color;
+    color: $pagination-current-color;
+    border: 2px solid $pagination-current-border-color;
   }
 
   span {

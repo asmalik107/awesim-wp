@@ -40,15 +40,43 @@
         color: $primary-main-color;
       }
     }
+
     a {
       text-decoration: none;
       text-transform: capitalize;
-      padding: 0 14px;
-      color: $primary-main-color;
+      padding: 0 0.875em;
       letter-spacing: 0;
       margin: 0;
       font-size: 1rem;
       font-family: $font-secondary;
+      transition: 0.3s;
+
+      &:hover {
+        color: $link-hover-color !important;
+
+        &::before {
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #10cca9;
+        transition: all 0.3s;
+      }
+
+    }
+
+    .current-menu-item {
+      a {
+        color: $secondary-main-color;
+      }
     }
 
   }
@@ -100,45 +128,45 @@
     margin: 0;
     padding: 0;
 
-/*    ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.1em;
-      left: -999em;
-      z-index: 99999;
-      line-height: 1.5rem;
-      background: $background-secondary-color;
+    /*    ul {
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          float: left;
+          position: absolute;
+          top: 1.1em;
+          left: -999em;
+          z-index: 99999;
+          line-height: 1.5rem;
+          background: $background-secondary-color;
 
-      ul {
-        left: -999em;
-        top: 0;
-      }
+          ul {
+            left: -999em;
+            top: 0;
+          }
 
-      li {
-        &:hover > ul,
-        &.focus > ul {
-          left: 100%;
+          li {
+            &:hover > ul,
+            &.focus > ul {
+              left: 100%;
+            }
+          }
+
+          a {
+            width: 200px;
+          }
+
+          :hover > a,
+          .focus > a {
+          }
+
+          a:hover,
+          a.focus {
+          }
         }
-      }
 
-      a {
-        width: 200px;
-      }
-
-      :hover > a,
-      .focus > a {
-      }
-
-      a:hover,
-      a.focus {
-      }
-    }
-
-    li:hover > ul,
-    li.focus > ul {
-      left: auto;
-    }*/
+        li:hover > ul,
+        li.focus > ul {
+          left: auto;
+        }*/
   }
 
   li {
@@ -160,9 +188,11 @@
     padding: 0.5em;
 
     &:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
       color: $link_hover-color;
+
     }
+
   }
 
 }

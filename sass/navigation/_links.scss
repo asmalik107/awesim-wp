@@ -1,28 +1,23 @@
 a {
-	color: $link-color;
-	cursor: pointer;
-	text-decoration: none;
-	outline: none;
-	vertical-align: top;
+  color: $link-color;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  vertical-align: top;
 
-	&:visited {
-		color: $link-visited-color;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $link-hover-color;
-	}
-	&:focus {
-		outline: 0;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    color: $link-hover-color;
+    outline: 0;
+  }
 
-	&:hover {
-		text-decoration: none;
-	}
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    //color: $link-visited-color;
+  }
 }
 

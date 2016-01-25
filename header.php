@@ -27,7 +27,7 @@
 	<header id="masthead" class="site-header" role="banner">
         <div class="menu-toggle">
             <button class="button-toggle" aria-controls="primary-menu" aria-expanded="false">
-            <i class="fa fa-3x fa-bars"></i>
+            <i class="fa fa-2x fa-bars"></i>
             <!-- <span><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></span> -->
             </button>
         </div>
@@ -40,8 +40,8 @@
 			<div class="menu-container">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</div>
-            <?php awesemo_social_icons() ?>
 			<?php get_search_form(); ?>
+            <?php awesemo_social_icons() ?>
 		</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->

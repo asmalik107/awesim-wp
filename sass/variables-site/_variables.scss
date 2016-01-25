@@ -22,7 +22,7 @@ $background-hr-color: #ccc;
 $primary-main-color: #313131;
 $secondary-main-color: #10cca9;
 
-$background-pre-color: #eee;
+$background-pre-color: #eeeeee;
 $background-ins-color: #fff9c0;
 $border-abbr-color: #666;
 
@@ -42,8 +42,8 @@ $input_focus-color: #45828E;
 $border-input-color: #ccc;
 
 /* Links */
-$link-color: $secondary-main-color;
-$link_hover-color: scale-color($link-color, $lightness: -15%);
+$link-color: $primary-main-color;
+$link-hover-color: scale-color($secondary-main-color, $lightness: -15%);
 $link-visited-color: $link-color;
 
 /* Background */
@@ -55,7 +55,8 @@ $background-secondary-color: #ffffff;
 $header-background-color: #ffffff;
 $header-links-color: $link-color;
 $header-size: 4.3em;
-$header-border-color:#ECECEC;
+$header-border-color: #ECECEC;
+$header-search-bar: 4em;
 
 $logo-color: #ffffff;
 $logo-background-color: $secondary-main-color;
@@ -68,7 +69,10 @@ $footer-size: $header-size;
 
 /* Tags*/
 $tag-color: #FF8C41;
-$category-color:#6C9ADF;
+$category-color: #6C9ADF;
+
+/* Inputs */
+$input-border-color: #eeeeee;
 
 /* Buttons */
 
@@ -79,22 +83,25 @@ $button-primary-color: #4580D6;
 $button-success-color: #46EA12;
 $button-warning-color: #FFB941;
 $button-error-color: #F60022;
-$button_link_color: $link-color;
+$button_link_color: $secondary-main-color;
 $button-tag-color: $category-color;
 
 /* Sidebar widgets */
 $widget-header-color: inherit;
-$widget-header-background-color: inherit  ;
+$widget-header-background-color: inherit;
+$widget-border-color: #eeeeee;
 
 /* Pagination */
 $pagination-color: #b3b3b3;
 $pagination-border-color: #e7e7e7;
+$pagination-current-color: $secondary-main-color;
+$pagination-current-border-color: $secondary-main-color;
 
 /* */
-$icon-facebook-color:#3b5998;
+$icon-facebook-color: #3b5998;
 $icon-twitter-color: #00aced;
-$icon-linkedin-color:#007bb5;
-$icon-github-color:#333;
+$icon-linkedin-color: #007bb5;
+$icon-github-color: #333;
 
 $icon-facebook-hover-color: scale-color($icon-facebook-color, $lightness: 25%);
 $icon-twitter-hover-color: scale-color($icon-twitter-color, $lightness: 25%);

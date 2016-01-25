@@ -1,6 +1,13 @@
+.search-form {
+  overflow: hidden;
+  padding-top: 0.3em;
+}
+
 .search-form .search-submit {
   display: none;
 }
+
+
 
 .site-logo {
   //background-image: url(images/logo.png);
@@ -19,7 +26,7 @@
 }
 
 .site-header {
-  .search-form {
+  .search-container {
     /*  position: absolute;
       right: 20px;
       top: 1px;*/
@@ -27,30 +34,40 @@
     //@include span(2 of 12 last);
     //margin: 16px 16px 14px 0;
     float: right;
+    margin-right: 1.5em;
+
   }
 
-  .search-field {
-    background-color: transparent;
-    background-image: url(images/search-icon.png);
-    background-position: 5px center;
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    height: 1.8em;
-    margin: 0 0.5em 0 0;
-    padding: 0 0 0 2em;
-    position: relative;
-    -webkit-transition: width 400ms ease, background 400ms ease;
-    transition: width 400ms ease, background 400ms ease;
-    width: 1px;
-
-    &:focus {
-      background-color: #fff;
-      border: 2px solid $secondary-main-color;
-      cursor: text;
-      outline: 0;
-      width: 150px;
-    }
+  .search-click {
+    //color:$primary-main-color;
   }
+
+  .search-bar {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: $header-search-bar;
+    background: #fff;
+    text-align: left;
+    z-index: 100;
+    padding: 0 4em;
+  }
+
+  .search-bar-open {
+    display: block
+  }
+
+  .close-search {
+    position: absolute;
+    display: inline-block;
+    right: 2em;
+    top: 0;
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 3em;
+  }
+
+
 }
