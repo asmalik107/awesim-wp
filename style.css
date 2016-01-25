@@ -498,8 +498,6 @@ textarea {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /*--------------------------------------------------------------
@@ -3324,7 +3322,6 @@ table {
 @media (min-width: 700px) {
   .content-area {
     padding: 1em 0 1em 0.5em;
-    margin: 0 auto -4.3em auto;
   }
 }
 @media (min-width: 899px) {
@@ -4320,6 +4317,15 @@ ul.page-numbers .dots {
   .article-masonry {
     width: 32.6%;
   }
+}
+
+.not-found {
+  float: left;
+  width: 100%;
+}
+
+.page-header {
+  margin: 0.5em;
 }
 
 /*--------------------------------------------------------------

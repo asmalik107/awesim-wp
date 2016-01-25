@@ -33,7 +33,7 @@ $susy: (
 
   @include breakpoint($bp-small-min, $bp-medium-max) {
     padding: 1em 0 1em 0.5em;
-    margin: 0 auto (-$header-size) auto;
+    //margin: 0 auto (-$header-size) auto;
   }
 
   @include susy-breakpoint($bp-medium-min, $susy) {

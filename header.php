@@ -40,7 +40,15 @@
 			<div class="menu-container">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</div>
-			<?php get_search_form(); ?>
+
+		    <div class="search-container">
+                <a class="search-click"><i class="fa fa-2x fa-search"></i></a>
+                <div class="search-bar">
+			        <?php get_search_form(); ?>
+			        <a class="search-click close-search"><i class="fa fa-close"></i></a>
+                </div> <!-- .search-bar -->
+			</div> <!-- .search-container -->
+
             <?php awesemo_social_icons() ?>
 		</nav><!-- #site-navigation -->
 
