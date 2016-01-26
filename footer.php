@@ -12,7 +12,7 @@
 ?>
 
 
-<!--</div> #content -->
+    </div> <!--#content -->
     <div class="clear-push"></div>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="copyright">

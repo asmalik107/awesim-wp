@@ -61,6 +61,6 @@
         <?php awesim_social_icons() ?>
     </div>
 
-<!-- 	<div id="content" class="site-content"> -->
+ 	<div id="content" class="site-content"> <!--#content -->
 
 

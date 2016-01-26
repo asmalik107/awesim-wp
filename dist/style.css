@@ -485,6 +485,11 @@ th {
   font-style: normal;
 
 }*/
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -3288,6 +3293,8 @@ table {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  min-height: 100%;
+  height: 100%;
 }
 #page:after {
   content: " ";
@@ -3311,6 +3318,19 @@ table {
   }
 }
 
+.site-content {
+  height: auto;
+  min-height: 100%;
+}
+.site-content::before {
+  content: "";
+  display: block;
+  height: 4.3em;
+}
+.site-content::after {
+  /* .push must be the same height as footer */
+}
+
 .content-area {
   padding: 1em 0.5em 1em 0.5em;
   margin: 0 auto 0 auto;
@@ -3329,14 +3349,14 @@ table {
     width: 74.9326145553%;
     float: left;
     margin-right: 0.269541779%;
-    padding: 5em 0 1em 0.5em;
+    padding: 0.5em 0 1em 0.5em;
     position: relative;
+    min-height: 100%;
   }
 }
 
 .widget-area {
   padding: 1em 0.5em 1em 0.5em;
-  margin: 0 auto -4.3em auto;
   width: 100%;
   float: left;
   margin-left: 0;
@@ -3347,9 +3367,9 @@ table {
     width: 24.7978436658%;
     float: right;
     margin-right: 0;
-    margin: 0 auto -4.3em auto;
-    padding: 5em 1em 1em 0.5em;
+    padding: 0.5em 1em 1em 0.5em;
     position: relative;
+    min-height: 100%;
   }
 }
 
@@ -3363,10 +3383,13 @@ table {
   display: block;
   color: #313131;
   background-color: #ffffff;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .clear-push {
-  height: 4.3em;
   content: "";
   display: block;
   clear: both;

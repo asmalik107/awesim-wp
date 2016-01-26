@@ -7,6 +7,8 @@ $susy: (
 
 #page {
   @include container;
+  min-height:100%;
+  height:100%;
 }
 
 #masthead {
@@ -25,6 +27,22 @@ $susy: (
 
 }
 
+.site-content {
+  height: auto;
+  min-height: 100%;
+
+
+  &::before {
+    content: "";
+    display: block;
+    height: $content-before-height;
+  }
+  &::after {
+    /* .push must be the same height as footer */
+    //height: $content-before-height;
+  }
+}
+
 .content-area {
   padding: 1em 0.5em 1em 0.5em;
   margin: 0 auto 0 auto;
@@ -38,10 +56,14 @@ $susy: (
 
   @include susy-breakpoint($bp-medium-min, $susy) {
     @include span(9 of 12);
-    padding: 5em 0 1em 0.5em;
+    padding: 0.5em 0 1em 0.5em;
     //padding: 1em 0 1em 1em;
     //top: $header-size;
     position: relative;
+    //margin-bottom: -4.3em;
+    min-height:100%;
+
+
 
     //margin-bottom: $header-size;
   }
@@ -49,16 +71,18 @@ $susy: (
 
 .widget-area {
   padding: 1em 0.5em 1em 0.5em;
-  margin: 0 auto (-$header-size) auto;
+  //margin: 0 auto (-$header-size) auto;
 
   @include span(12 of 12);
 
   @include susy-breakpoint($bp-medium-min, $susy) {
     @include span(3 of 12 last);
-    margin: 0 auto (-$header-size) auto;
-    padding: 5em 1em 1em 0.5em;
+   // margin: 0 auto (-$header-size) auto;
+    padding: 0.5em 1em 1em 0.5em;
     position: relative;
-    //top: $header-size;
+    //margin-bottom: -4.3em;
+    min-height:100%;
+
     //margin-bottom: $header-size;
   }
 
@@ -75,11 +99,12 @@ $susy: (
   display: block;
   color: $footer-color;
   background-color: $footer_background_color;
+  @include span(12 of 12);
 
 }
 
 .clear-push {
-  height: $footer-size;
+ // height: $footer-size;
 
   @include clearfix();
   @include clearfix-after();
