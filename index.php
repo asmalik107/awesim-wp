@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Awesomo
+ * @package Awesim
  */
 
 get_header(); ?>
@@ -48,7 +48,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 		<div class="pagination">
-			<?php awesemo_posts_pagination(); ?>
+			<?php awesim_posts_pagination(); ?>
 		</div>
 	</div><!-- #primary -->
 

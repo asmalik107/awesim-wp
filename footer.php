@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Awesomo
+ * @package Awesim
  */
 
 ?>
@@ -18,9 +18,9 @@
 	<div class="copyright">
 	        <span>© Asim Malik</span>
 	        <span>
-	        	<?php printf( esc_html__( 'Theme: %1$s designed and developed by Asim Malik. Powered by %2$s.', 'awesomo' ), '<a href="https://github.com/asmalik107/awesome-wp">Awesomo</a>', 'WordPress' ); ?>
+	        	<?php printf( esc_html__( 'Theme: %1$s designed and developed by Asim Malik. Powered by %2$s.', 'awesim' ), '<a href="https://github.com/asmalik107/awesim-wp">Awesim</a>', 'WordPress' ); ?>
 	        </span>
-	    <!--<?php awesemo_social_icons() ?> -->
+	    <!--<?php awesim_social_icons() ?> -->
     </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

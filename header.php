@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Awesomo
+ * @package Awesim
  */
 
 ?><!DOCTYPE html>
@@ -22,13 +22,13 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-<!--	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'awesomo' ); ?></a> -->
+<!--	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'awesim' ); ?></a> -->
 
 	<header id="masthead" class="site-header" role="banner">
         <div class="menu-toggle">
             <button class="button-toggle" aria-controls="primary-menu" aria-expanded="false">
             <i class="fa fa-2x fa-bars"></i>
-            <!-- <span><?php esc_html_e( 'Primary Menu', 'awesomo' ); ?></span> -->
+            <!-- <span><?php esc_html_e( 'Primary Menu', 'awesim' ); ?></span> -->
             </button>
         </div>
 		<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -49,7 +49,7 @@
                 </div> <!-- .search-bar -->
 			</div> <!-- .search-container -->
 
-            <?php awesemo_social_icons() ?>
+            <?php awesim_social_icons() ?>
 		</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->
@@ -58,7 +58,7 @@
 	    <div class='mobile-menu-container'>
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_id' => 'primary-menu' ) ); ?>
         </div>
-        <?php awesemo_social_icons() ?>
+        <?php awesim_social_icons() ?>
     </div>
 
 <!-- 	<div id="content" class="site-content"> -->

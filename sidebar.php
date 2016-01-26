@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Awesomo
+ * @package Awesim
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -13,6 +13,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <div id="secondary" class="widget-area" role="complementary">
-    <?php awesemo_recent_posts(); ?>
+    <?php awesim_recent_posts(); ?>
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div><!-- #secondary -->

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Awesomo
+ * @package Awesim
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
             <header class="page-header">
-                <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'awesomo' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'awesim' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
             </header><!-- .page-header -->
 	    <?php endif; ?>
 
@@ -43,7 +43,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
         <div class="pagination">
-            <?php awesemo_posts_pagination(); ?>
+            <?php awesim_posts_pagination(); ?>
         </div>
 	</section><!-- #primary -->
 

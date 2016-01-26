@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Awesomo
+ * @package Awesim
  */
 
-if ( ! function_exists( 'awesomo_posted_on' ) ) :
+if ( ! function_exists( 'awesim_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function awesomo_posted_on() {
+function awesim_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -30,17 +30,17 @@ function awesomo_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'awesomo_on_comments' ) ) :
+if ( ! function_exists( 'awesim_on_comments' ) ) :
 /**
  * Prints HTML with meta information for the edit link.
  */
-function awesomo_on_comments() {
+function awesim_on_comments() {
 
 	if (  ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link"><i class="fa fa-comment-o"></i>';
-		comments_popup_link(esc_html__('0', 'awesomo' ),
-		    esc_html__('1', 'awesomo' ),
-		    esc_html__('%', 'awesomo' ) );
+		comments_popup_link(esc_html__('0', 'awesim' ),
+		    esc_html__('1', 'awesim' ),
+		    esc_html__('%', 'awesim' ) );
 		echo '</span>';
 	}
 
@@ -49,11 +49,11 @@ endif;
 
 
 
-if ( ! function_exists( 'awesomo_on_edit' ) ) :
+if ( ! function_exists( 'awesim_on_edit' ) ) :
 /**
  * Prints HTML with meta information for the edit link.
  */
-function awesomo_on_edit() {
+function awesim_on_edit() {
 
 	edit_post_link(
 
@@ -70,16 +70,16 @@ function awesomo_on_edit() {
 endif;
 
 
-if ( ! function_exists( 'awesomo_tags' ) ) :
+if ( ! function_exists( 'awesim_tags' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function awesomo_tags() {
+function awesim_tags() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		$tags_list = get_the_tag_list( '' );
 		if ( $tags_list ) {
-			printf('<div class="tagcloud text-center">' . esc_html__('%1$s', 'awesomo' ) . '</div>', $tags_list);
+			printf('<div class="tagcloud text-center">' . esc_html__('%1$s', 'awesim' ) . '</div>', $tags_list);
 		}
 	}
 }
@@ -91,8 +91,8 @@ endif;
  *
  * @return bool
  */
-function awesomo_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'awesomo_categories' ) ) ) {
+function awesim_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'awesim_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -105,37 +105,37 @@ function awesomo_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'awesomo_categories', $all_the_cool_cats );
+		set_transient( 'awesim_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so awesomo_categorized_blog should return true.
+		// This blog has more than 1 category so awesim_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so awesomo_categorized_blog should return false.
+		// This blog has only 1 category so awesim_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in awesomo_categorized_blog.
+ * Flush out the transients used in awesim_categorized_blog.
  */
-function awesomo_category_transient_flusher() {
+function awesim_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'awesomo_categories' );
+	delete_transient( 'awesim_categories' );
 }
 
-function awesemo_comments( $comment, $args, $depth ) {
+function awesim_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
 
 	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php esc_html_e( 'Pingback:', 'awesomo' ); ?> <?php comment_author_link(); ?>
-              <?php edit_comment_link( esc_html__( 'Edit', 'awesomo' ), '<span class="edit-link"><i class="fa fa-pencil-square-o"></i>', '</span>' ); ?>
+			<p><?php esc_html_e( 'Pingback:', 'awesim' ); ?> <?php comment_author_link(); ?>
+              <?php edit_comment_link( esc_html__( 'Edit', 'awesim' ), '<span class="edit-link"><i class="fa fa-pencil-square-o"></i>', '</span>' ); ?>
 			</p>
 
         <?php else : ?>
@@ -154,7 +154,7 @@ function awesemo_comments( $comment, $args, $depth ) {
                                     </a>
 
                                 </div>
-                            <?php edit_comment_link( esc_html__( 'Edit', 'awesomo' ), '<span class="edit-link"><i class="fa fa-pencil-square-o"></i>', '</span>' ); ?>
+                            <?php edit_comment_link( esc_html__( 'Edit', 'awesim' ), '<span class="edit-link"><i class="fa fa-pencil-square-o"></i>', '</span>' ); ?>
             	        </header>
             	        <div class="comment-content-body">
                             <?php if ($comment->comment_approved == '0') : ?>
@@ -181,7 +181,7 @@ function awesemo_comments( $comment, $args, $depth ) {
 }
 
 
-function awesemo_post_navigation( $args = array() ) {
+function awesim_post_navigation( $args = array() ) {
 	$args = wp_parse_args( $args, array(
 		'prev_text'          => '%title',
 		'next_text'          => '%title',
@@ -204,7 +204,7 @@ function awesemo_post_navigation( $args = array() ) {
 
 	$previous = get_previous_post_link(
         '%link',
-		__(sprintf($template, 'fa-angle-left', 'post-previous-icon', 'post-next-content','Previous Post' ,$args['prev_text']), 'awesemo'),
+		__(sprintf($template, 'fa-angle-left', 'post-previous-icon', 'post-next-content','Previous Post' ,$args['prev_text']), 'awesim'),
 		$args['in_same_term'],
 		$args['excluded_terms'],
 		$args['taxonomy']
@@ -212,7 +212,7 @@ function awesemo_post_navigation( $args = array() ) {
 
 	$next = get_next_post_link(
 		'%link',
-		__(sprintf($template, 'fa-angle-right', 'post-next-icon', 'post-previous-content', 'Next Post', $args['next_text']), 'awesemo'),
+		__(sprintf($template, 'fa-angle-right', 'post-next-icon', 'post-previous-content', 'Next Post', $args['next_text']), 'awesim'),
 		$args['in_same_term'],
 		$args['excluded_terms'],
 		$args['taxonomy']
@@ -227,7 +227,7 @@ function awesemo_post_navigation( $args = array() ) {
 }
 
 
-function awesemo_posts_navigation($args = array()) {
+function awesim_posts_navigation($args = array()) {
 	$navigation = '';
 
 	// Don't print empty markup if there's only one page.
@@ -238,8 +238,8 @@ function awesemo_posts_navigation($args = array()) {
 			'screen_reader_text' => __( 'Posts navigation' ),
 		) );
 
-		$next_link = get_previous_posts_link( __($args['next_text'] . '<i class="fa fa-arrow-right"></i>', 'awesemo'));
-		$prev_link = get_next_posts_link( __('<i class="fa fa-arrow-left"></i>' . $args['prev_text'], 'awesemo') );
+		$next_link = get_previous_posts_link( __($args['next_text'] . '<i class="fa fa-arrow-right"></i>', 'awesim'));
+		$prev_link = get_next_posts_link( __('<i class="fa fa-arrow-left"></i>' . $args['prev_text'], 'awesim') );
 
 		if ( $prev_link ) {
 			$navigation .= '<div class="nav-previous">' . $prev_link . '</div>';
@@ -271,7 +271,7 @@ function post_link_attributes($output) {
 }*/
 
 
-function awesemo_recent_posts() {
+function awesim_recent_posts() {
     ?>
         <aside id="recent-post-widget" class="widget widget_recent_entries article-single">
             <h3>Latest Posts</h3>
@@ -305,7 +305,7 @@ function awesemo_recent_posts() {
 }
 
 
-function awesemo_posts_pagination($pages = '', $range = 4)
+function awesim_posts_pagination($pages = '', $range = 4)
 {
     $prev_arrow = is_rtl() ? '<i class="fa fa-angle-right"></i>' :'<i class="fa fa-angle-left"></i>';
     $next_arrow = is_rtl() ? '<i class="fa fa-angle-left"></i>' :'<i class="fa fa-angle-right"></i>';
@@ -335,7 +335,7 @@ function awesemo_posts_pagination($pages = '', $range = 4)
 }
 
 
-function awesemo_social_icons() {
+function awesim_social_icons() {
 ?>
         <div class="header-social-icons">
             <ul>
@@ -378,10 +378,10 @@ function awesemo_social_icons() {
 }
 
 
-function awesemo_footer_content() {
+function awesim_footer_content() {
 
 }
 
 
-add_action( 'edit_category', 'awesomo_category_transient_flusher' );
-add_action( 'save_post',     'awesomo_category_transient_flusher' );
+add_action( 'edit_category', 'awesim_category_transient_flusher' );
+add_action( 'save_post',     'awesim_category_transient_flusher' );

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Awesomo
+ * @package Awesim
  */
 
 ?>
@@ -22,9 +22,9 @@
 
             <?php if ( 'post' === get_post_type() ) : ?>
                 <p class="entry-meta">
-                    <?php awesomo_posted_on(); ?>
-                    <?php awesomo_on_comments(); ?>
-                    <?php awesomo_on_edit(); ?>
+                    <?php awesim_posted_on(); ?>
+                    <?php awesim_on_comments(); ?>
+                    <?php awesim_on_edit(); ?>
                 </p>
             <?php endif; ?>
 
@@ -36,7 +36,7 @@
 	    <?php
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'awesomo' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'awesim' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>

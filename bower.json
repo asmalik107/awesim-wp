@@ -1,5 +1,5 @@
 {
-  "name": "awesomo",
+  "name": "awesim",
   "version": "0.0.1",
   "homepage": "https://github.com/asmalik107/awesome-wp",
   "authors": [
@@ -15,6 +15,5 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-  }
+  "dependencies": {}
 }

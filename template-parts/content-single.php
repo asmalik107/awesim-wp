@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Awesomo
+ * @package Awesim
  */
 
 ?>
@@ -17,15 +17,15 @@
 
 
         <header class="entry-header">
-            <span class="cat-links button button-tag cat-size"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesomo' ) ); ?></span>
+            <span class="cat-links button button-tag cat-size"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesim' ) ); ?></span>
 
             <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
             <p class="entry-meta entry-meta-single">
-                <?php awesomo_posted_on(); ?>
-                <?php awesomo_on_comments(); ?>
-                <?php awesomo_on_edit(); ?>
+                <?php awesim_posted_on(); ?>
+                <?php awesim_on_comments(); ?>
+                <?php awesim_on_edit(); ?>
             </p>
-            <?php awesomo_tags(); ?>
+            <?php awesim_tags(); ?>
 
         </header><!-- .entry-header -->
      </div>
@@ -34,7 +34,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'awesomo' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'awesim' ),
 				'after'  => '</div>',
 			) );
 		?>

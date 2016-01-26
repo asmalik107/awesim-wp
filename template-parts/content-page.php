@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Awesomo
+ * @package Awesim
  */
 
 ?>
@@ -17,9 +17,9 @@
 
         <header class="entry-header">
              <p class="entry-meta entry-meta-single">
-                 <?php awesomo_posted_on(); ?>
-                 <?php awesomo_on_comments(); ?>
-                 <?php awesomo_on_edit(); ?>
+                 <?php awesim_posted_on(); ?>
+                 <?php awesim_on_comments(); ?>
+                 <?php awesim_on_edit(); ?>
              </p>
 
         </header><!-- .entry-header -->
@@ -29,7 +29,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'awesomo' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'awesim' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -40,7 +40,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'awesomo' ),
+					esc_html__( 'Edit %s', 'awesim' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',
