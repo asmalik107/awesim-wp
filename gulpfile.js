@@ -21,7 +21,7 @@ gulp.task('sass', function() {
     })
     .pipe(cssChannel())
     .pipe($.autoprefixer({
-      browsers: ['last 1 version']
+      browsers: ['last 2 versions']
     }))
     .pipe(gulp.dest('dist'))
     .pipe(gulp.dest(''));
