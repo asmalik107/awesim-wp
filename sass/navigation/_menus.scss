@@ -204,6 +204,12 @@
 .mobile-menu-open {
   display: block;
   background: $background-secondary-color;
+  position: absolute;
+  width: 100%;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid $header-border-color;
 }
 
 .mobile-menu {

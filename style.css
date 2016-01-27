@@ -3310,12 +3310,8 @@ table {
   float: left;
   margin-left: 0;
   margin-right: 0;
-}
-@media (min-width: 899px) {
-  #masthead {
-    position: fixed;
-    z-index: 100;
-  }
+  position: fixed;
+  z-index: 300;
 }
 
 .site-content {
@@ -3537,7 +3533,7 @@ textarea {
      -moz-appearance: none;
           appearance: none;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0;
   padding: 10px;
   border: none;
   border-bottom: solid 2px #eeeeee;
@@ -3762,6 +3758,12 @@ a:hover {
 .mobile-menu-open {
   display: block;
   background: #ffffff;
+  position: absolute;
+  width: 100%;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #ECECEC;
 }
 
 @media (min-width: 899px) {

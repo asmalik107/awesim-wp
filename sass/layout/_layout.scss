@@ -19,11 +19,11 @@ $susy: (
 
   @include span(12 of 12);
 
-  @include breakpoint($bp-medium-min) {
+ // @include breakpoint($bp-medium-min) {
     position: fixed;
-    z-index: 100;
+    z-index: 300;
     //opacity: .92;
-  }
+  //}
 
 }
 
