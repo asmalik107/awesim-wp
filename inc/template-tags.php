@@ -379,7 +379,15 @@ function awesim_social_icons() {
 
 
 function awesim_footer_content() {
-
+?>
+	<div class="copyright">
+	        <span>© Asim Malik</span>
+	        <span>
+	        	<?php printf( esc_html__( 'Theme: %1$s designed and developed by Asim Malik. Powered by %2$s.', 'awesim' ), '<a href="https://github.com/asmalik107/awesim-wp">Awesim</a>', 'WordPress' ); ?>
+	        </span>
+	    <!--<?php awesim_social_icons() ?> -->
+    </div>
+<?php
 }
 
 

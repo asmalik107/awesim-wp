@@ -12,20 +12,15 @@
 ?>
 
 
-    </div> <!--#content -->
-    <div class="clear-push"></div>
-	<footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="copyright">
-	        <span>© Asim Malik</span>
-	        <span>
-	        	<?php printf( esc_html__( 'Theme: %1$s designed and developed by Asim Malik. Powered by %2$s.', 'awesim' ), '<a href="https://github.com/asmalik107/awesim-wp">Awesim</a>', 'WordPress' ); ?>
-	        </span>
-	    <!--<?php awesim_social_icons() ?> -->
-    </div>
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+        </div> <!--#content -->
+        <div class="clear-push"></div>
 
-<?php wp_footer(); ?>
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <?php awesim_footer_content(); ?>
+        </footer><!-- #colophon -->
+        </div><!-- #page -->
 
-</body>
+        <?php wp_footer(); ?>
+
+    </body>
 </html>

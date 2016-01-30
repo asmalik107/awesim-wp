@@ -19,6 +19,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
         <div class="article-single">
+        <?php single_month_title(); ?>
             <?php wp_get_archives('type=monthly'); ?>
         </div>
         <div class="article-single">
