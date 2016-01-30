@@ -18,7 +18,7 @@
 
 
         <header class="entry-header">
-            <span class="cat-links button button-tag button-xsmall"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesim' ) ); ?></span>
+            <span class="cat-item"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesim' ) ); ?></span>
             <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
             <?php if ( 'post' === get_post_type() ) : ?>
                 <p class="entry-meta">

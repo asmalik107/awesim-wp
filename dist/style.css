@@ -4232,28 +4232,6 @@ ul.page-numbers .dots {
   font-size: .9em;
 }
 
-.categories {
-  padding: 0.5em;
-}
-.categories .cat-item {
-  display: inline-block;
-  background: #6C9ADF;
-  margin-bottom: 0.5em;
-  line-height: 1.6em;
-  font-size: 0.5em;
-  font-weight: 700;
-  padding: 0.5em 1em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.categories .cat-item a {
-  color: #ffffff;
-}
-.categories .cat-item:hover, .categories .cat-item:focus {
-  background: #437ed6;
-  outline: 0;
-}
-
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -4294,16 +4272,41 @@ ul.page-numbers .dots {
   margin: 0 0 1.5em;
 }
 
-.cat-links {
+/*.cat-links {
   position: relative;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 0.5em;
+  margin-bottom:0.5em;
   padding: 4px 7px 3px;
   line-height: 14px;
+
+  //margin: 0 auto;
+
+  a {
+    color: $button-text-color;
+  }
+}*/
+.categories {
+  padding: 0.5em;
 }
-.cat-links a {
+
+.cat-item {
+  display: inline-block;
+  background: #6C9ADF;
+  margin-bottom: 0.5em;
+  line-height: 1.6em;
+  font-size: 0.5em;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
   color: #ffffff;
+}
+.cat-item a {
+  color: #ffffff;
+}
+.cat-item:hover, .cat-item:focus {
+  background: #437ed6;
+  outline: 0;
 }
 
 .entry-header {

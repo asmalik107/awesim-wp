@@ -17,7 +17,7 @@
 
 
         <header class="entry-header">
-            <span class="cat-links button button-tag cat-size"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesim' ) ); ?></span>
+            <span class="cat-item cat-size"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'awesim' ) ); ?></span>
 
             <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
             <p class="entry-meta entry-meta-single">
