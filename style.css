@@ -568,15 +568,15 @@ big {
 # Font Awesome
 --------------------------------------------------------------*/
 /*!
- *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("fonts/fontawesome-webfont.eot?v=4.4.0");
-  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.4.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.4.0") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.4.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular") format("svg");
+  src: url("fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -3202,6 +3202,86 @@ big {
   content: "";
 }
 
+.fa-reddit-alien:before {
+  content: "";
+}
+
+.fa-edge:before {
+  content: "";
+}
+
+.fa-credit-card-alt:before {
+  content: "";
+}
+
+.fa-codiepie:before {
+  content: "";
+}
+
+.fa-modx:before {
+  content: "";
+}
+
+.fa-fort-awesome:before {
+  content: "";
+}
+
+.fa-usb:before {
+  content: "";
+}
+
+.fa-product-hunt:before {
+  content: "";
+}
+
+.fa-mixcloud:before {
+  content: "";
+}
+
+.fa-scribd:before {
+  content: "";
+}
+
+.fa-pause-circle:before {
+  content: "";
+}
+
+.fa-pause-circle-o:before {
+  content: "";
+}
+
+.fa-stop-circle:before {
+  content: "";
+}
+
+.fa-stop-circle-o:before {
+  content: "";
+}
+
+.fa-shopping-bag:before {
+  content: "";
+}
+
+.fa-shopping-basket:before {
+  content: "";
+}
+
+.fa-hashtag:before {
+  content: "";
+}
+
+.fa-bluetooth:before {
+  content: "";
+}
+
+.fa-bluetooth-b:before {
+  content: "";
+}
+
+.fa-percent:before {
+  content: "";
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -3613,7 +3693,7 @@ a:hover {
     position: relative;
     display: inline;
     width: auto;
-    padding: 0px;
+    padding: 0;
     padding-right: 0.2em;
   }
   .menu-container li:hover > a, .menu-container li:focus > a {
@@ -4110,7 +4190,6 @@ ul.page-numbers .dots {
   width: 4px;
   height: 4px;
   border-radius: 2px;
-  border-radius: 2px;
   background: #fff;
   box-shadow: -1px -1px 2px #004977;
 }
@@ -4151,6 +4230,28 @@ ul.page-numbers .dots {
 #recent-post-widget .post-date {
   display: block;
   font-size: .9em;
+}
+
+.categories {
+  padding: 0.5em;
+}
+.categories .cat-item {
+  display: inline-block;
+  background: #6C9ADF;
+  margin-bottom: 0.5em;
+  line-height: 1.6em;
+  font-size: 0.5em;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.categories .cat-item a {
+  color: #ffffff;
+}
+.categories .cat-item:hover, .categories .cat-item:focus {
+  background: #437ed6;
+  outline: 0;
 }
 
 /*--------------------------------------------------------------
@@ -4202,7 +4303,7 @@ ul.page-numbers .dots {
   line-height: 14px;
 }
 .cat-links a {
-  color: white;
+  color: #ffffff;
 }
 
 .entry-header {
