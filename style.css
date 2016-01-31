@@ -4272,20 +4272,6 @@ ul.page-numbers .dots {
   margin: 0 0 1.5em;
 }
 
-/*.cat-links {
-  position: relative;
-  text-transform: uppercase;
-  margin: 0;
-  margin-bottom:0.5em;
-  padding: 4px 7px 3px;
-  line-height: 14px;
-
-  //margin: 0 auto;
-
-  a {
-    color: $button-text-color;
-  }
-}*/
 .categories {
   padding: 0.5em;
 }
@@ -4312,8 +4298,6 @@ ul.page-numbers .dots {
 .entry-header {
   margin: auto;
   position: absolute;
-  /*  top: 0;
-    left: 0;*/
   bottom: 0;
   width: 100%;
   padding: 1em 0.5em;
@@ -4464,6 +4448,30 @@ ul.page-numbers .dots {
 
 .page-header {
   margin: 0.5em;
+}
+
+.archive-list {
+  margin: 2px 0 3em 0;
+  padding: 5px 0 0 0;
+  left: 0;
+  float: left;
+}
+.archive-list a {
+  color: #4c4c4c;
+  display: block;
+  width: 100px;
+  line-height: 1;
+  height: 14px;
+}
+.archive-list li {
+  height: 21px;
+  list-style: none;
+  margin: 0 0 2px 0;
+  display: inline-block;
+}
+.archive-list span, .archive-list ul.page-numbers a, ul.page-numbers .archive-list a {
+  background: #fdfdfd;
+  padding: 0 2px 1px 0;
 }
 
 /*--------------------------------------------------------------

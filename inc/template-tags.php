@@ -391,5 +391,137 @@ function awesim_footer_content() {
 }
 
 
+function awesim_get_archives() {
+
+   $output = '';
+   global $wpdb;
+   $prev_year = null;
+
+   $template = '
+        <a href="%1$s">
+            %2$s
+            (%3$s)
+        </a>
+   ';
+
+   $months = $wpdb->get_results(	"SELECT DISTINCT MONTH( post_date ) AS month ,
+   								YEAR( post_date ) AS year,
+   								COUNT( id ) as post_count FROM $wpdb->posts
+   								WHERE post_status = 'publish' and post_date <= now( )
+   								and post_type = 'post'
+   								GROUP BY month , year
+   								ORDER BY post_date ASC");
+
+   	  foreach($months as $month) :
+        $current_year = $month->year;
+        if ($current_year != $prev_year){
+           	if ($prev_year != null){
+           		$output .= '</ul></div>';
+           	}
+
+            $output .= '<div class="archive-years"><h3>' . esc_attr($month->year) . '</h3><ul  class="archive-list">';
+        }
+
+        $output .= '<li>' . __(sprintf($template, get_month_link( $month->year, $month->month ),
+            date("F", mktime(0, 0, 0, $month->month, 1, $month->year)), $month->post_count))
+            . '</li>';
+
+
+        $prev_year = $current_year;
+   	  endforeach;
+
+   	  $output .= '</div>';
+   	  echo $output;
+
+}
+
+function awesim_get_archives2(){
+   global $wpdb;
+    $yearliest_year = $wpdb->get_results(
+
+        "SELECT YEAR(post_date) AS year
+         FROM $wpdb->posts
+         WHERE post_status = 'publish'
+         AND post_type = 'post'
+         ORDER BY post_date
+         ASC LIMIT 1
+
+    ");
+
+
+    //If there are any posts
+    if($yearliest_year){
+
+        //This year
+        $this_year = date('Y');
+
+        //Setup months
+        $months = array(1 => "January", 2 => "February", 3 => "March" , 4 => "April", 5 => "May", 6 => "June", 7 => "July", 8 => "August", 9 => "September", 10 => "October", 11 => "November", 12 => "December");
+
+        $current_year = $yearliest_year[0]->year;
+
+
+        //Loop through every year and check each monnth of each year for posts
+        while($current_year <= $this_year){
+
+            echo "<h3>" . $current_year . "</h3>";
+
+            echo "<ul>";
+
+            foreach($months as $month_num => $month){
+
+
+                //Checks to see if a month a has posts
+                if($search_month = $wpdb->query(
+
+                        "SELECT MONTHNAME(post_date) as month
+
+                            FROM $wpdb->posts
+                            WHERE MONTHNAME(post_date) = '$month'
+                            AND YEAR(post_date) = $current_year
+                            AND post_type = 'post'
+                            AND post_status = 'publish'
+                            LIMIT 1
+
+                ")){
+
+                    //Month has post -> link it
+                    echo "<li>
+
+                            <a href='" . get_bloginfo('url') . "/" . $current_year . "/" . $month_num . "/'><span class='archive-month'>" . $month . "</span></a>
+
+                          </li>";
+
+
+                }else{
+
+                    //Month does not have post -> just print it
+
+                    echo "<li>
+
+                            <span class='archive-month'>" . $month . "</span>
+
+                          </li>";
+                }
+
+
+
+            }
+
+            echo "</ul>";
+
+            $current_year++;
+
+
+        }
+
+    }else{
+
+        echo "No Posts Found.";
+
+    }
+}
+
+
 add_action( 'edit_category', 'awesim_category_transient_flusher' );
 add_action( 'save_post',     'awesim_category_transient_flusher' );

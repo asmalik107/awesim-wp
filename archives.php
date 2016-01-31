@@ -19,9 +19,10 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
         <div class="article-single">
-        <?php single_month_title(); ?>
-            <?php wp_get_archives('type=monthly'); ?>
+            <h2>Archives</h2>
+            <?php awesim_get_archives() ?>
         </div>
+
         <div class="article-single">
             <h2>Categories</h2>
             <div class="categories">
