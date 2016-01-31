@@ -404,13 +404,21 @@ function awesim_get_archives() {
         </a>
    ';
 
+   $year_template = '
+        <h3><a href="%1$s">%2$s</a></h3>
+   ';
+
+   $month_names = array(1 => "January", 2 => "February", 3 => "March" , 4 => "April", 5 => "May", 6 => "June",
+            7 => "July", 8 => "August", 9 => "September", 10 => "October", 11 => "November", 12 => "December");
+
+
    $months = $wpdb->get_results(	"SELECT DISTINCT MONTH( post_date ) AS month ,
    								YEAR( post_date ) AS year,
    								COUNT( id ) as post_count FROM $wpdb->posts
    								WHERE post_status = 'publish' and post_date <= now( )
    								and post_type = 'post'
    								GROUP BY month , year
-   								ORDER BY post_date ASC");
+   								ORDER BY post_date DESC");
 
    	  foreach($months as $month) :
         $current_year = $month->year;
@@ -419,13 +427,21 @@ function awesim_get_archives() {
            		$output .= '</ul></div>';
            	}
 
-            $output .= '<div class="archive-years"><h3>' . esc_attr($month->year) . '</h3><ul  class="archive-list">';
+            $output .= '<div class="archive-years">';
+            $output .= __(sprintf($year_template, get_year_link($current_year), esc_attr($current_year)));
+            $output .= '<ul  class="archive-list">';
         }
 
-        $output .= '<li>' . __(sprintf($template, get_month_link( $month->year, $month->month ),
-            date("F", mktime(0, 0, 0, $month->month, 1, $month->year)), $month->post_count))
-            . '</li>';
+        $output .= '<li>';
 
+        if (isset($month_names[$month->month])){
+            $output .= __(sprintf($template, get_month_link( $current_year, $month->month ),
+                date("F", mktime(0, 0, 0, $month->month, 1,$current_year)), $month->post_count));
+        } else {
+            $output .= $month_names[$month->month];
+        }
+
+        $output .= '</li>';
 
         $prev_year = $current_year;
    	  endforeach;
