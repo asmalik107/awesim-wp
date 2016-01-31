@@ -3420,7 +3420,7 @@ table {
 }
 @media (min-width: 700px) {
   .content-area {
-    padding: 1em 0 1em 0.5em;
+    padding: 1em 0.5em 1em 0.5em;
   }
 }
 @media (min-width: 899px) {
@@ -4450,28 +4450,37 @@ ul.page-numbers .dots {
   margin: 0.5em;
 }
 
-.archive-list {
-  margin: 2px 0 3em 0;
-  padding: 5px 0 0 0;
-  left: 0;
-  float: left;
+.archive-years {
+  margin: 0 1em;
 }
-.archive-list a {
-  color: #4c4c4c;
-  display: block;
-  width: 100px;
-  line-height: 1;
-  height: 14px;
+
+.archive-list {
+  margin: 0;
+  padding: 0;
 }
 .archive-list li {
-  height: 21px;
   list-style: none;
-  margin: 0 0 2px 0;
   display: inline-block;
+  padding: 1em 1em;
+  background: #eee;
+  margin: 0.5em;
+  line-height: 1.6em;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #10cca9;
+  cursor: default;
 }
-.archive-list span, .archive-list ul.page-numbers a, ul.page-numbers .archive-list a {
-  background: #fdfdfd;
-  padding: 0 2px 1px 0;
+.archive-list .archive-month {
+  background: #10cca9;
+  cursor: pointer;
+}
+.archive-list .archive-month a {
+  color: #ffffff;
+}
+.archive-list .archive-month:hover, .archive-list .archive-month:focus {
+  background: #0ead90;
+  outline: 0;
 }
 
 /*--------------------------------------------------------------

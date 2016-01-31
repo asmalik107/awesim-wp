@@ -50,7 +50,7 @@ $susy: (
   @include span(12 of 12);
 
   @include breakpoint($bp-small-min, $bp-medium-max) {
-    padding: 1em 0 1em 0.5em;
+    padding: 1em 0.5em 1em 0.5em;
     //margin: 0 auto (-$header-size) auto;
   }
 

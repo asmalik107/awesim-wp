@@ -1,6 +1,5 @@
 .widget {
   margin: 0 0 1rem;
-  //padding-left: 1rem ! important;
 
   h3 {
     color: $widget-header-color;
@@ -16,16 +15,12 @@
   }
 
   ul {
-    //padding: 10px 10px;
     list-style: none;
-    //border-top: 2px solid #45828E;
     margin: 0;
-    //margin-bottom: 1em;
     padding: 0 0.5em;
 
     li {
       padding: 0.5em 0;
-      //border-top: 2px solid #45828E;
       border-top: 1px solid $widget-border-color;
 
       &:after {

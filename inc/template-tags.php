@@ -391,7 +391,7 @@ function awesim_footer_content() {
 }
 
 
-function awesim_get_archives() {
+/*function awesim_get_archives() {
 
    $output = '';
    global $wpdb;
@@ -449,93 +449,76 @@ function awesim_get_archives() {
    	  $output .= '</div>';
    	  echo $output;
 
-}
+}*/
 
-function awesim_get_archives2(){
+function awesim_db_get_archives(){
    global $wpdb;
-    $yearliest_year = $wpdb->get_results(
+   $results = $wpdb->get_results(	"SELECT DISTINCT MONTH( post_date ) AS month ,
+   								YEAR( post_date ) AS year,
+   								COUNT( id ) as post_count FROM $wpdb->posts
+   								WHERE post_status = 'publish' and post_date <= now( )
+   								and post_type = 'post'
+   								GROUP BY month , year
+   								ORDER BY post_date DESC");
 
-        "SELECT YEAR(post_date) AS year
-         FROM $wpdb->posts
-         WHERE post_status = 'publish'
-         AND post_type = 'post'
-         ORDER BY post_date
-         ASC LIMIT 1
+    $archives = array();
 
-    ");
-
-
-    //If there are any posts
-    if($yearliest_year){
-
-        //This year
-        $this_year = date('Y');
-
-        //Setup months
-        $months = array(1 => "January", 2 => "February", 3 => "March" , 4 => "April", 5 => "May", 6 => "June", 7 => "July", 8 => "August", 9 => "September", 10 => "October", 11 => "November", 12 => "December");
-
-        $current_year = $yearliest_year[0]->year;
-
-
-        //Loop through every year and check each monnth of each year for posts
-        while($current_year <= $this_year){
-
-            echo "<h3>" . $current_year . "</h3>";
-
-            echo "<ul>";
-
-            foreach($months as $month_num => $month){
-
-
-                //Checks to see if a month a has posts
-                if($search_month = $wpdb->query(
-
-                        "SELECT MONTHNAME(post_date) as month
-
-                            FROM $wpdb->posts
-                            WHERE MONTHNAME(post_date) = '$month'
-                            AND YEAR(post_date) = $current_year
-                            AND post_type = 'post'
-                            AND post_status = 'publish'
-                            LIMIT 1
-
-                ")){
-
-                    //Month has post -> link it
-                    echo "<li>
-
-                            <a href='" . get_bloginfo('url') . "/" . $current_year . "/" . $month_num . "/'><span class='archive-month'>" . $month . "</span></a>
-
-                          </li>";
-
-
-                }else{
-
-                    //Month does not have post -> just print it
-
-                    echo "<li>
-
-                            <span class='archive-month'>" . $month . "</span>
-
-                          </li>";
-                }
-
-
-
-            }
-
-            echo "</ul>";
-
-            $current_year++;
-
-
+    foreach($results as $result) :
+        if (!isset($archives[$result->year])) {
+            $archives[$result->year] = array();
         }
 
-    }else{
+    $archives[$result->year][$result->month] = $result->post_count;
 
-        echo "No Posts Found.";
+    endforeach;
 
+    return $archives;
+}
+
+function awesim_get_archives(){
+   $month_template = '
+        <a href="%1$s">
+            %2$s
+            (%3$s)
+        </a>
+   ';
+
+   $year_template = '
+        <h3><a href="%1$s">%2$s</a></h3>
+   ';
+
+
+   $month_names = array(1 => "Jan", 2 => "Feb", 3 => "Mar" , 4 => "Apr", 5 => "May", 6 => "Jun",
+            7 => "Jul", 8 => "Aug", 9 => "Sep", 10 => "Oct", 11 => "Nov", 12 => "Dec");
+
+    $archives = awesim_db_get_archives();
+   // print_r($archives);
+    $output = '';
+
+    foreach ( $archives as $year => $months ) {
+            $output .= '<div class="archive-years">';
+            $output .= __(sprintf($year_template, get_year_link($year), esc_attr($year)));
+            $output .= '<ul  class="archive-list">';
+
+            foreach($month_names as $month_number => $month_name) {
+
+
+
+                if(isset($months[$month_number])) {
+                    $output .= '<li class="archive-month">';
+                    $output .= __(sprintf($month_template, get_month_link( $year, $month_name), $month_name, $months[$month_number]));
+                } else {
+                $output .= '<li>';
+                    $output .= '<span>' . $month_name . '(0)</span>';
+                }
+
+                $output .= '</li>';
+            }
+
+            $output .= '</ul></div>';
     }
+
+    echo $output;
 }
 
 

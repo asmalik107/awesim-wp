@@ -49,7 +49,6 @@
 
   a {
     color: $button-text-color;
-
   }
 
   &:hover, &:focus {
@@ -237,33 +236,40 @@
 }
 
 .archive-years {
-  //float: left;
+  margin: 0 1em;
 }
 
 .archive-list {
-  margin: 2px 0 3em 0;
-  padding: 5px 0 0 0;
-  left: 0;
-  float: left;
- // width: 100px;
+  margin: 0;
+  padding: 0;
 
-  a {
-    color: #4c4c4c;
-    display: block;
-    width: 100px;
-    line-height: 1;
-    height: 14px;
-  }
-
-   li {
-    height: 21px;
+  li {
     list-style: none;
-    margin: 0 0 2px 0;
-    display:inline-block;
+    display: inline-block;
+    padding: 1em 1em;
+    background: #eee;
+    margin: 0.5em;
+    line-height: 1.6em;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $secondary-main-color;
+    cursor:default;
+
   }
 
- span {
-    background: #fdfdfd;
-    padding: 0 2px 1px 0;
+  .archive-month {
+    background: $secondary-main-color;
+    cursor: pointer;
+
+    a {
+      color: $button-text-color;
+    }
+
+    &:hover, &:focus {
+      background: scale-color($secondary-main-color, $lightness: -15%);
+      outline: 0;
+    }
   }
+
 }

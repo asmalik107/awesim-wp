@@ -19,12 +19,16 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
         <div class="article-single">
-            <h2>Archives</h2>
+            <div class="entry-content">
+                <h2>Archives</h2>
+            </div>
             <?php awesim_get_archives() ?>
         </div>
 
         <div class="article-single">
-            <h2>Categories</h2>
+            <div class="entry-content">
+                <h2>Categories</h2>
+            </div>
             <div class="categories">
                 <?php wp_list_categories('orderby=name&show_count=1&title_li=&hierarchical=0'); ?>
             </categories>
