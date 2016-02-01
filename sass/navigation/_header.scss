@@ -7,11 +7,7 @@
   display: none;
 }
 
-
-
 .site-logo {
-  //background-image: url(images/logo.png);
-  //background-repeat: no-repeat;
   height: 40px;
   width: 40px;
   display: block;
@@ -25,49 +21,58 @@
 
 }
 
-.site-header {
-  .search-container {
-    /*  position: absolute;
-      right: 20px;
-      top: 1px;*/
-    //float: right;
-    //@include span(2 of 12 last);
-    //margin: 16px 16px 14px 0;
-    float: right;
-    margin-right: 1.5em;
+.search-container {
+  float: right;
+  margin-right: 1.5em;
 
+}
+
+.search-click {
+  //color:$primary-main-color;
+}
+
+.search-bar {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: $header-search-bar;
+  background: #fff;
+  text-align: left;
+  z-index: 100;
+  padding: 0 4em;
+}
+
+.search-bar-open {
+  display: block
+}
+
+.close-search {
+  position: absolute;
+  display: inline-block;
+  right: 2em;
+  top: 0;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 3em;
+}
+
+input[type="search"].search-field {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-size: 1em;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px $input-border-color;
+  transition: all .3s;
+
+  &:focus {
+    outline: none;
+    border-bottom: solid 2px $secondary-main-color;
   }
-
-  .search-click {
-    //color:$primary-main-color;
-  }
-
-  .search-bar {
-    display: none;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 0;
-    height: $header-search-bar;
-    background: #fff;
-    text-align: left;
-    z-index: 100;
-    padding: 0 4em;
-  }
-
-  .search-bar-open {
-    display: block
-  }
-
-  .close-search {
-    position: absolute;
-    display: inline-block;
-    right: 2em;
-    top: 0;
-    text-align: center;
-    font-size: 1.4em;
-    line-height: 3em;
-  }
-
-
 }

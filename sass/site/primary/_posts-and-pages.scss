@@ -57,6 +57,10 @@
   }
 }
 
+.page-header {
+  margin: 0.5em;
+}
+
 .entry-header {
   margin: auto;
   position: absolute;
@@ -75,7 +79,6 @@
 }
 
 .entry-title {
-  //text-align: center;
   color: white;
   text-transform: capitalize;
   margin: 0;
@@ -254,7 +257,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $secondary-main-color;
-    cursor:default;
+    cursor: default;
 
   }
 

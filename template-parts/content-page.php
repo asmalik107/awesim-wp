@@ -10,10 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-single'); ?>>
-	<div class="article-featured-image">
-		   <?php the_post_thumbnail('large-thumbnail'); ?>
+<!--	<div class="article-featured-image"> -->
+		   <!-- <?php the_post_thumbnail('large-thumbnail'); ?> -->
 
-       <?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
+       <!--<?php the_title( '<h3 class="entry-title entry-title-single">', '</h3>' ); ?>
 
         <header class="entry-header">
              <p class="entry-meta entry-meta-single">
@@ -22,8 +22,10 @@
                  <?php awesim_on_edit(); ?>
              </p>
 
-        </header><!-- .entry-header -->
-	</div>
+        </header> --><!-- .entry-header -->
+	<!-- </div> -->
+
+	<?php the_title( '<div class="page-header"><h2>', '</h2></div>' ); ?>
 
 	<div class="entry-content">
 		<?php the_content(); ?>

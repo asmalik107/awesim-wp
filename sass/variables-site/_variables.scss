@@ -64,7 +64,7 @@ $logo-font-family: TROCCHI;
 
 /* Footer */
 $footer-color: $primary-main-color;
-$footer_background_color: #ffffff;
+$footer-background_color: #ffffff;
 $footer-size: $header-size;
 
 /* Tags*/
@@ -72,7 +72,9 @@ $tag-color: #FF8C41;
 $category-color: #6C9ADF;
 
 /* Inputs */
+$input-background-color: $background-secondary-color;
 $input-border-color: #eeeeee;
+$input-small-spacing: 0.1em;
 
 /* Buttons */
 
@@ -109,3 +111,5 @@ $icon-linkedin-hover-color: scale-color($icon-linkedin-color, $lightness: 25%);
 $icon-github-hover-color: scale-color($icon-github-color, $lightness: 25%);
 
 $content-before-height: 4.3em;
+
+

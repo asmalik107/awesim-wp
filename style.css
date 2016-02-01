@@ -3500,6 +3500,7 @@ input[type="submit"] {
   font-size: 0.9rem;
   color: #ffffff;
   font-weight: bold;
+  background: #ffffff;
 }
 
 .button-success,
@@ -3599,43 +3600,111 @@ input[type="submit"]:hover, input[type="submit"]:focus, .button-primary:hover, .
   outline: 0;
 }
 
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.05em;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.05em;
+}
+
+input,
+select {
+  display: block;
+  font-size: 1em;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
-textarea {
-  display: block;
-  margin: 0;
-  width: 100%;
-  font-size: 1em;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  box-shadow: none;
+textarea,
+select[multiple] {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
   border-radius: 0;
-  padding: 10px;
-  border: none;
-  border-bottom: solid 2px #eeeeee;
-  transition: all .3s;
+  box-sizing: border-box;
+  font-size: 1em;
+  margin-bottom: 0.1em;
+  padding: 0.5em 0.5em;
+  width: 100%;
+}
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+textarea:hover,
+select[multiple]:hover {
+  border-color: shade(#eeeeee, 20%);
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
-textarea:focus {
+textarea:focus,
+select[multiple]:focus {
+  border-color: #10cca9;
   outline: none;
-  border-bottom: solid 2px #10cca9;
+}
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="url"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled,
+textarea:disabled,
+select[multiple]:disabled {
+  background-color: shade(#10cca9, 5%);
+  cursor: not-allowed;
+}
+input[type="text"]:disabled:hover,
+input[type="email"]:disabled:hover,
+input[type="url"]:disabled:hover,
+input[type="password"]:disabled:hover,
+input[type="search"]:disabled:hover,
+textarea:disabled:hover,
+select[multiple]:disabled:hover {
+  border: 1px solid #eeeeee;
 }
 
 textarea {
-  padding-left: 3px;
+  resize: vertical;
+}
+
+[type="search"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 0.05em;
+}
+
+[type="file"] {
+  margin-bottom: 0.1em;
   width: 100%;
 }
 
-label {
-  margin-bottom: 5px;
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto;
 }
 
 /*--------------------------------------------------------------
@@ -4006,14 +4075,12 @@ ul.page-numbers .dots {
   text-align: center;
 }
 
-.site-header .search-container {
-  /*  position: absolute;
-    right: 20px;
-    top: 1px;*/
+.search-container {
   float: right;
   margin-right: 1.5em;
 }
-.site-header .search-bar {
+
+.search-bar {
   display: none;
   position: absolute;
   left: 0;
@@ -4025,10 +4092,12 @@ ul.page-numbers .dots {
   z-index: 100;
   padding: 0 4em;
 }
-.site-header .search-bar-open {
+
+.search-bar-open {
   display: block;
 }
-.site-header .close-search {
+
+.close-search {
   position: absolute;
   display: inline-block;
   right: 2em;
@@ -4036,6 +4105,26 @@ ul.page-numbers .dots {
   text-align: center;
   font-size: 1.4em;
   line-height: 3em;
+}
+
+input[type="search"].search-field {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-size: 1em;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #eeeeee;
+  transition: all .3s;
+}
+input[type="search"].search-field:focus {
+  outline: none;
+  border-bottom: solid 2px #10cca9;
 }
 
 /*--------------------------------------------------------------
@@ -4293,6 +4382,10 @@ ul.page-numbers .dots {
 .cat-item:hover, .cat-item:focus {
   background: #437ed6;
   outline: 0;
+}
+
+.page-header {
+  margin: 0.5em;
 }
 
 .entry-header {
