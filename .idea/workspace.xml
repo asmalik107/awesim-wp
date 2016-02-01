@@ -5,10 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives.php" afterPath="$PROJECT_DIR$/archives.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/style.css" afterPath="$PROJECT_DIR$/dist/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/template-tags.php" afterPath="$PROJECT_DIR$/inc/template-tags.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/layout/_layout.scss" afterPath="$PROJECT_DIR$/sass/layout/_layout.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/site/primary/_posts-and-pages.scss" afterPath="$PROJECT_DIR$/sass/site/primary/_posts-and-pages.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/site/secondary/_widgets.scss" afterPath="$PROJECT_DIR$/sass/site/secondary/_widgets.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="awesome-wp.iws" />
@@ -33,7 +30,7 @@
       <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/variables-site/_variables.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="27.818182">
+            <state vertical-scroll-proportion="0.0">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="21" />
               <folding />
             </state>
@@ -50,21 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="archives.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="archives.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/archives.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.8433544">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_posts-and-pages.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_posts-and-pages.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/site/primary/_posts-and-pages.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3180328">
-              <caret line="243" column="13" selection-start-line="243" selection-start-column="13" selection-end-line="243" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -134,8 +131,8 @@
         <option value="$PROJECT_DIR$/sass/layout/_layout.scss" />
         <option value="$PROJECT_DIR$/inc/template-tags.php" />
         <option value="$PROJECT_DIR$/sass/site/secondary/_widgets.scss" />
-        <option value="$PROJECT_DIR$/archives.php" />
         <option value="$PROJECT_DIR$/sass/site/primary/_posts-and-pages.scss" />
+        <option value="$PROJECT_DIR$/archives.php" />
       </list>
     </option>
   </component>
@@ -821,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7672131">
           <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,22 +825,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3868853">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/variables-site/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="27.818182">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archives.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="18" />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -857,10 +844,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/archives.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8433544">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sass/site/primary/_posts-and-pages.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3180328">
-          <caret line="243" column="13" selection-start-line="243" selection-start-column="13" selection-end-line="243" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding />
         </state>
       </provider>

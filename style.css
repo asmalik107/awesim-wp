@@ -4283,12 +4283,12 @@ ul.page-numbers .dots {
   line-height: 1.6em;
   font-size: 0.5em;
   font-weight: 700;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em !important;
   text-transform: uppercase;
   color: #ffffff;
 }
 .cat-item a {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .cat-item:hover, .cat-item:focus {
   background: #437ed6;

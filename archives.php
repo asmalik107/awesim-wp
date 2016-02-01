@@ -34,6 +34,16 @@ get_header(); ?>
             </categories>
         </div>
 
+        <div class="article-single">
+            <div class="entry-content">
+                <h2>Tags</h2>
+            </div>
+            <div class="tagcloud">
+                <?php wp_tag_cloud(); ?>
+            </categories>
+        </div>
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
