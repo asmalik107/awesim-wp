@@ -272,36 +272,23 @@ function post_link_attributes($output) {
 
 
 function awesim_recent_posts() {
-    ?>
-        <aside id="recent-post-widget" class="widget widget_recent_entries article-single">
-            <h3>Latest Posts</h3>
-            <ul>
-            <?php
-                $args = array( 'numberposts' => '5' );
-                $recent_posts = wp_get_recent_posts($args);
-                foreach( $recent_posts as $recent ){
-                    if($recent['post_status']=="publish"){
-                    ?>
-                        <li>
-                            <div class="thumbnail">
-                            <?php
-                                echo '<a href="' . get_permalink($recent["ID"]) . '">' .get_the_post_thumbnail($recent["ID"], 'recent-thumbnail').'</a>'
-                            ?>
-                            </div>
-                            <div class="detail">
-                            <?php
-                                echo '<a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a>';
-                                echo '<span class="post-date">'.mysql2date('F j, Y', $recent['post_date']).'</span>';
-                            ?>
-                            </div>
-                        </li>
-                    <?php
-                    }
-                }
-                ?>
-            </ul>
-        </aside>
-    <?php
+    $output = '<aside id="recent-post-widget" class="widget widget_recent_entries article-single">';
+    $output .= '<h3>Latest Posts</h3><ul>';
+    $args = array( 'numberposts' => '5' );
+    $recent_posts = wp_get_recent_posts($args);
+    foreach( $recent_posts as $recent ){
+        if($recent['post_status']=="publish"){
+            $output .= '<li><div class="thumbnail">';
+            $output .='<a href="' . get_permalink($recent["ID"]) . '">' .get_the_post_thumbnail($recent["ID"], 'recent-thumbnail').'</a>';
+            $output .= '</div><div class="detail">';
+            $output .= '<a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a>';
+            $output .= '<span class="post-date">'.mysql2date('F j, Y', $recent['post_date']).'</span>';
+            $output .= '</div></li>';
+        }
+    }
+    $output .= '</ul></aside>';
+
+    echo $output;
 }
 
 
@@ -379,15 +366,17 @@ function awesim_social_icons() {
 
 
 function awesim_footer_content() {
-?>
-	<div class="copyright">
-	        <span>© Asim Malik</span>
-	        <span>
-	        	<?php printf( esc_html__( 'Theme: %1$s designed and developed by Asim Malik. Powered by %2$s.', 'awesim' ), '<a href="https://github.com/asmalik107/awesim-wp">Awesim</a>', 'WordPress' ); ?>
-	        </span>
-	    <!--<?php awesim_social_icons() ?> -->
-    </div>
-<?php
+    $template = '
+            <div class="%1$s">
+                <span>%2$s</span>
+                <span>%3$s</span>
+             </div>';
+
+    $txt = __(sprintf(esc_html__( 'Theme: %1$s designed and developed by Asim Malik. Powered by %2$s.', 'awesim' ),
+            '<a href="https://github.com/asmalik107/awesim-wp">Awesim</a>', 'WordPress' ));
+
+    printf($template, 'copyright', '© Asim Malik', $txt);
+
 }
 
 
@@ -492,7 +481,7 @@ function awesim_get_archives(){
             7 => "Jul", 8 => "Aug", 9 => "Sep", 10 => "Oct", 11 => "Nov", 12 => "Dec");
 
     $archives = awesim_db_get_archives();
-   // print_r($archives);
+
     $output = '';
 
     foreach ( $archives as $year => $months ) {
