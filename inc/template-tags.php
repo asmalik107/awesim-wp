@@ -272,7 +272,7 @@ function post_link_attributes($output) {
 
 
 function awesim_recent_posts() {
-    $output = '<aside id="recent-post-widget" class="widget widget_recent_entries article-single">';
+    $output = '<aside id="recent-post-widget" class="widget article-single">';
     $output .= '<h3>Latest Posts</h3><ul>';
     $args = array( 'numberposts' => '5' );
     $recent_posts = wp_get_recent_posts($args);
@@ -286,9 +286,29 @@ function awesim_recent_posts() {
             $output .= '</div></li>';
         }
     }
+
     $output .= '</ul></aside>';
 
     echo $output;
+}
+
+function awesim_get_about_widget() {
+
+
+        $output = '<aside id="about-widget" class="widget  article-single">';
+        $output .= '<h3>Welcome</h3>';
+        $output .='<div class="about-content">';
+
+        $dir = get_bloginfo('stylesheet_directory') . '/images/profile-large.jpg';
+        $output .= '<img class="about-image" src="' . $dir . '" alt="MDN">';
+
+        $output .= '<p>Hi,I\'m Asim Malik. I\'m a full stack developer living in London.</p>';
+        $output .= '<p class="about-more"><a class="button button-link button-xsmall" href="'. get_page_link(get_page_by_title( 'About' ))
+                . '">More About Me</a></p>';
+
+        $output .= '</div></aside>';
+
+        echo $output;
 }
 
 
@@ -509,6 +529,7 @@ function awesim_get_archives(){
 
     echo $output;
 }
+
 
 
 add_action( 'edit_category', 'awesim_category_transient_flusher' );

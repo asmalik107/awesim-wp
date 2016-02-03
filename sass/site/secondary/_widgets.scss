@@ -111,7 +111,7 @@
   a {
     color: $primary-main-color;
     font-weight: bold;
-    font-family: "PT Serif";
+    font-family: $font-secondary;
 
     &:hover {
       color: $link_hover-color;
@@ -124,5 +124,19 @@
   }
 }
 
+.about-content {
+  margin: 0.5em;
+}
+
+.about-more {
+  text-align: center;
+}
+
+.about-image {
+  float: right;
+  padding-right: 0.5em;
+  border-radius: 50%;
+  height: 100px;
+}
 
 

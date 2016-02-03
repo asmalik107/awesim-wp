@@ -4312,7 +4312,7 @@ input[type="search"].search-field:focus {
 #recent-post-widget a {
   color: #313131;
   font-weight: bold;
-  font-family: "PT Serif";
+  font-family: "PT Serif", Helvetica, sans-serif;
 }
 #recent-post-widget a:hover {
   color: #0ead90;
@@ -4320,6 +4320,21 @@ input[type="search"].search-field:focus {
 #recent-post-widget .post-date {
   display: block;
   font-size: .9em;
+}
+
+.about-content {
+  margin: 0.5em;
+}
+
+.about-more {
+  text-align: center;
+}
+
+.about-image {
+  float: right;
+  padding-right: 0.5em;
+  border-radius: 50%;
+  height: 100px;
 }
 
 /*--------------------------------------------------------------
