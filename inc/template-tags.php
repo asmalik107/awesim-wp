@@ -271,9 +271,9 @@ function post_link_attributes($output) {
 }*/
 
 
-function awesim_recent_posts() {
+function awesim_recent_posts($heading_before = '<h3>', $heading_after = '</h3>') {
     $output = '<aside id="recent-post-widget" class="widget article-single">';
-    $output .= '<h3>Latest Posts</h3><ul>';
+    $output .= $heading_before . 'Latest Posts' . $heading_after . '<ul>';
     $args = array( 'numberposts' => '5' );
     $recent_posts = wp_get_recent_posts($args);
     foreach( $recent_posts as $recent ){

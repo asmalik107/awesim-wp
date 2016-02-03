@@ -1,13 +1,9 @@
 /* Main Navigation*/
 .main-navigation {
   display: block;
-  //padding-top: 1.2em;
-  padding-left: 8em;
+  padding-left: 18em;
   padding-top: 1em;
 
-  @include breakpoint($bp-large-min) {
-    padding-left: 18em;
-  }
 }
 
 .menu-container {

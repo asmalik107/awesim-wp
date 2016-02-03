@@ -3434,6 +3434,10 @@ table {
   }
 }
 
+.not-found-content-area {
+  min-height: 100%;
+}
+
 .widget-area {
   padding: 1em 0.5em 1em 0.5em;
   width: 100%;
@@ -3734,13 +3738,8 @@ a:hover {
 /* Main Navigation*/
 .main-navigation {
   display: block;
-  padding-left: 8em;
+  padding-left: 18em;
   padding-top: 1em;
-}
-@media (min-width: 1200px) {
-  .main-navigation {
-    padding-left: 18em;
-  }
 }
 
 .menu-container {
@@ -4553,6 +4552,12 @@ input[type="search"].search-field:focus {
 .not-found {
   float: left;
   width: 100%;
+}
+.not-found .search-form {
+  margin-bottom: 1em;
+}
+.not-found .widget h2 {
+  text-align: center;
 }
 
 .page-header {

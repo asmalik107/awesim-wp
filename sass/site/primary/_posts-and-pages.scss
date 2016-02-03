@@ -229,8 +229,17 @@
 
 .not-found {
   float: left;
-  //background: #ffffff;
   width: 100%;
+
+  .search-form {
+    margin-bottom:  1em;
+  }
+
+  .widget {
+    h2 {
+      text-align: center;
+    }
+  }
 
 }
 

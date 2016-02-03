@@ -19,11 +19,9 @@ $susy: (
 
   @include span(12 of 12);
 
- // @include breakpoint($bp-medium-min) {
     position: fixed;
     z-index: 300;
-    //opacity: .92;
-  //}
+
 
 }
 
@@ -51,27 +49,22 @@ $susy: (
 
   @include breakpoint($bp-small-min, $bp-medium-max) {
     padding: 1em 0.5em 1em 0.5em;
-    //margin: 0 auto (-$header-size) auto;
   }
 
   @include susy-breakpoint($bp-medium-min, $susy) {
     @include span(9 of 12);
     padding: 0.5em 0 1em 0.5em;
-    //padding: 1em 0 1em 1em;
-    //top: $header-size;
     position: relative;
-    //margin-bottom: -4.3em;
     min-height:100%;
-
-
-
-    //margin-bottom: $header-size;
   }
+}
+
+.not-found-content-area {
+  min-height:100%;
 }
 
 .widget-area {
   padding: 1em 0.5em 1em 0.5em;
-  //margin: 0 auto (-$header-size) auto;
 
   @include span(12 of 12);
 

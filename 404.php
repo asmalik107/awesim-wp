@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="not-found-content-area">
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
@@ -22,10 +22,11 @@ get_header(); ?>
 
 					 <?php get_search_form(); ?>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+
+					<?php awesim_recent_posts('<h2>', '</h2>'); ?>
 
 					<?php if ( awesim_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
+					<div class="widget widget_categories article-single">
 						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'awesim' ); ?></h2>
 						<ul>
 						<?php
@@ -41,13 +42,13 @@ get_header(); ?>
 					</div><!-- .widget -->
 					<?php endif; ?>
 
-					<?php
+					<!-- <?php
 						/* translators: %1$s: smiley */
 						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'awesim' ), convert_smilies( ':)' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
+					?> -->
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+                     <?php the_widget('WP_Widget_Tag_Cloud', '', 'before_widget= <div  class="widget %1$s article-single">&after_widget=</div>'); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
