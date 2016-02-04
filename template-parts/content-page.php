@@ -38,7 +38,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php
+	<?php awesim_on_edit_button() ?>
+<!--		<?php
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
@@ -48,7 +49,7 @@
 				'<span class="edit-link">',
 				'</span>'
 			);
-		?>
+		?> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

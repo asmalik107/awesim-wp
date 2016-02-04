@@ -70,6 +70,27 @@ function awesim_on_edit() {
 endif;
 
 
+if ( ! function_exists( 'awesim_on_edit_button' ) ) :
+/**
+ * Prints HTML with meta information for the edit link.
+ */
+function awesim_on_edit_button() {
+
+	edit_post_link(
+
+		sprintf(
+			/* translators: %s: Name of current post */
+			'<i class="fa fa-pencil-square-o"></i>&nbsp;Edit',
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		),
+		'<span class="edit-link">',
+		'</span>'
+	);
+
+}
+endif;
+
+
 if ( ! function_exists( 'awesim_tags' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
@@ -302,7 +323,7 @@ function awesim_get_about_widget() {
         $dir = get_bloginfo('stylesheet_directory') . '/images/profile-large.jpg';
         $output .= '<img class="about-image" src="' . $dir . '" alt="MDN">';
 
-        $output .= '<p>Hi,I\'m Asim Malik. I\'m a full stack developer living in London.</p>';
+        $output .= '<p>Hi,I\'m Asim Malik. I\'m a full stack Javascript developer with over 15+ years of experience living in London.</p>';
         $output .= '<p class="about-more"><a class="button button-link button-xsmall" href="'. get_page_link(get_page_by_title( 'About' ))
                 . '">More About Me</a></p>';
 
