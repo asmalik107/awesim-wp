@@ -15,6 +15,7 @@ Run `gulp` to run sass and build the theme in the dist directory
 - [masonry](http://masonry.desandro.com/)
 - [breakpoint](http://breakpoint-sass.com/)
 - [susy](http://susy.oddbird.net/)
+- [prism](http://prismjs.com/)
 
 ![small icon](screenshot.png)
 
