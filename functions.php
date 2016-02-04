@@ -134,7 +134,7 @@ function awesim_scripts() {
 
 	wp_enqueue_script( 'prism-js', get_template_directory_uri() . '/js/prism.js', array(), '', true );
 
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(''), '', true );
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

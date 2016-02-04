@@ -364,47 +364,37 @@ function awesim_posts_pagination($pages = '', $range = 4)
 
 
 function awesim_social_icons() {
-?>
-        <div class="header-social-icons">
-            <ul>
-                <li>
-                    <a class="icon-facebook" href="https://www.facebook.com/asimsaeedmalik">
-                        <span class="fa-stack fa-stack-header">
-                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon-twitter" href="https://twitter.com/asimmalik">
-                        <span class="fa-stack fa-stack-header">
-                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon-linkedin" href="https://uk.linkedin.com/in/asimsmalik">
-                        <span class="fa-stack fa-stack-header">
-                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon-github" href="https://github.com/asmalik107">
-                        <span class="fa-stack fa-stack-header">
-                            <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    <?php
+    $socials = array();
+    $socials['facebook'] = 'https://www.facebook.com/asimsaeedmalik';
+    $socials['twitter'] = 'https://twitter.com/asimmalik';
+    $socials['linkedin'] = 'https://uk.linkedin.com/in/asimsmalik';
+    $socials['github'] = 'https://github.com/asmalik107';
+
+
+
+    $template= '
+            <li>
+                <a class="icon-%1$s" href="%2$s">
+                    <span class="fa-stack fa-stack-header">
+                        <i class="fa fa-circle fa-stack-2x fa-stack-square"></i>
+                        <i class="fa fa-%1$s fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+    ';
+
+
+    $output = '<div class="header-social-icons"><ul>';
+
+    foreach($socials as $key => $value) {
+        $output .= __(sprintf($template, $key, $value));
+    }
+
+    $output .= '</ul></div>';
+
+    echo $output;
 
 }
-
 
 function awesim_footer_content() {
     $template = '
