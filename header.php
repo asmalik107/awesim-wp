@@ -27,10 +27,16 @@
 
 	<header id="masthead" class="site-header" role="banner">
         <div class="menu-toggle">
-            <button class="button-toggle" aria-controls="primary-menu" aria-expanded="false">
-            <i class="fa fa-2x fa-bars"></i>
-            <!-- <span><?php esc_html_e( 'Primary Menu', 'awesim' ); ?></span> -->
-            </button>
+            <div id="nav-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+
         </div>
 		<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 		    <span class='site-logo'>AM</span>

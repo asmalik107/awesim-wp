@@ -60,7 +60,8 @@ $header-search-bar: 4em;
 
 $logo-color: #ffffff;
 $logo-background-color: $secondary-main-color;
-$logo-font-family: TROCCHI;
+//$logo-font-family: TROCCHI;
+$logo-font-family: $font-secondary;
 
 /* Footer */
 $footer-color: $primary-main-color;

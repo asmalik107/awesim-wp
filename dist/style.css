@@ -3845,45 +3845,6 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-    /*    ul {
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          float: left;
-          position: absolute;
-          top: 1.1em;
-          left: -999em;
-          z-index: 99999;
-          line-height: 1.5rem;
-          background: $background-secondary-color;
-
-          ul {
-            left: -999em;
-            top: 0;
-          }
-
-          li {
-            &:hover > ul,
-            &.focus > ul {
-              left: 100%;
-            }
-          }
-
-          a {
-            width: 200px;
-          }
-
-          :hover > a,
-          .focus > a {
-          }
-
-          a:hover,
-          a.focus {
-          }
-        }
-
-        li:hover > ul,
-        li.focus > ul {
-          left: auto;
-        }*/
 }
 .mobile-menu-container li {
   position: relative;
@@ -3920,6 +3881,41 @@ a:hover {
   }
 }
 
+@-webkit-keyframes anim {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes anim {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -4016,6 +4012,75 @@ a:hover {
     width: 85%;
   }
 }
+#nav-icon {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: 0.5em auto;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+#nav-icon span, #nav-icon ul.page-numbers a, ul.page-numbers #nav-icon a {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 50%;
+  background: #313131;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+#nav-icon span:nth-child(even), #nav-icon ul.page-numbers a:nth-child(even), ul.page-numbers #nav-icon a:nth-child(even) {
+  left: 50%;
+}
+#nav-icon span:nth-child(odd), #nav-icon ul.page-numbers a:nth-child(odd), ul.page-numbers #nav-icon a:nth-child(odd) {
+  left: 0;
+}
+#nav-icon span:nth-child(1), #nav-icon ul.page-numbers a:nth-child(1), ul.page-numbers #nav-icon a:nth-child(1), #nav-icon span:nth-child(2), #nav-icon ul.page-numbers a:nth-child(2), ul.page-numbers #nav-icon a:nth-child(2) {
+  top: 0;
+}
+#nav-icon span:nth-child(3), #nav-icon ul.page-numbers a:nth-child(3), ul.page-numbers #nav-icon a:nth-child(3), #nav-icon span:nth-child(4), #nav-icon ul.page-numbers a:nth-child(4), ul.page-numbers #nav-icon a:nth-child(4) {
+  top: 10px;
+}
+#nav-icon span:nth-child(5), #nav-icon ul.page-numbers a:nth-child(5), ul.page-numbers #nav-icon a:nth-child(5), #nav-icon span:nth-child(6), #nav-icon ul.page-numbers a:nth-child(6), ul.page-numbers #nav-icon a:nth-child(6) {
+  top: 20px;
+}
+#nav-icon.open span:nth-child(1), #nav-icon.open ul.page-numbers a:nth-child(1), ul.page-numbers #nav-icon.open a:nth-child(1), #nav-icon.open span:nth-child(6), #nav-icon.open ul.page-numbers a:nth-child(6), ul.page-numbers #nav-icon.open a:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#nav-icon.open span:nth-child(2), #nav-icon.open ul.page-numbers a:nth-child(2), ul.page-numbers #nav-icon.open a:nth-child(2), #nav-icon.open span:nth-child(5), #nav-icon.open ul.page-numbers a:nth-child(5), ul.page-numbers #nav-icon.open a:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#nav-icon.open span:nth-child(1), #nav-icon.open ul.page-numbers a:nth-child(1), ul.page-numbers #nav-icon.open a:nth-child(1) {
+  left: 3px;
+  top: 7px;
+}
+#nav-icon.open span:nth-child(2), #nav-icon.open ul.page-numbers a:nth-child(2), ul.page-numbers #nav-icon.open a:nth-child(2) {
+  left: calc(50% - 3px);
+  top: 7px;
+}
+#nav-icon.open span:nth-child(3), #nav-icon.open ul.page-numbers a:nth-child(3), ul.page-numbers #nav-icon.open a:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+#nav-icon.open span:nth-child(4), #nav-icon.open ul.page-numbers a:nth-child(4), ul.page-numbers #nav-icon.open a:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+#nav-icon.open span:nth-child(5), #nav-icon.open ul.page-numbers a:nth-child(5), ul.page-numbers #nav-icon.open a:nth-child(5) {
+  left: 3px;
+  top: 15px;
+}
+#nav-icon.open span:nth-child(6), #nav-icon.open ul.page-numbers a:nth-child(6), ul.page-numbers #nav-icon.open a:nth-child(6) {
+  left: calc(50% - 3px);
+  top: 15px;
+}
+
 /*--------------------------------------------------------------
 ## Pagination
 --------------------------------------------------------------*/
@@ -4070,7 +4135,7 @@ ul.page-numbers .dots {
   color: #ffffff;
   background: #10cca9;
   line-height: 41px;
-  font-family: TROCCHI;
+  font-family: "PT Serif", Helvetica, sans-serif;
   text-align: center;
 }
 

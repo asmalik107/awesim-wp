@@ -6,13 +6,14 @@
  */
 (function () {
     var mobileMenu = $('.mobile-menu');
-    var toggleButton = $('.button-toggle');
+    var toggleButton = $('#nav-icon');
     var searchBar = $('.search-bar');
     var toggleSearch = $('.search-click');
     var searchField = $('.search-field');
 
     toggleButton.click(function () {
         mobileMenu.toggleClass('mobile-menu-open');
+        toggleButton.toggleClass('open');
     });
 
 
