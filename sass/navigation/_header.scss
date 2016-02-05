@@ -45,7 +45,10 @@
 }
 
 .search-bar-open {
-  display: block
+  display: block;
+  transform: scale(1);
+  opacity: 1;
+  animation: anim .3s ease-in-out;
 }
 
 .close-search {

@@ -3873,6 +3873,11 @@ a:hover {
   top: 0;
   left: 0;
   border-bottom: 1px solid #ECECEC;
+  -webkit-animation: anim .3s ease-in-out;
+          animation: anim .3s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 
 @media (min-width: 899px) {
@@ -4159,6 +4164,11 @@ ul.page-numbers .dots {
 
 .search-bar-open {
   display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  -webkit-animation: anim .3s ease-in-out;
+          animation: anim .3s ease-in-out;
 }
 
 .close-search {

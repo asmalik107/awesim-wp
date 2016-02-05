@@ -165,15 +165,33 @@
   top: 0;
   left: 0;
   border-bottom: 1px solid $header-border-color;
+  animation: anim .3s ease-in-out;
+  transform: scale(1);
+  opacity: 1;
 }
 
 .mobile-menu {
   @include breakpoint($bp-medium-min) {
     display: none;
+
   }
 }
 
-
+@keyframes anim {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 
 .comment-navigation,
