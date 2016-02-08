@@ -165,7 +165,7 @@
   top: 0;
   left: 0;
   border-bottom: 1px solid $header-border-color;
-  animation: anim .3s ease-in-out;
+  animation: animate-in .3s ease-in-out;
   transform: scale(1);
   opacity: 1;
 }
@@ -177,7 +177,7 @@
   }
 }
 
-@keyframes anim {
+@keyframes animate-in {
   0% {
     display: none;
     opacity: 0;
