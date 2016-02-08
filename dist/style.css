@@ -4150,7 +4150,6 @@ ul.page-numbers .dots {
 }
 
 .search-bar {
-  display: none;
   position: absolute;
   left: 0;
   width: 100%;
@@ -4160,15 +4159,15 @@ ul.page-numbers .dots {
   text-align: left;
   z-index: 100;
   padding: 0 4em;
+  opacity: 0;
+  transition: all 1s ease;
+  pointer-events: none;
 }
 
 .search-bar-open {
-  display: block;
-  -webkit-transform: scale(1);
-          transform: scale(1);
   opacity: 1;
-  -webkit-animation: anim .3s ease-in-out;
-          animation: anim .3s ease-in-out;
+  transition: all 1s ease;
+  pointer-events: auto;
 }
 
 .close-search {
@@ -4580,14 +4579,18 @@ input[type="search"].search-field:focus {
 }
 
 /*.article-featured-image {
-  position: relative;
-
+  //position: relative;
+  transition: all .2s ease-in-out;
   img {
     transition: all .2s ease-in-out;
 
     &:hover {
-      //  transform: scale(1.1);
+        transform: scale(1.1);
     }
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }*/
 /* Articles */
