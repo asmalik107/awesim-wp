@@ -104,6 +104,10 @@
 }
 
 /* Mobile Menu */
+.mobile-menu-container {
+  position:relative;
+}
+
 .mobile-menu {
   position:absolute;
   left:0;
@@ -144,7 +148,7 @@
     text-align: center;
     padding: 0;
     border-bottom: 1px solid $header-border-color;
-    
+
 
     &:hover > a,
     &.focus > a {

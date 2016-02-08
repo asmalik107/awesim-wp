@@ -61,9 +61,11 @@
 
 	</header><!-- #masthead -->
 
+    <div class="mobile-menu-container">
 	<div class="mobile-menu">
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_id' => 'primary-menu' ) ); ?>
         <?php awesim_social_icons() ?>
+    </div>
     </div>
 
  	<div id="content" class="site-content"> <!--#content -->
