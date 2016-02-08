@@ -62,9 +62,7 @@
 	</header><!-- #masthead -->
 
 	<div class="mobile-menu">
-	    <div class='mobile-menu-container'>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_id' => 'primary-menu' ) ); ?>
-        </div>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_id' => 'primary-menu' ) ); ?>
         <?php awesim_social_icons() ?>
     </div>
 

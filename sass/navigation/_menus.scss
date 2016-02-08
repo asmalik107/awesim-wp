@@ -105,7 +105,15 @@
 
 /* Mobile Menu */
 .mobile-menu {
-  display: none;
+  position:absolute;
+  left:0;
+  top: $header-size;
+  z-index:1;
+  visibility:hidden;
+  opacity:0;
+  width:100%;
+  filter:alpha(opacity=0);
+  transition: all 1s ease-in-out;
 
   .header-social-icons {
     display: block;
@@ -121,10 +129,7 @@
     display: none;
 
   }
-}
 
-.mobile-menu-container {
-  padding-top: $header-size;
 
   ul {
     display: block;
@@ -139,6 +144,7 @@
     text-align: center;
     padding: 0;
     border-bottom: 1px solid $header-border-color;
+    
 
     &:hover > a,
     &.focus > a {
@@ -162,17 +168,12 @@
 }
 
 .mobile-menu-open {
-  display: block;
-  background: $background-secondary-color;
-  position: absolute;
-  width: 100%;
+  visibility:visible;
+  opacity:1;
+  filter:alpha(opacity=100);
   z-index: 200;
-  top: 0;
-  left: 0;
-  border-bottom: 1px solid $header-border-color;
-  animation: animate-in .3s ease-in-out;
-  transform: scale(1);
-  opacity: 1;
+  background: $background-secondary-color;
+  transition: all 1s ease-in-out;
 }
 
 
