@@ -3836,6 +3836,11 @@ a:hover {
 .mobile-menu .header-social-icons li {
   width: 16%;
 }
+@media (min-width: 899px) {
+  .mobile-menu {
+    display: none;
+  }
+}
 
 .mobile-menu-container {
   padding-top: 4.3em;
@@ -3878,12 +3883,6 @@ a:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
-}
-
-@media (min-width: 899px) {
-  .mobile-menu {
-    display: none;
-  }
 }
 
 @-webkit-keyframes animate-in {

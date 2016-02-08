@@ -116,6 +116,11 @@
       width: 16%;
     }
   }
+
+  @include breakpoint($bp-medium-min) {
+    display: none;
+
+  }
 }
 
 .mobile-menu-container {
@@ -170,12 +175,6 @@
   opacity: 1;
 }
 
-.mobile-menu {
-  @include breakpoint($bp-medium-min) {
-    display: none;
-
-  }
-}
 
 @keyframes animate-in {
   0% {
