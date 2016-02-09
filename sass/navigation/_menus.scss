@@ -113,16 +113,16 @@
   left:0;
   top: $header-size;
   z-index:1;
-  visibility:hidden;
-  opacity:0;
   width:100%;
-  filter:alpha(opacity=0);
-  transition: all 1s ease-in-out;
+  max-height:0;
+  overflow: hidden;
+  transition:max-height 1s ease;
 
   .header-social-icons {
     display: block;
     text-align: center;
     padding: 0.5em 0;
+    background: $background-secondary-color;
 
     li {
       width: 16%;
@@ -130,7 +130,8 @@
   }
 
   @include breakpoint($bp-medium-min) {
-    display: none;
+    visibility:hidden;
+    opacity:0;
 
   }
 
@@ -140,6 +141,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    background: $background-secondary-color;
   }
 
   li {
@@ -172,12 +174,10 @@
 }
 
 .mobile-menu-open {
-  visibility:visible;
-  opacity:1;
-  filter:alpha(opacity=100);
   z-index: 200;
   background: $background-secondary-color;
-  transition: all 1s ease-in-out;
+  max-height:500px;
+  transition:max-height 1s ease;
 }
 
 

@@ -3834,23 +3834,24 @@ a:hover {
   left: 0;
   top: 4.3em;
   z-index: 1;
-  visibility: hidden;
-  opacity: 0;
   width: 100%;
-  filter: alpha(opacity=0);
-  transition: all 1s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
 }
 .mobile-menu .header-social-icons {
   display: block;
   text-align: center;
   padding: 0.5em 0;
+  background: #ffffff;
 }
 .mobile-menu .header-social-icons li {
   width: 16%;
 }
 @media (min-width: 899px) {
   .mobile-menu {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 .mobile-menu ul {
@@ -3858,6 +3859,7 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
+  background: #ffffff;
 }
 .mobile-menu li {
   position: relative;
@@ -3878,12 +3880,10 @@ a:hover {
 }
 
 .mobile-menu-open {
-  visibility: visible;
-  opacity: 1;
-  filter: alpha(opacity=100);
   z-index: 200;
   background: #ffffff;
-  transition: all 1s ease-in-out;
+  max-height: 500px;
+  transition: max-height 1s ease;
 }
 
 @-webkit-keyframes animate-in {
