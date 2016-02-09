@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var sass = require('gulp-ruby-sass');
+var cssnano = require('gulp-cssnano');
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
@@ -23,8 +24,10 @@ gulp.task('sass', function () {
         .pipe($.autoprefixer({
             browsers: ['last 2 versions']
         }))
-        .pipe(gulp.dest('dist'))
-        .pipe(gulp.dest(''));
+        .pipe(gulp.dest(''))
+        .pipe(cssnano())
+        .pipe(gulp.dest('dist'));
+
 });
 
 gulp.task('copy', function () {
