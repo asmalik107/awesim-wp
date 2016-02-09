@@ -4369,6 +4369,7 @@ input[type="search"].search-field:focus {
 }
 
 .about-image-box {
+  position: relative;
   float: right;
   padding-right: 0.5em;
 }
@@ -4386,8 +4387,8 @@ input[type="search"].search-field:focus {
           transform: skewX(-25deg);
 }
 .about-image-box:hover::before {
-  -webkit-animation: shine 2s;
-          animation: shine 2s;
+  -webkit-animation: shine 1.5s;
+          animation: shine 1.5s;
 }
 .about-image-box .about-image {
   border-radius: 50%;

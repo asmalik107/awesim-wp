@@ -133,7 +133,7 @@
 }
 
 .about-image-box {
-
+  position: relative;
   float: right;
   padding-right: 0.5em;
 
@@ -151,7 +151,7 @@
   }
 
   &:hover::before {
-    animation: shine 2s;
+    animation: shine 1.5s;
   }
 
   .about-image {
