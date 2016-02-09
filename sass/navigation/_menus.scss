@@ -180,24 +180,6 @@
   transition:max-height 1s ease;
 }
 
-
-@keyframes animate-in {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: block;
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
