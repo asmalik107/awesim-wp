@@ -132,11 +132,35 @@
   text-align: center;
 }
 
-.about-image {
+.about-image-box {
+
   float: right;
   padding-right: 0.5em;
-  border-radius: 50%;
-  height: 100px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    transform: skewX(-25deg);
+  }
+
+  &:hover::before {
+    animation: shine 2s;
+  }
+
+  .about-image {
+    border-radius: 50%;
+    height: 100px;
+  }
+
 }
+
+
 
 

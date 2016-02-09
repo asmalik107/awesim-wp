@@ -4368,9 +4368,28 @@ input[type="search"].search-field:focus {
   text-align: center;
 }
 
-.about-image {
+.about-image-box {
   float: right;
   padding-right: 0.5em;
+}
+.about-image-box::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-25deg);
+          transform: skewX(-25deg);
+}
+.about-image-box:hover::before {
+  -webkit-animation: shine 2s;
+          animation: shine 2s;
+}
+.about-image-box .about-image {
   border-radius: 50%;
   height: 100px;
 }
@@ -4590,22 +4609,6 @@ input[type="search"].search-field:focus {
         }*/
 }
 
-/*
-@-webkit-keyframes shine {
-  100% {
-    left: 125%;
-  }
-}*/
-@-webkit-keyframes shine {
-  100% {
-    left: 125%;
-  }
-}
-@keyframes shine {
-  100% {
-    left: 125%;
-  }
-}
 .article-masonry {
   width: 100%;
 }
@@ -4906,6 +4909,17 @@ object {
 .icon-hamburger:before {
   content: "\e008";
 }*/
+/* Animations */
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/

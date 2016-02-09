@@ -86,3 +86,11 @@
 .icon-hamburger:before {
   content: "\e008";
 }*/
+
+/* Animations */
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}

@@ -210,7 +210,6 @@
       animation: shine 1.5s;
     }
 
-
     .post-link::before {
       content: "";
       position: absolute;
@@ -233,26 +232,6 @@
     }
   }
 }
-
-
-
-
-/*
-@-webkit-keyframes shine {
-  100% {
-    left: 125%;
-  }
-}*/
-
-@keyframes shine {
-  100% {
-    left: 125%;
-  }
-}
-
-
-
-
 
 .article-masonry {
   @extend .article-single;
