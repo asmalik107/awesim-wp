@@ -27,7 +27,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
         <div class="menu-toggle">
-            <div id="nav-icon">
+            <div class="nav-icon">
               <span></span>
               <span></span>
               <span></span>
