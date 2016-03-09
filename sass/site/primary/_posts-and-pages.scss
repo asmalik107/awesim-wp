@@ -27,6 +27,15 @@
   margin: 0.5em;
 }
 
+.entry-content {
+
+  a {
+    color: $secondary-main-color;
+    text-decoration: underline;
+  }
+
+}
+
 .entry-footer {
   margin: 0.5em;
 }
@@ -72,7 +81,6 @@
   width: 100%;
   padding: 1em 0.5em;
   text-align: center;
-
 
   .cat-size {
     font-size: 70%;
@@ -191,7 +199,6 @@
     position: relative;
     font-size: 0.9rem;
     overflow: hidden;
-
 
     &::before {
       position: absolute;
