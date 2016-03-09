@@ -43,7 +43,7 @@
 .cat-item {
   display: inline-block;
   background: $category-color;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
   line-height: 1.6em;
   font-size: 0.5em;
   font-weight: 700;
@@ -71,6 +71,8 @@
   bottom: 0;
   width: 100%;
   padding: 1em 0.5em;
+  text-align: center;
+
 
   .cat-size {
     font-size: 70%;
@@ -86,7 +88,6 @@
   color: white;
   text-transform: capitalize;
   margin: 0;
-  margin-bottom: 0.3em;
 
   a {
     color: white;
@@ -110,8 +111,8 @@
   //margin: 10px 10px;
   font-size: 0.8em;
   margin: 0;
-  margin-bottom: 2px;
-  //padding-top: 5px;
+  margin-bottom: 0.2em;
+  margin-top: 0.5em;
 
   a {
     color: white;
@@ -168,16 +169,15 @@
   @include breakpoint($bp-small-min $bp-large-max) {
     font-size: 2.4em;
     line-height: 60px;
-    margin: 0.5em;
+    //margin: 0.5em;
   }
 
   @include breakpoint($bp-large-min) {
     font-size: 3.7em;
     line-height: 60px;
-    margin: 0.5em;
+    //margin: 0.5em;
   }
 }
-
 
 /* Articles */
 .article-single {
@@ -223,12 +223,13 @@
 
     img {
       width: 100%;
-/*      transform: scale(1);
-      transition: .3s ease-in-out;
+      //min-height: 460px;
+      /*      transform: scale(1);
+            transition: .3s ease-in-out;
 
-      &:hover {
-        transform: scale(1.3);
-      }*/
+            &:hover {
+              transform: scale(1.3);
+            }*/
     }
   }
 }
