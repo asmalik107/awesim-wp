@@ -144,7 +144,17 @@ add_action( 'wp_enqueue_scripts', 'awesim_scripts' );
 
 
 
+add_filter( 'wp_trim_excerpt', 'awesim_custom_excerpt', 10, 2 );
 
+function awesim_custom_excerpt($text, $raw_excerpt) {
+
+    if( ! $raw_excerpt ) {
+        $content = apply_filters( 'the_content', strip_shortcodes(get_the_content() ));
+        $text = substr( $content, 0, strpos( $content, '</p>' ) + 4 );
+        $text = preg_replace("/<img[^>]+\>/i", "", $text);
+    }
+    return $text;
+}
 
 
 

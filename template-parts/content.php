@@ -33,11 +33,14 @@
 
 	<div class="entry-content">
 		<?php
-			the_excerpt( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'awesim' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+
+		  //  awesim_custom_excerpt(
+                the_excerpt( sprintf(
+                    /* translators: %s: Name of current post. */
+                    wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'awesim' ), array( 'span' => array( 'class' => array() ) ) ),
+                    the_title( '<span class="screen-reader-text">"', '"</span>', false )
+                ));
+			//);
 		?>
 		<a href="<?php echo get_permalink(); ?>" class="button button-link button-small"> Read More...</a>
 
