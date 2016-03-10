@@ -546,8 +546,8 @@ pre {
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 abbr, acronym {
@@ -3560,6 +3560,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, .button-primary:hover, .
 .button-link {
   color: #10cca9;
   border: 2px solid #10cca9;
+  text-decoration: none !important;
 }
 .button-link:hover, .button-link:focus {
   background: #10cca9;
