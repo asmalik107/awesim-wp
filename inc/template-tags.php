@@ -323,7 +323,7 @@ function awesim_get_about_widget() {
         $dir = get_bloginfo('stylesheet_directory') . '/images/profile-large.jpg';
         $output .= '<div class="about-image-box"><img class="about-image" src="' . $dir . '" alt="MDN"></div>';
 
-        $output .= '<p>Hi,I\'m Asim Malik. I\'m a full stack Javascript developer with over 15+ years of experience living in London.</p>';
+        $output .= '<p>Hi, I\'m Asim Malik. I\'m a full stack Javascript developer living in London.</p>';
 
         //$output .= '<a href="https://twitter.com/asimmalik" class="twitter-follow-button" data-show-count="false">Follow @asimmalik</a>';
         //$output .= "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>";
